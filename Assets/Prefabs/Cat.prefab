@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3115878860009593353}
   - component: {fileID: 6554300900528253792}
   - component: {fileID: 1678171603758184488}
+  - component: {fileID: 667015524}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 5197631445958828315}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9b17597f0206b49e1b19e0b88db191bd, type: 2}
+  m_Controller: {fileID: 22100000, guid: f46ff0664c3134e90ab2892e61b4dd56, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -169,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1c6d15fa7924544a532f8d14ec9a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.2
-  changeDirectionTime: 1
+  moveSpeed: 0.5
+  changeDirectionTime: 3
 --- !u!61 &1678171603758184488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -197,3 +198,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &667015524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197631445958828315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7611b6f2aaa6f4770b3256bb8119ab50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letter: K
+  letterUI: {fileID: 0}
+  alpha: 0

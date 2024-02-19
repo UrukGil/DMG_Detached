@@ -311,7 +311,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 1.65
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -367,7 +367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212704779}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6653404, y: -0.41413084, z: 0.21877933}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.14263, y: 0.14263, z: 0.14263}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -451,8 +451,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327835093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6653404, y: 0.41413084, z: -2.2187793}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.01, y: -0.13, z: -2.2187793}
+  m_LocalScale: {x: 0.80555, y: 0.80555, z: 0.80555}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 212704780}
@@ -652,7 +652,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1578135, y: -1.1128836}
+  m_Offset: {x: 1.1224554, y: -0.8240072}
   m_SpriteTilingProperty:
     border: {x: 0.02, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -663,7 +663,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.39054823, y: 1.1242328}
+  m_Size: {x: 0.31983232, y: 0.5705246}
   m_EdgeRadius: 0
 --- !u!61 &415923027
 BoxCollider2D:
@@ -1352,17 +1352,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3146065168561122600, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: f46ff0664c3134e90ab2892e61b4dd56, type: 2}
     - target: {fileID: 5197631445958828315, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
       propertyPath: m_Name
       value: Kitten
-      objectReference: {fileID: 0}
-    - target: {fileID: 5621090815716280787, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6414187319368238976, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
       propertyPath: m_RootOrder
@@ -1410,24 +1402,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
---- !u!1 &667015523 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5197631445958828315, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
-  m_PrefabInstance: {fileID: 667015522}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &667015524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667015523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7611b6f2aaa6f4770b3256bb8119ab50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  letter: 75
 --- !u!1 &734843207
 GameObject:
   m_ObjectHideFlags: 0
