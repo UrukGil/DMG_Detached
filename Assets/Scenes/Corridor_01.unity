@@ -2063,14 +2063,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2082979908450116750, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
-      propertyPath: m_Size.y
-      value: 0.13163614
-      objectReference: {fileID: 0}
-    - target: {fileID: 2082979908450116750, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.1315456
-      objectReference: {fileID: 0}
     - target: {fileID: 5702311182620724344, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2115,25 +2107,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6088413804659991465, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
-      propertyPath: moveSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7578972438860698416, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
       propertyPath: m_Name
       value: Grandpa
-      objectReference: {fileID: 0}
-    - target: {fileID: 9110020037311094636, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9110020037311094636, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9110020037311094636, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
