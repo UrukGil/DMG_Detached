@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class ItemCollection : MonoBehaviour
 {
-    [SerializeField] char letter;
+    [SerializeField] string letter;
     private bool isPlayerInTrigger = false;
+    [SerializeField] GameObject letterUI = null;
+    [SerializeField] float alpha = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +23,12 @@ public class ItemCollection : MonoBehaviour
         {
             GameObject memo = GameObject.FindGameObjectWithTag("Memo");
             memo.transform.GetChild(0).gameObject.SetActive(true);
-            GameObject letterUI = GameObject.FindGameObjectWithTag("I");
-            if (letterUI != null)
-            {
-                letterUI.GetComponent<TextMeshPro>().color = new Color(255, 255, 255, 255);
-            }
+            letterUI = GameObject.FindGameObjectWithTag(letter);
+            alpha = 0f;
+        }
+        if (letterUI != null)
+        {
+            letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, Mathf.Min(255, alpha += Time.deltaTime/2));
         }
     }
 
