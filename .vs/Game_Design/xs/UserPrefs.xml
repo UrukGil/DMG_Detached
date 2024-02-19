@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{78B7C505-48D0-9ACD-E8C0-44249841E24D}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnterTrigger.cs">
+    <Files>
+      <File FileName="Assets/Scripts/EnterTrigger.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Game_Design" expanded="True" selected="True">
+            <Node name="Assets" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a43ee348-a1f0-427b-bf50-b9b48cdf75c5" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
