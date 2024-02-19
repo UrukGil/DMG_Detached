@@ -6,12 +6,12 @@ public class Mover : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 5f; // 角色移动速度
     Animator animator;
-    Rigidbody2D rigidbody;
+    Rigidbody2D rb;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -55,6 +55,6 @@ public class Mover : MonoBehaviour
         animator.SetFloat("speed", dir.magnitude);
 
         //改变刚体速度
-        rigidbody.velocity = dir * moveSpeed;
+        rb.velocity = dir * moveSpeed;
     }
 }
