@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ItemCollection : MonoBehaviour
 {
-    [SerializeField] string letter = "";
+    [SerializeField] char letter;
     private bool isPlayerInTrigger = false;
     // Start is called before the first frame update
     void Start()
@@ -16,13 +16,16 @@ public class ItemCollection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(letter);
+        //print(letter);
         if (isPlayerInTrigger == true && Input.GetKeyDown(KeyCode.F))
         {
             GameObject memo = GameObject.FindGameObjectWithTag("Memo");
             memo.transform.GetChild(0).gameObject.SetActive(true);
-            GameObject letterUI = GameObject.FindGameObjectWithTag(letter);
-            letterUI.GetComponent<TextMeshPro>().color = new Color(255, 255, 255, 255);
+            GameObject letterUI = GameObject.FindGameObjectWithTag("I");
+            if (letterUI != null)
+            {
+                letterUI.GetComponent<TextMeshPro>().color = new Color(255, 255, 255, 255);
+            }
         }
     }
 
