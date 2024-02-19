@@ -5,4 +5,7 @@
 /Packages/
 /Temp/
 /UserSettings/
+/.vs/
+Assembly-CSharp.csproj
+Game_Design.sln
 .DS_Store
