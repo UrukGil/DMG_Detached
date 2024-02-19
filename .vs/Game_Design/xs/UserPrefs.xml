@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{78B7C505-48D0-9ACD-E8C0-44249841E24D}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ItemCollection.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnterTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ItemCollection.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnterTrigger.cs" Line="30" Column="38" />
+      <File FileName="Assets/Scripts/ItemCollection.cs" Line="24" Column="71" />
       <File FileName="Assets/Scripts/RandomMover.cs" Line="13" Column="23" />
-      <File FileName="Assets/Scripts/Mover.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Mover.cs" Line="12" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
