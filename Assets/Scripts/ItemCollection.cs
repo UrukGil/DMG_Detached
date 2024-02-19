@@ -28,7 +28,7 @@ public class ItemCollection : MonoBehaviour
         }
         if (letterUI != null)
         {
-            letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, Mathf.Min(255, alpha += Time.deltaTime/2));
+            letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, Mathf.Min(255, alpha += Time.deltaTime / 2));
         }
     }
 
