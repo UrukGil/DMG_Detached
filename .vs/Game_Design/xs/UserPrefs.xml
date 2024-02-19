@@ -6,8 +6,12 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Game_Design" expanded="True" selected="True">
-            <Node name="Assets" expanded="True" />
+          <Node name="Game_Design" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="EnterTrigger.cs" selected="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>

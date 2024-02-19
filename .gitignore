@@ -1,8 +1,8 @@
-/Assets
-/Library
-/Logs
-/obj
-/Packages
-/ProjectSettings
-/Temp
-/UserSettings
+/Assets/
+/Library/
+/Logs/
+/obj/
+/Packages/
+/ProjectSettings/
+/Temp/
+/UserSettings/
