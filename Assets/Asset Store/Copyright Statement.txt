@@ -1,0 +1,14 @@
+Unity官网问答：
+Q: How do I know how many or what type of licenses to buy?
+
+A: If the license type is “Extension,” it means that you should buy a seat for each person who will need to use or modify the asset in development.
+
+如果你要使用、复制或将Unity资源商店中的内容用于任何其他用途，请去资源商店购入该资源。
+
+本项目中用到的Free Unity Store Assets有：
+
+2D-Basic-Room-Assets
+https://assetstore.unity.com/packages/2d/2d-basic-room-assets-234762
+
+Fantasy Wooden GUI : Free
+https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811
