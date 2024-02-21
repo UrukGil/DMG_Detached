@@ -12,3 +12,6 @@ https://assetstore.unity.com/packages/2d/2d-basic-room-assets-234762
 
 Fantasy Wooden GUI : Free
 https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811
+
+DOTween (HOTween v2)
+https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445d06398617d4c3fbae1018d09318cc, type: 3}
+  m_Name: TextDialogue
+  m_EditorClassIdentifier: 
+  m_pieceOfDialogueArray:
+  - m_index: 0
+    m_sprite: {fileID: -1932308543, guid: 6ae28fa4fe21b434e86dd86c1c38ac1a, type: 3}
+    m_textString: Oh! No!
+    m_optionsArray:
+    - m_textString: OK.Fine.
+      m_targetPieceIndex: 2
+  - m_index: 1
+    m_sprite: {fileID: -1317175395, guid: 6ae28fa4fe21b434e86dd86c1c38ac1a, type: 3}
+    m_textString: Hi! Bye!
+    m_optionsArray: []
+  - m_index: 2
+    m_sprite: {fileID: 154989937, guid: 6ae28fa4fe21b434e86dd86c1c38ac1a, type: 3}
+    m_textString: Oh Holy!
+    m_optionsArray: []
+  - m_index: 3
+    m_sprite: {fileID: -2127988990, guid: 80ebd58581bbf4280b39b56875493f01, type: 3}
+    m_textString: Shit!
+    m_optionsArray:
+    - m_textString: OK
+      m_targetPieceIndex: 
