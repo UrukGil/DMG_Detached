@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pieceOfDialogueArray:
   - m_index: 0
-    m_sprite: {fileID: -1932308543, guid: 6ae28fa4fe21b434e86dd86c1c38ac1a, type: 3}
+    m_sprite: {fileID: 21300000, guid: 06b8d42bfab654e038c0020ce890637e, type: 3}
     m_textString: Oh! No!
     m_optionsArray:
     - m_textString: OK.Fine.

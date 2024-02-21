@@ -1220,6 +1220,7 @@ MonoBehaviour:
   m_pressSpaceUI: {fileID: 0}
   m_canTalk: 0
   m_isTalking: 0
+  m_hasTalked: 0
   m_dialogue: {fileID: 0}
 --- !u!4 &1035396000
 Transform:

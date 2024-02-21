@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
         if (other.tag == "Player" && m_dialogueData != null)
         {
             m_canTalk = true;
-            if (m_pressSpaceUI != null)
+            if (!m_hasTalked && m_pressSpaceUI != null)
             {
                 m_pressSpaceUI.SetActive(true);
             }
