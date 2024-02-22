@@ -32,6 +32,7 @@ public class IronCollection : MonoBehaviour
             }
             letterUI = GameObject.FindGameObjectWithTag(letter);
             GameManager.Instance.AddItem(letter);
+
             alpha = 0f;
         }
         if (letterUI != null)
