@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MemoManager : MonoBehaviour
 {
-    public GameObject UiElement;
+    public GameObject UIElement;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,19 +16,19 @@ public class MemoManager : MonoBehaviour
     void Update()
     {
 
-        if (!UiElement.activeSelf)
+        if (!UIElement.activeSelf)
         {
             //print("s");
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                UiElement.SetActive(true);
+                UIElement.SetActive(true);
             }
         }
-        else if (UiElement.activeSelf)
+        else if (UIElement.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                UiElement.SetActive(!UiElement.activeSelf);
+                UIElement.SetActive(!UIElement.activeSelf);
             }
         }
 
