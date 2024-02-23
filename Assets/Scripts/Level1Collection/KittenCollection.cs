@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class EnvelopeCollection : MonoBehaviour
+public class KittenCollection : MonoBehaviour
 {
     [SerializeField] string letter;
     private bool isPlayerInTrigger = false;
@@ -12,7 +12,7 @@ public class EnvelopeCollection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -22,7 +22,6 @@ public class EnvelopeCollection : MonoBehaviour
         {
             GameObject memo = GameObject.FindGameObjectWithTag("Memo");
             memo.transform.GetChild(0).gameObject.SetActive(true);
-
             List<string> tempList = GameManager.Instance.GetItems();
             for (int i = 0; i < tempList.Count; i++){
                 alpha = 0f;
@@ -42,7 +41,7 @@ public class EnvelopeCollection : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    {  
         if (other.gameObject.tag == "Player")
         {
             isPlayerInTrigger = true;
