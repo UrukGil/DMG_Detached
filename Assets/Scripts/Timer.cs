@@ -9,7 +9,7 @@ public class Timer: MonoBehaviour
 
     void Start()
     {
-        print("duration "+duration);
+        // print("duration "+duration);
         timeLeft = GameManager.Instance.LoadTime();
         if (progressBar == null)
         {
@@ -20,13 +20,13 @@ public class Timer: MonoBehaviour
 
         if (timeLeft < duration && timeLeft > 0)
         {
-            print("here2");
+            // print("here2");
             timeLeft = GameManager.Instance.LoadTime();
         }
         else
         {
             timeLeft = duration;
-            print("here1");
+            // print("here1");
             progressBar.value = 1; // 初始化进度条值为100%
         }
         print("timeleft "+timeLeft);

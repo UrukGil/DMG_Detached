@@ -6,7 +6,7 @@ using UnityEngine;
 public class KittenCollection : MonoBehaviour
 {
     [SerializeField] string letter;
-    private bool isPlayerInTrigger = false;
+    private bool isTriggered = false;
     [SerializeField] GameObject letterUI = null;
     [SerializeField] float alpha = 0f;
     // Start is called before the first frame update
@@ -14,11 +14,20 @@ public class KittenCollection : MonoBehaviour
     {
         
     }
+    public void SetTrigger(bool value)
+    {
+        isTriggered = value;
+    }
 
+    public bool GetTrigger()
+    {
+        return isTriggered;
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInTrigger == true && Input.GetKeyDown(KeyCode.F))
+        if (isTriggered == true )
         {
             GameObject memo = GameObject.FindGameObjectWithTag("Memo");
             memo.transform.GetChild(0).gameObject.SetActive(true);
@@ -44,12 +53,12 @@ public class KittenCollection : MonoBehaviour
     {  
         if (other.gameObject.tag == "Player")
         {
-            isPlayerInTrigger = true;
+            isTriggered = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        isPlayerInTrigger = false;
+        isTriggered = false;
     }
 }
