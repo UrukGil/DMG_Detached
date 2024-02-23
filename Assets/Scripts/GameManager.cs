@@ -23,17 +23,24 @@ public class GameManager : MonoBehaviour
     public List<GameObject> gameObjectsList = new List<GameObject>();
 
     // Timer
-    // private float timer = 0f;
+    public float timer = 60f;
+    public float timeLeft = 60f;
     public bool timerIsRunning = false;
     public Dictionary<string, GameObject> gameObjectsDict = new Dictionary<string, GameObject>();
-
+    public Timer timerKit;
+    private void Start()
+    {
+        timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
+    }
     private void Update()
     {
+        timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
         // Timer Update
         // if (timerIsRunning)
         // {
         //     timer += Time.deltaTime;
         // }
+
     }
 
     // Method to start the timer
@@ -48,6 +55,25 @@ public class GameManager : MonoBehaviour
     //     timerIsRunning = false;
     //     return timer; // Returns the current time value
     // }
+
+    public float GetTime()
+    {
+        timeLeft = timerKit.GetLeftTime();
+
+        return timeLeft;
+    }
+
+    public float LoadTime()
+    {
+        return timer;
+    }
+
+    public void SaveTime()
+    {
+        timeLeft = GetTime();
+        timer = timeLeft;
+        Debug.Log("Time left2: " + timeLeft);
+    }
 
     // Add item to the player's inventory
     public void AddItem(string item)
@@ -106,8 +132,8 @@ public class GameManager : MonoBehaviour
     }
     
     // Reset Timer
-    // public void ResetTimer()
-    // {
-    //     timer = 0f;
-    // }
+    public void ResetTimer()
+    {
+        timer = 0f;
+    }
 }

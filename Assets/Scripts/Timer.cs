@@ -1,30 +1,50 @@
 using UnityEngine;
 using UnityEngine.UI; // 引入UI命名空间
 
-public class ProgressBarTimer : MonoBehaviour
+public class Timer: MonoBehaviour
 {
     public Slider progressBar; // 引用UI进度条
-    public float duration = 10f; // 计时器的持续时间
+    public float duration = 60f; // 计时器的持续时间
     private float timeLeft; // 剩余时间
 
     void Start()
     {
+        print("duration "+duration);
+        timeLeft = GameManager.Instance.LoadTime();
         if (progressBar == null)
         {
             Debug.LogError("Progress bar slider is not assigned!");
             return;
         }
+        
 
-        timeLeft = duration;
-        progressBar.value = 1; // 初始化进度条值为100%
+        if (timeLeft < duration && timeLeft > 0)
+        {
+            print("here2");
+            timeLeft = GameManager.Instance.LoadTime();
+        }
+        else
+        {
+            timeLeft = duration;
+            print("here1");
+            progressBar.value = 1; // 初始化进度条值为100%
+        }
+        print("timeleft "+timeLeft);
+        
     }
 
     void Update()
     {
+        if (timeLeft <= 0f)
+        {
+            //endgame
+            print("You are dead");
+        }
         if (timeLeft > 0)
         {
             // 更新剩余时间
             timeLeft -= Time.deltaTime;
+            GameManager.Instance.SaveTime();
             // 计算剩余时间的百分比，并更新进度条的值
             progressBar.value = timeLeft / duration;
         }
@@ -34,5 +54,10 @@ public class ProgressBarTimer : MonoBehaviour
             progressBar.value = 0;
             // 可选：计时器结束后的逻辑
         }
+    }
+
+    public float GetLeftTime()
+    {
+        return timeLeft;
     }
 }

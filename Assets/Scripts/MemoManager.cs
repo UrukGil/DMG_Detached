@@ -7,7 +7,7 @@ using TMPro;
 public class MemoManager : MonoBehaviour
 {
     public GameObject UiElement;
-    [SerializeField] string letter = "";
+    [SerializeField] string letter;
     [SerializeField] GameObject letterUI = null;
     [SerializeField] float alpha = 0f;
     // Start is called before the first frame update

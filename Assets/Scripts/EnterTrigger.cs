@@ -11,7 +11,7 @@ public class EnterTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     
     // Update is called once per frame
@@ -19,6 +19,7 @@ public class EnterTrigger : MonoBehaviour
     {
         if (playerIsInTrigger && Input.GetKeyDown(KeyCode.F))
         {
+            //GameManager.Instance.timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
             SceneManager.LoadScene(sceneIndex);
         }
     }
