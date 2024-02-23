@@ -6,10 +6,17 @@ using TMPro;
 
 public class MemoManager : MonoBehaviour
 {
+<<<<<<< HEAD
+    public GameObject UIElement;
+=======
     public GameObject UiElement;
     [SerializeField] string letter;
     [SerializeField] GameObject letterUI = null;
     [SerializeField] float alpha = 0f;
+<<<<<<< Updated upstream
+=======
+>>>>>>> 862a44b418a06aa9b7bc058a1a0d2695e1f6c7c8
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +27,13 @@ public class MemoManager : MonoBehaviour
     void Update()
     {
 
-        if (!UiElement.activeSelf)
+        if (!UIElement.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
+<<<<<<< HEAD
+                UIElement.SetActive(true);
+=======
                 UiElement.SetActive(true);
                 GameObject memo = GameObject.FindGameObjectWithTag("Memo");
                 memo.transform.GetChild(0).gameObject.SetActive(true);
@@ -35,13 +45,17 @@ public class MemoManager : MonoBehaviour
                         letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 255);
                     }
                 }
+<<<<<<< Updated upstream
+=======
+>>>>>>> 862a44b418a06aa9b7bc058a1a0d2695e1f6c7c8
+>>>>>>> Stashed changes
             }
         }
-        else if (UiElement.activeSelf)
+        else if (UIElement.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                UiElement.SetActive(!UiElement.activeSelf);
+                UIElement.SetActive(!UIElement.activeSelf);
             }
         }
 
