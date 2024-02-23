@@ -13,6 +13,7 @@ TagManager:
   - E
   - H
   - Dialogue
+  - Timer
   layers:
   - Default
   - TransparentFX
