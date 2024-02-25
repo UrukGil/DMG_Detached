@@ -128,6 +128,8 @@ MonoBehaviour:
   m_isTalking: 0
   m_hasTalked: 0
   m_dialogue: {fileID: 0}
+  letter: 
+  m_isMemoTrigger: 0
 --- !u!61 &8151323430721903338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -205,8 +207,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.23, y: 0.42}
+  m_Offset: {x: 0, y: -0.095000006}
+  m_Size: {x: 0.23, y: 0.23}
   m_Direction: 0
 --- !u!1001 &8746392798205324122
 PrefabInstance:
@@ -299,10 +301,6 @@ PrefabInstance:
     - target: {fileID: 3309727415040846489, guid: 7d7ddf05cbb8c44efbc6d5ffd6e02591, type: 3}
       propertyPath: m_Name
       value: TalkUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 3309727415040846489, guid: 7d7ddf05cbb8c44efbc6d5ffd6e02591, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
