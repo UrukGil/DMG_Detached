@@ -31,5 +31,5 @@ MonoBehaviour:
     m_sprite: {fileID: -2127988990, guid: 80ebd58581bbf4280b39b56875493f01, type: 3}
     m_textString: Shit!
     m_optionsArray:
-    - m_textString: OK
+    - m_textString: 1
       m_targetPieceIndex: 

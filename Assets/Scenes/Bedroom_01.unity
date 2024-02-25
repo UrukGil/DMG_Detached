@@ -1213,6 +1213,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Daughter
       objectReference: {fileID: 0}
+    - target: {fileID: 5887978004249287080, guid: 9dca97f2e2ca24943b2db6e3c000dcca, type: 3}
+      propertyPath: letter
+      value: K
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887978004249287080, guid: 9dca97f2e2ca24943b2db6e3c000dcca, type: 3}
+      propertyPath: m_isMemoTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1483,6 +1491,8 @@ MonoBehaviour:
   m_isTalking: 0
   m_hasTalked: 0
   m_dialogue: {fileID: 0}
+  letter: 
+  m_isMemoTrigger: 0
 --- !u!4 &1035396000
 Transform:
   m_ObjectHideFlags: 0

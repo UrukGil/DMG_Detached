@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     private GameObject m_dialogueCanvas = null;
     [SerializeField] DialogueUI m_dialogue = null;
     private GameObject m_player = null;
+    [SerializeField] public string letter;
+    [SerializeField] public bool m_isMemoTrigger = false;
     private void Awake()
     {
         m_player = GameObject.FindWithTag("Player");

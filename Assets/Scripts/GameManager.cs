@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
     {
         timeLeft = GetTime();
         timer = timeLeft;
-        Debug.Log("Time left2: " + timeLeft);
+        // Debug.Log("Time left2: " + timeLeft);
     }
 
     // Add item to the player's inventory
