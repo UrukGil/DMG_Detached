@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RandomMover : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 5f; // 移动速度
+    float moveSpeed = 0.3f; // 移动速度
     public float changeDirectionTime = 2f; // 改变方向的时间间隔
     private Vector2 movement; // 移动方向
     private float timeToChangeDirection; // 改变方向的计时器

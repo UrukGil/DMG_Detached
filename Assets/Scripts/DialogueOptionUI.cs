@@ -54,6 +54,7 @@ public class DialogueOptionUI : MonoBehaviour
         }
         else if (m_targetPieceIndex == "" && m_isMemoTrigger == true)
         {
+            //Memo
             letter = m_dialogueManager.letter;
             GameObject memo = GameObject.FindGameObjectWithTag("Memo");
             memo.transform.GetChild(0).gameObject.SetActive(true);
@@ -81,12 +82,27 @@ public class DialogueOptionUI : MonoBehaviour
     {
         if (letterUI != null)
         {
-            while (alpha <= 255)
+            while (alpha <= 1)
             {
-            yield return new WaitForSeconds(1f);
-            letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, Mathf.Min(255, alpha += 1f));
+                print(alpha);
+                letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, Mathf.Min(1, alpha += 0.01f));
+                yield return new WaitForSeconds(0.01f);
             }
-            
+            if (letter == "K")
+            {
+                m_dialogueManager.GetComponent<RandomMover>().enabled = true;
+                //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                m_dialogueManager.GetComponent<Animator>().enabled = true;
+            }
+            //Dialogue
+            m_dialogue.m_dialoguePanel.SetActive(false);
+            m_dialogue.m_dialogueOptionPanel.SetActive(false);
+            m_dialogue.m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
+            foreach (var dialogueManager in GameObject.FindObjectsOfType<DialogueManager>())
+            {
+                dialogueManager.m_isTalking = false;
+                dialogueManager.m_hasTalked = true;
+            }
         }
     }
 }

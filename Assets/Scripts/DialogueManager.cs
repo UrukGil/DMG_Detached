@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.tag == "Player" && m_dialogueData != null)
         {
             m_canTalk = true;
@@ -78,6 +79,12 @@ public class DialogueManager : MonoBehaviour
     }
     private void StartDialogue()
     {
+        if (letter == "K")
+        {
+            GetComponent<RandomMover>().enabled = false;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GetComponent<Animator>().enabled = false;
+        }
         m_dialogueCanvas.GetComponent<DialogueUI>().m_text.text = "";
         //m_dialogueCanvas.GetComponent<DialogueUI>().m_text.DOKill();
         m_dialogue.UpdateDialogueData(m_dialogueData);

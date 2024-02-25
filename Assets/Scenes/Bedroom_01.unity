@@ -1215,11 +1215,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5887978004249287080, guid: 9dca97f2e2ca24943b2db6e3c000dcca, type: 3}
       propertyPath: letter
-      value: K
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5887978004249287080, guid: 9dca97f2e2ca24943b2db6e3c000dcca, type: 3}
       propertyPath: m_isMemoTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1739,6 +1739,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MemoKit
       objectReference: {fileID: 0}
+    - target: {fileID: 1672155535723027817, guid: c147ad4332f83374dbfcc5e09e16fb88, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672155535723027817, guid: c147ad4332f83374dbfcc5e09e16fb88, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4671303
+      objectReference: {fileID: 0}
     - target: {fileID: 6328946652701911548, guid: c147ad4332f83374dbfcc5e09e16fb88, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1777,6 +1785,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6328946652701911548, guid: c147ad4332f83374dbfcc5e09e16fb88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746702263219341476, guid: c147ad4332f83374dbfcc5e09e16fb88, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
