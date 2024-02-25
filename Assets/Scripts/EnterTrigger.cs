@@ -8,6 +8,8 @@ public class EnterTrigger : MonoBehaviour
 {
     [SerializeField] int sceneIndex = 0;
     [SerializeField] bool playerIsInTrigger = false;
+
+    public Vector2 spawnPointInNextScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class EnterTrigger : MonoBehaviour
     {
         if (playerIsInTrigger && Input.GetKeyDown(KeyCode.F))
         {
+            PositionManager.instance.SetSpawnPoint(spawnPointInNextScene);
             //GameManager.Instance.timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
             SceneManager.LoadScene(sceneIndex);
         }
