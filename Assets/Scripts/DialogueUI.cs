@@ -137,18 +137,23 @@ public class DialogueUI : MonoBehaviour
     }
     IEnumerator ChangeAlpha()
     {
+        yield return null;
         if (letterUI != null)
         {
             //Dialogue
             m_dialoguePanel.SetActive(false);
             m_dialogueOptionPanel.SetActive(false);
             m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
-            while (alpha <= 1)
-            {
-                letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, Mathf.Min(1, alpha += 0.01f));
-                //letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
-                yield return new WaitForSeconds(0.01f);
-            }
+            // while (alpha <= 1)
+            // {
+            //     letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, Mathf.Min(1, alpha += 0.01f));
+            //     //letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
+            //     yield return new WaitForSeconds(0.01f);
+            // }
+            // letterUI.GetComponent<TMP_Text>().font = Resources.Load<TMP_FontAsset>("FlowBlock-Regular SDF");
+            letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+
+            //控制猫 勿动
             if (letter == "K")
             {
                 m_dialogueManager.GetComponent<RandomMover>().enabled = true;

@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 126202215}
   m_Layer: 0
   m_Name: Newspaper
-  m_TagString: Untagged
+  m_TagString: Newspaper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -846,12 +846,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 126202211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1524b855e7a6428c8f5c7a9ca99aad5, type: 3}
+  m_Script: {fileID: 11500000, guid: 91cd0b0e1cba447489d8317d2021c26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: N
-  letterUI: {fileID: 0}
-  alpha: 0
+  m_dialogueData: {fileID: 11400000, guid: fa9299e442ea64a2a977159f70c41893, type: 2}
+  m_pressSpaceUI: {fileID: 0}
+  m_canTalk: 0
+  m_isTalking: 0
+  m_hasTalked: 0
+  m_dialogue: {fileID: 0}
+  letter: Newspaper
+  m_isMemoTrigger: 1
 --- !u!1 &260875493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,6 +1673,10 @@ PrefabInstance:
     - target: {fileID: 1672155535723027817, guid: c147ad4332f83374dbfcc5e09e16fb88, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4671303
+      objectReference: {fileID: 0}
+    - target: {fileID: 3470864931987865273, guid: c147ad4332f83374dbfcc5e09e16fb88, type: 3}
+      propertyPath: m_TagString
+      value: Newspaper
       objectReference: {fileID: 0}
     - target: {fileID: 6328946652701911548, guid: c147ad4332f83374dbfcc5e09e16fb88, type: 3}
       propertyPath: m_LocalPosition.x
