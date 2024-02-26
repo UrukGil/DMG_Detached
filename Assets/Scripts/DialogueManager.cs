@@ -48,6 +48,12 @@ public class DialogueManager : MonoBehaviour
             {
                 m_pressSpaceUI.SetActive(false);
             }
+            if (letter == "K")
+            {
+                GetComponent<RandomMover>().enabled = true;
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GetComponent<Animator>().enabled = true;
+            }
         }
     }
     private void Update()
