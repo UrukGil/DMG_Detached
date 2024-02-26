@@ -18,15 +18,14 @@ public class DialogueOptionUI : MonoBehaviour
     [SerializeField] float alpha = 0f;
     [SerializeField] GameObject letterUI = null;
     [SerializeField] string letter;
-    private DialogueManager m_dialogueManager = null;
+    public DialogueManager m_dialogueManager = null;
 
     private void Awake()
     {
         m_dialogueOptionButton = GetComponent<Button>();
         m_dialogueCanvas = GameObject.FindWithTag("Dialogue");
         m_dialogue = m_dialogueCanvas.GetComponent<DialogueUI>();
-        m_dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
-        m_isMemoTrigger = m_dialogueManager.m_isMemoTrigger;
+        //m_dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
     }
     public void UpdateDialogueOption(PieceOfDialogue pieceOfDialogue, OptionOfDialogue optionOfDialogue)
     {
@@ -55,6 +54,11 @@ public class DialogueOptionUI : MonoBehaviour
         else if (m_targetPieceIndex == "" && m_isMemoTrigger == true)
         {
             //Memo
+            m_dialogueManager = m_dialogue.m_dialogueManager;
+            if (m_dialogueManager != null)
+            {
+                m_isMemoTrigger = m_dialogueManager.m_isMemoTrigger;
+            }
             letter = m_dialogueManager.letter;
             GameObject memo = GameObject.FindGameObjectWithTag("Memo");
             memo.transform.GetChild(0).gameObject.SetActive(true);
@@ -98,11 +102,8 @@ public class DialogueOptionUI : MonoBehaviour
             m_dialogue.m_dialoguePanel.SetActive(false);
             m_dialogue.m_dialogueOptionPanel.SetActive(false);
             m_dialogue.m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
-            foreach (var dialogueManager in GameObject.FindObjectsOfType<DialogueManager>())
-            {
-                dialogueManager.m_isTalking = false;
-                dialogueManager.m_hasTalked = true;
-            }
+            m_dialogueManager.m_isTalking = false;
+            m_dialogueManager.m_hasTalked = true;
         }
     }
 }
