@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     private GameObject m_player = null;
     [SerializeField] public string letter;
     [SerializeField] public bool m_isMemoTrigger = false;
+    private GameObject player;
     private void Awake()
     {
         m_player = GameObject.FindWithTag("Player");
@@ -84,7 +85,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
     private void StartDialogue()
-    {
+    {   
+        
+        StartCoroutine(ChangeDialoguePosition());
         if (letter == "K")
         {
             GetComponent<RandomMover>().enabled = false;
@@ -99,5 +102,16 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         m_dialogue.UpdateDialogue(m_dialogueData.m_pieceOfDialogueArray[0]);
+    }
+    IEnumerator ChangeDialoguePosition()
+    {
+        player = GameObject.FindWithTag("Player");
+        while (true)
+        {
+            m_dialogueCanvas.transform.position = new Vector2(player.transform.position.x, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
+        // m_dialogueCanvas.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
+        // yield return new WaitForSeconds(0.1f);
     }
 }
