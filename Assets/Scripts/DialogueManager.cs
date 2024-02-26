@@ -85,8 +85,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
     private void StartDialogue()
-    {   
-        
+    {
+        m_dialogue.m_dialogueManager = this;
         StartCoroutine(ChangeDialoguePosition());
         if (letter == "K")
         {

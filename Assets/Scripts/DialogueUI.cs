@@ -20,14 +20,10 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] float alpha = 0f;
     [SerializeField] GameObject letterUI = null;
     [SerializeField] string letter;
-    private DialogueManager m_dialogueManager = null;
+    public DialogueManager m_dialogueManager = null;
     private void Start()
     {
-        m_dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
-        if (m_dialogueManager != null)
-        {
-            m_isMemoTrigger = m_dialogueManager.m_isMemoTrigger;
-        }
+        //m_dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
     }
     private void LateUpdate()
     {
@@ -52,9 +48,12 @@ public class DialogueUI : MonoBehaviour
     }
     public void EndDialogue()
     {
+        if (m_dialogueManager != null)
+        {
+            m_isMemoTrigger = m_dialogueManager.m_isMemoTrigger;
+        }
         if (m_isMemoTrigger == true)
         {
-            print("1");
             //Memo
             letter = m_dialogueManager.letter;
             GameObject memo = GameObject.FindGameObjectWithTag("Memo");
@@ -76,15 +75,11 @@ public class DialogueUI : MonoBehaviour
         }
         else
         {
-            print("2");
             m_dialoguePanel.SetActive(false);
             m_dialogueOptionPanel.SetActive(false);
             m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
-            foreach (var dialogueManager in GameObject.FindObjectsOfType<DialogueManager>())
-            {
-                dialogueManager.m_isTalking = false;
-                dialogueManager.m_hasTalked = true;
-            }
+            m_dialogueManager.m_isTalking = false;
+            m_dialogueManager.m_hasTalked = true;
         }
 
     }
@@ -160,12 +155,8 @@ public class DialogueUI : MonoBehaviour
                 m_dialogueManager.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 m_dialogueManager.GetComponent<Animator>().enabled = true;
             }
-            
-            foreach (var dialogueManager in GameObject.FindObjectsOfType<DialogueManager>())
-            {
-                dialogueManager.m_isTalking = false;
-                dialogueManager.m_hasTalked = true;
-            }
+            m_dialogueManager.m_isTalking = false;
+            m_dialogueManager.m_hasTalked = true;
         }
     }
 }

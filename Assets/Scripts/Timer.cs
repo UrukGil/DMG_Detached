@@ -29,7 +29,7 @@ public class Timer: MonoBehaviour
             // print("here1");
             progressBar.value = 1; // 初始化进度条值为100%
         }
-        print("timeleft "+timeLeft);
+        //print("timeleft "+timeLeft);
         
     }
 
