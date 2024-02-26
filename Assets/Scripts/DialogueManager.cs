@@ -108,7 +108,7 @@ public class DialogueManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         while (true)
         {
-            m_dialogueCanvas.transform.position = new Vector2(player.transform.position.x, 0.1f);
+            m_dialogueCanvas.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
             yield return new WaitForSeconds(0.01f);
         }
         // m_dialogueCanvas.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
