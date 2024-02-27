@@ -846,12 +846,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 126202211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1524b855e7a6428c8f5c7a9ca99aad5, type: 3}
+  m_Script: {fileID: 11500000, guid: 91cd0b0e1cba447489d8317d2021c26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: N
-  letterUI: {fileID: 0}
-  alpha: 0
+  m_dialogueData: {fileID: 11400000, guid: fa9299e442ea64a2a977159f70c41893, type: 2}
+  m_pressSpaceUI: {fileID: 0}
+  m_canTalk: 0
+  m_isTalking: 0
+  m_hasTalked: 0
+  m_dialogue: {fileID: 0}
+  letter: Newspaper
+  m_isMemoTrigger: 1
 --- !u!1 &260875493
 GameObject:
   m_ObjectHideFlags: 0

@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 335120264285311873}
   m_Layer: 0
   m_Name: Sentence3
-  m_TagString: Untagged
+  m_TagString: Newspaper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1474,7 +1474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7294986114821351987
 Transform:
   m_ObjectHideFlags: 0
