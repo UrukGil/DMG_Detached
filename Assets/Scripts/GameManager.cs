@@ -36,17 +36,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {   
-        string string1 = "Vegetable";
-        string string2 = "Magazine";
-        string string3 = "Wine";
-        bool allStringsInList = CheckIfStringsInList(string1, string2, string3);
         timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
-        GameObject dialogue = GameObject.FindGameObjectWithTag("Dialogue");
-        if(allStringsInList){
-            dialogue.transform.GetChild(2).gameObject.SetActive(true);
-        }
-        
-
         // Timer Update
         // if (timerIsRunning)
         // {
@@ -102,6 +92,20 @@ public class GameManager : MonoBehaviour
     public void AddItem(string item)
     {
         playerItems.Add(item);
+        CheckPhoneOpen();
+    }
+
+    public void CheckPhoneOpen()
+    {
+        string string1 = "Vegetable";
+        string string2 = "Magazine";
+        string string3 = "Wine";
+        bool allStringsInList = CheckIfStringsInList(string1, string2, string3);
+        GameObject dialogue = GameObject.FindGameObjectWithTag("Dialogue");
+        if (allStringsInList)
+        {
+            dialogue.transform.GetChild(2).gameObject.SetActive(true);
+        }
     }
 
     // Remove item from the player's inventory
