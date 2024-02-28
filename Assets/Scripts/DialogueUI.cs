@@ -65,7 +65,12 @@ public class DialogueUI : MonoBehaviour
                 letterUI = GameObject.FindGameObjectWithTag(tempList[i]);
                 if (letterUI != null)
                 {
-                    letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 255);
+                    for ( int j = 0; j < tempList.Count; j++)
+                    {
+                        letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+                    }
+                    //letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 255);
+                    
                 }
             }
             letterUI = GameObject.FindGameObjectWithTag(letter);

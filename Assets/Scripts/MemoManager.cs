@@ -36,7 +36,7 @@ public class MemoManager : MonoBehaviour
                     alpha = 0f;
                     letterUI = GameObject.FindGameObjectWithTag(tempList[i]);
                     if (letterUI != null){
-                        letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 255);
+                        letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
                     }
                 }
             }

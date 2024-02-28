@@ -8,6 +8,11 @@ TagManager:
   - Dialogue
   - Timer
   - Newspaper
+  - Photo
+  - Vegetable
+  - Magazine
+  - Wine
+  - Phone
   layers:
   - Default
   - TransparentFX

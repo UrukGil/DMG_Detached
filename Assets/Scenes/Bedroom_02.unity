@@ -697,6 +697,51 @@ Transform:
   - {fileID: 484925359}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &657864554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657864556}
+  - component: {fileID: 657864555}
+  m_Layer: 0
+  m_Name: PhoneClose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &657864555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657864554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8967dc30bc9163d44883826a73a5e153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToClose: {fileID: 1074163143}
+--- !u!4 &657864556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657864554}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3306099, y: 0.0612765, z: -1.5672944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &814027661
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +906,22 @@ PrefabInstance:
     - target: {fileID: 61330682482502895, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123309468820804930, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 657864555}
+    - target: {fileID: 123309468820804930, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 123309468820804930, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PhoneClose, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 123309468820804930, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 129184613968276930, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1283,6 +1344,11 @@ GameObject:
 --- !u!1 &1074163142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9051302382075404818, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
+  m_PrefabInstance: {fileID: 1074163140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1074163143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2682043446120066499, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
   m_PrefabInstance: {fileID: 1074163140}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1159275134
@@ -1821,10 +1887,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1609899377}
   - component: {fileID: 1609899376}
-  - component: {fileID: 1609899378}
   - component: {fileID: 1609899379}
+  - component: {fileID: 1609899380}
   m_Layer: 0
-  m_Name: Envelope
+  m_Name: Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1871,7 +1937,7 @@ SpriteRenderer:
   m_SortingLayerID: 1007175511
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c59e212311494c11ae7c8aa6e67a640, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b90773dc803ba104fa2c62ef44ee2948, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1891,27 +1957,12 @@ Transform:
   m_GameObject: {fileID: 1609899375}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.203, y: 0.304, z: -0.5}
-  m_LocalScale: {x: 0.28405, y: 0.28405, z: 0.28405}
+  m_LocalPosition: {x: -0.208, y: 0.315, z: -0.5}
+  m_LocalScale: {x: 0.019592632, y: 0.019592632, z: 0.019592632}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1609899378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609899375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c770256932464ffaa1383fbba6450db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  letter: E
-  letterUI: {fileID: 0}
-  alpha: 0
 --- !u!61 &1609899379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1944,19 +1995,39 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.4382609}
+  m_Offset: {x: 0.44718456, y: -13.892598}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.77, y: 0.77}
+    oldSize: {x: 5, y: 5.2}
     newSize: {x: 0.77, y: 0.77}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.77, y: 1.6465213}
+  m_Size: {x: 10.141369, y: 8.723658}
   m_EdgeRadius: 0
+--- !u!114 &1609899380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609899375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cd0b0e1cba447489d8317d2021c26e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogueData: {fileID: 11400000, guid: fa9299e442ea64a2a977159f70c41893, type: 2}
+  m_pressSpaceUI: {fileID: 0}
+  m_canTalk: 0
+  m_isTalking: 0
+  m_hasTalked: 0
+  m_dialogue: {fileID: 0}
+  letter: Magazine
+  m_isMemoTrigger: 1
 --- !u!1 &1683642409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,3 +2349,4 @@ SceneRoots:
   - {fileID: 173169947}
   - {fileID: 1170961398}
   - {fileID: 1074163140}
+  - {fileID: 657864556}
