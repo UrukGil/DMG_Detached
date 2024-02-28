@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
     // Player's items - Using a list to store string letters.
     public List<string> playerItems = new List<string>();
     public List<GameObject> gameObjectsList = new List<GameObject>();
-
+    //public List<string> stringList;
     // Timer
     public float timer = 60f;
     public float timeLeft = 60f;
@@ -31,10 +32,21 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
+        
     }
     private void Update()
-    {
+    {   
+        string string1 = "Vegetable";
+        string string2 = "Magazine";
+        string string3 = "Wine";
+        bool allStringsInList = CheckIfStringsInList(string1, string2, string3);
         timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
+        GameObject dialogue = GameObject.FindGameObjectWithTag("Dialogue");
+        if(allStringsInList){
+            dialogue.transform.GetChild(2).gameObject.SetActive(true);
+        }
+        
+
         // Timer Update
         // if (timerIsRunning)
         // {
@@ -55,7 +67,18 @@ public class GameManager : MonoBehaviour
     //     timerIsRunning = false;
     //     return timer; // Returns the current time value
     // }
-
+    bool CheckIfStringsInList(params string[] strings)
+    {
+        // 使用 LINQ 查询，检查每个字符串是否在列表中
+        foreach (string str in strings)
+        {
+            if (!playerItems.Contains(str))
+            {
+                return false; // 如果有任何一个字符串不在列表中，返回 false
+            }
+        }
+        return true; // 如果所有字符串都在列表中，返回 true
+    }
     public float GetTime()
     {
         timeLeft = timerKit.GetLeftTime();
