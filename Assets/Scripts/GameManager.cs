@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -92,11 +93,12 @@ public class GameManager : MonoBehaviour
     public void AddItem(string item)
     {
         playerItems.Add(item);
-        CheckPhoneOpen();
+        StartCoroutine(CheckPhoneOpen());
     }
 
-    public void CheckPhoneOpen()
+    IEnumerator CheckPhoneOpen()
     {
+
         string string1 = "Vegetable";
         string string2 = "Magazine";
         string string3 = "Wine";
@@ -104,6 +106,9 @@ public class GameManager : MonoBehaviour
         GameObject dialogue = GameObject.FindGameObjectWithTag("Dialogue");
         if (allStringsInList)
         {
+            yield return new WaitForSeconds(4f);
+            GameObject.FindObjectOfType<MemoManager>().CloseMemo();
+            yield return new WaitForSeconds(1f);
             dialogue.transform.GetChild(2).gameObject.SetActive(true);
         }
     }

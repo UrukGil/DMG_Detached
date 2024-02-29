@@ -50,4 +50,12 @@ public class MemoManager : MonoBehaviour
         }
 
     }
+
+    public void CloseMemo()
+    {
+        GameObject memo = GameObject.FindGameObjectWithTag("Memo");
+        memo.transform.GetChild(0).gameObject.SetActive(false);
+        UiElement.SetActive(false);
+        //UiElement.SetActive(!UiElement.activeSelf);
+    }
 }
