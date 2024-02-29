@@ -1325,6 +1325,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 5408101200364346302, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
+      propertyPath: letter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408101200364346302, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408101200364346302, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
+      propertyPath: m_isMemoTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5815375075524145573, guid: 0af27a227aaeb4c6c9f6ca53e1dba58a, type: 3}
       propertyPath: m_SortingLayer
       value: 3
