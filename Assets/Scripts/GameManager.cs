@@ -32,12 +32,16 @@ public class GameManager : MonoBehaviour
     public Timer timerKit;
     private void Start()
     {
-        timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
+        if (GameObject.FindWithTag("Timer") != null){
+            timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
+        }
         
     }
     private void Update()
     {   
-        timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
+        if (GameObject.FindWithTag("Timer") != null){
+            timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
+        }
         // Timer Update
         // if (timerIsRunning)
         // {
@@ -94,6 +98,10 @@ public class GameManager : MonoBehaviour
     {
         playerItems.Add(item);
         StartCoroutine(CheckPhoneOpen());
+    }
+
+    public void clear(){
+        playerItems.Clear();
     }
 
     IEnumerator CheckPhoneOpen()

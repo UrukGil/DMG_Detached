@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI; // 引入UI命名空间
+using UnityEngine.SceneManagement; // 引入场景管理命名空间
 
 public class Timer: MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class Timer: MonoBehaviour
         if (timeLeft <= 0f)
         {
             //endgame
-            print("You are dead");
+            SceneManager.LoadScene("GameOver");
         }
         if (timeLeft > 0)
         {
