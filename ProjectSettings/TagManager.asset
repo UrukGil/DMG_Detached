@@ -13,6 +13,8 @@ TagManager:
   - Magazine
   - Wine
   - Phone
+  - Magic
+  - ComputerImage
   layers:
   - Default
   - TransparentFX
