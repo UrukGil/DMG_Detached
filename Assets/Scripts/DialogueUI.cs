@@ -127,6 +127,7 @@ public class DialogueUI : MonoBehaviour
         if (m_dialogueData.m_pieceOfDialogueArray.Count > m_currentDialogueIndex + 1)
         {
             m_nextButton.gameObject.SetActive(true);
+            m_endButton.gameObject.SetActive(false);
             m_currentDialogueIndex++;
         }
         else

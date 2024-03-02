@@ -16,11 +16,7 @@ MonoBehaviour:
   - m_index: 0
     m_sprite: {fileID: 21300000, guid: 9ff5fa8ad119f4dd29044c2a2a700fdf, type: 3}
     m_textString: This is a example.
-    m_optionsArray:
-    - m_textString: ...
-      m_targetPieceIndex: 1
-    - m_textString: ...
-      m_targetPieceIndex: 
+    m_optionsArray: []
   - m_index: 1
     m_sprite: {fileID: 21300000, guid: 9ff5fa8ad119f4dd29044c2a2a700fdf, type: 3}
     m_textString: This is another example.
