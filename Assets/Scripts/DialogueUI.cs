@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 // using DG.Tweening;
 using TMPro;
+using UnityEditorInternal;
+using System.Linq;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -17,12 +19,15 @@ public class DialogueUI : MonoBehaviour
     public SODialogue m_dialogueData = null;
     public int m_currentDialogueIndex = 0;
     private bool m_isMemoTrigger = false;
+    private bool m_isDialogueTrigger = false;
     [SerializeField] float alpha = 0f;
     [SerializeField] GameObject letterUI = null;
     [SerializeField] string letter;
     public DialogueManager m_dialogueManager = null;
+    List<string> tags;
     private void Start()
     {
+        tags = InternalEditorUtility.tags.ToList();
         //m_dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
     }
     private void LateUpdate()
@@ -51,6 +56,7 @@ public class DialogueUI : MonoBehaviour
         if (m_dialogueManager != null)
         {
             m_isMemoTrigger = m_dialogueManager.m_isMemoTrigger;
+            m_isDialogueTrigger = m_dialogueManager.m_isDialogueTrigger;
         }
         if (m_isMemoTrigger == true)
         {
@@ -62,7 +68,10 @@ public class DialogueUI : MonoBehaviour
             for (int i = 0; i < tempList.Count; i++)
             {
                 alpha = 0f;
-                letterUI = GameObject.FindGameObjectWithTag(tempList[i]);
+                if (tags.Contains(tempList[i]))
+                {
+                    letterUI = GameObject.FindGameObjectWithTag(tempList[i]);
+                }
                 if (letterUI != null)
                 {
                     for ( int j = 0; j < tempList.Count; j++)
@@ -77,6 +86,16 @@ public class DialogueUI : MonoBehaviour
             GameManager.Instance.AddItem(letter);
             alpha = 0f;
             StartCoroutine(ChangeAlpha());
+        }
+        else if (m_isDialogueTrigger == true)
+        {
+            letter = m_dialogueManager.letter;
+            GameManager.Instance.AddItem(letter);
+            m_dialoguePanel.SetActive(false);
+            m_dialogueOptionPanel.SetActive(false);
+            m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
+            m_dialogueManager.m_isTalking = false;
+            m_dialogueManager.m_hasTalked = true;
         }
         else
         {

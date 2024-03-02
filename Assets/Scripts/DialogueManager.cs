@@ -10,11 +10,15 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] bool m_canTalk = false;
     public bool m_isTalking = false;
     public bool m_hasTalked = false;
+    [SerializeField] bool m_isAutoStart = false;
     private GameObject m_dialogueCanvas = null;
     [SerializeField] DialogueUI m_dialogue = null;
     private GameObject m_player = null;
     [SerializeField] public string letter;
+    [Header("是否是需要收集的物品？")]
     [SerializeField] public bool m_isMemoTrigger = false;
+    [Header("是否是自动触发的对话？")]
+    [SerializeField] public bool m_isDialogueTrigger = false;
     private GameObject player;
     private void Awake()
     {
@@ -59,13 +63,13 @@ public class DialogueManager : MonoBehaviour
     }
     private void Update()
     {
-        if (m_canTalk && Input.GetKeyDown(KeyCode.Space) && m_dialogue.m_dialoguePanel.activeSelf == false){
+        if (m_canTalk){
             if (GameManager.Instance.playerItems.Contains(letter))
             {
                 m_hasTalked = true;
             }
         }
-        if (!m_hasTalked && m_canTalk && Input.GetKeyDown(KeyCode.Space) && m_dialogue.m_dialoguePanel.activeSelf == false)
+        if (!m_hasTalked && m_canTalk && (Input.GetKeyDown(KeyCode.Space)||m_isAutoStart) && m_dialogue.m_dialoguePanel.activeSelf == false)
         {
             StartDialogue();
             m_isTalking = true;
