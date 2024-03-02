@@ -6,30 +6,51 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Livingroom.unity
+    path: Assets/Scenes/Level_1_Scenes/Livingroom.unity
     guid: e82e96f0b902b5b48985d8fdf2b3f5d4
   - enabled: 1
-    path: Assets/Scenes/Corridor_01.unity
+    path: Assets/Scenes/Level_1_Scenes/Corridor_01.unity
     guid: 520ea363aa26b41d987543caf34adaba
   - enabled: 1
-    path: Assets/Scenes/Corridor_02.unity
+    path: Assets/Scenes/Level_1_Scenes/Corridor_02.unity
     guid: 1c241d766467b4527a56610b02e52315
   - enabled: 1
-    path: Assets/Scenes/Bedroom_01.unity
+    path: Assets/Scenes/Level_1_Scenes/Bedroom_01.unity
     guid: c15a7118377b149ccb793dc5f190c935
   - enabled: 1
-    path: Assets/Scenes/Bedroom_02.unity
+    path: Assets/Scenes/Level_1_Scenes/Bedroom_02.unity
     guid: 8e85a9a77e8b84a368117f8a0150bc5c
   - enabled: 1
-    path: Assets/Scenes/Bedroom_03.unity
+    path: Assets/Scenes/Level_1_Scenes/Bedroom_03.unity
     guid: 472e1eeffdf254032a8763f547d73af6
   - enabled: 1
-    path: Assets/Scenes/Kitchen.unity
+    path: Assets/Scenes/Level_1_Scenes/Kitchen.unity
     guid: 3eafe22a270d1432abbcaf8ef1ff44ec
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: cdd5a797d2f71ba47acaf9ea2feb8a58
+    path: Assets/Scenes/Level_2_Scenes/Livingroom.unity
+    guid: 21a33fb755d4a420ba29b56110a605a4
+  - enabled: 1
+    path: Assets/Scenes/Level_2_Scenes/Corridor_01.unity
+    guid: c11c6faedb1974672964f75afcb3f6a4
+  - enabled: 1
+    path: Assets/Scenes/Level_2_Scenes/Corridor_02.unity
+    guid: 9bd7c9443cdbd4ea28054ff2f2160bf0
+  - enabled: 1
+    path: Assets/Scenes/Level_2_Scenes/Bedroom_01.unity
+    guid: 509ec2a9ef1d04a88abe74aa0fb63ff0
+  - enabled: 1
+    path: Assets/Scenes/Level_2_Scenes/Bedroom_02.unity
+    guid: ed39a2f5394c84c06827f4b6ad59df65
+  - enabled: 1
+    path: Assets/Scenes/Level_2_Scenes/Bedroom_03.unity
+    guid: 65dedde9edc4c4135b27d03be1db2fc9
+  - enabled: 1
+    path: Assets/Scenes/Level_2_Scenes/Kitchen.unity
+    guid: b8c06641846274342a0ed052c063e501
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 15119955e904d1c45a713d3afe137574
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: cdd5a797d2f71ba47acaf9ea2feb8a58
   m_configObjects: {}
