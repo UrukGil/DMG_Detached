@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour
     public List<GameObject> gameObjectsList = new List<GameObject>();
     //public List<string> stringList;
     // Timer
-    public float timer = 60f;
-    public float timeLeft = 60f;
+    public float timer = 120f;
+    public float timeLeft = 120f;
     public bool timerIsRunning = false;
     public Dictionary<string, GameObject> gameObjectsDict = new Dictionary<string, GameObject>();
     public Timer timerKit;

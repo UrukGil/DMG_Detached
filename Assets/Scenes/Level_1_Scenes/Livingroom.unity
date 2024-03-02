@@ -2723,8 +2723,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerItems: []
   gameObjectsList: []
-  timer: 60
-  timeLeft: 60
+  timer: 120
+  timeLeft: 120
   timerIsRunning: 0
   timerKit: {fileID: 1958135222}
   memoClosedTimes: 0
@@ -2941,6 +2941,10 @@ PrefabInstance:
     - target: {fileID: 3525365478469719663, guid: 59ce0b953b8728445a16f40025376be6, type: 3}
       propertyPath: m_Name
       value: TimerKit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680262826546207122, guid: 59ce0b953b8728445a16f40025376be6, type: 3}
+      propertyPath: duration
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6754772008576298087, guid: 59ce0b953b8728445a16f40025376be6, type: 3}
       propertyPath: m_AnchorMax.y

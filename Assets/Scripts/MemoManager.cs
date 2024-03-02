@@ -8,6 +8,7 @@ public class MemoManager : MonoBehaviour
 {
     public GameObject UiElement;
     [SerializeField] string letter;
+    GameObject[] letterUIArray = null;
     [SerializeField] GameObject letterUI = null;
     [SerializeField] float alpha = 0f;
     public int memoClosedTimes = 0;
