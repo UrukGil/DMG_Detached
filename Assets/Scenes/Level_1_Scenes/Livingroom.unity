@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 555480134}
   - component: {fileID: 555480135}
   m_Layer: 0
-  m_Name: Collider (17)
+  m_Name: CorridorTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,12 +917,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555480132}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.724, y: 2.084, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 811388499}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &555480134
 BoxCollider2D:
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 624118692}
   - component: {fileID: 624118693}
   m_Layer: 0
-  m_Name: Collider (15)
+  m_Name: LeftRoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,12 +1011,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624118690}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.724, y: 2.084, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 811388499}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &624118692
 BoxCollider2D:
@@ -1075,9 +1075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 0
+  sceneIndex: 3
   playerIsInTrigger: 0
-  hasExactIndex: 0
+  hasExactIndex: 1
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &692156793
 GameObject:
@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 692156795}
   - component: {fileID: 692156796}
   m_Layer: 0
-  m_Name: Collider (16)
+  m_Name: RightRoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1105,12 +1105,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692156793}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.724, y: 2.084, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 811388499}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &692156795
 BoxCollider2D:
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 6
   playerIsInTrigger: 0
-  hasExactIndex: 0
+  hasExactIndex: 1
   spawnPointInNextScene: {x: 0, y: -0.7744917}
 --- !u!1 &700505804
 GameObject:
@@ -1941,9 +1941,6 @@ Transform:
   - {fileID: 790916740}
   - {fileID: 227300603}
   - {fileID: 1942693652}
-  - {fileID: 624118691}
-  - {fileID: 692156794}
-  - {fileID: 555480133}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &816932097
@@ -3067,3 +3064,6 @@ SceneRoots:
   - {fileID: 1115221949}
   - {fileID: 811166812}
   - {fileID: 144409088}
+  - {fileID: 555480133}
+  - {fileID: 624118691}
+  - {fileID: 692156794}
