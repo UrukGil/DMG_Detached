@@ -83,6 +83,7 @@ public class DialogueUI : MonoBehaviour
                 }
             }
             letterUI = GameObject.FindGameObjectWithTag(letter);
+            GameManager.Instance.memoClosedTimes += 1;
             GameManager.Instance.AddItem(letter);
             alpha = 0f;
             StartCoroutine(ChangeAlpha());
@@ -184,5 +185,8 @@ public class DialogueUI : MonoBehaviour
             m_dialogueManager.m_isTalking = false;
             m_dialogueManager.m_hasTalked = true;
         }
+        yield return new WaitForSeconds(5f);
+        GameObject.FindObjectOfType<MemoManager>().CloseMemo();
+
     }
 }

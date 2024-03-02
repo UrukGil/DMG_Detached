@@ -10,7 +10,7 @@ public class MemoManager : MonoBehaviour
     [SerializeField] string letter;
     [SerializeField] GameObject letterUI = null;
     [SerializeField] float alpha = 0f;
-
+    public int memoClosedTimes = 0;
     private GameObject player;
     // Start is called before the first frame update
     void Start()

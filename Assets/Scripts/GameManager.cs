@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public bool timerIsRunning = false;
     public Dictionary<string, GameObject> gameObjectsDict = new Dictionary<string, GameObject>();
     public Timer timerKit;
+    public int memoClosedTimes = 0;
     private void Start()
     {
         if (GameObject.FindWithTag("Timer") != null){
@@ -114,10 +115,16 @@ public class GameManager : MonoBehaviour
         GameObject dialogue = GameObject.FindGameObjectWithTag("Dialogue");
         if (allStringsInList)
         {
-            yield return new WaitForSeconds(4f);
-            GameObject.FindObjectOfType<MemoManager>().CloseMemo();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(6f);
             dialogue.transform.GetChild(2).gameObject.SetActive(true);
+        }
+        if (memoClosedTimes == 2)
+        {
+            print("1");
+            yield return new WaitForSeconds(6f);
+            //激活玩家身上的Trigger
+            GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk = true;
         }
     }
 

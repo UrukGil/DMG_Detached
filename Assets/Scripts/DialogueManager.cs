@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     public SODialogue m_dialogueData = null;
     public GameObject m_pressSpaceUI = null;
-    [SerializeField] bool m_canTalk = false;
+    [SerializeField] public bool m_canTalk = false;
     public bool m_isTalking = false;
     public bool m_hasTalked = false;
     [SerializeField] bool m_isAutoStart = false;
