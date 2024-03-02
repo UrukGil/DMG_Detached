@@ -279,7 +279,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03693579, y: -0.282295}
+  m_Offset: {x: -0.2968067, y: -0.40304607}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -290,7 +290,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9261284, y: 0.4987285}
+  m_Size: {x: 0.2586434, y: 0.25722638}
   m_EdgeRadius: 0
 --- !u!114 &144409087
 MonoBehaviour:
@@ -323,7 +323,7 @@ Transform:
   m_GameObject: {fileID: 144409085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.057477914, y: 0.0019778293, z: -2.3168037}
+  m_LocalPosition: {x: -0.631, y: 0.545, z: -2.3168037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2372,6 +2372,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4166884351908249585, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5702311182620724344, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2416,13 +2420,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6462908534906076757, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7578972438860698416, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
       propertyPath: m_Name
       value: Grandpa
       objectReference: {fileID: 0}
     - target: {fileID: 8118079417340421633, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8118079417340421633, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
       propertyPath: m_SortingLayerID
@@ -2703,6 +2711,7 @@ MonoBehaviour:
   timeLeft: 60
   timerIsRunning: 0
   timerKit: {fileID: 1958135222}
+  memoClosedTimes: 0
 --- !u!4 &1536511900
 Transform:
   m_ObjectHideFlags: 0

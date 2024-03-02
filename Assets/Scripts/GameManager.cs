@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
 
     public void clear(){
         playerItems.Clear();
+        memoClosedTimes = 0;
     }
 
     IEnumerator CheckPhoneOpen()
