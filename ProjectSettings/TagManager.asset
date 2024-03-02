@@ -15,6 +15,8 @@ TagManager:
   - Phone
   - Magic
   - ComputerImage
+  - Birthday
+  - All
   layers:
   - Default
   - TransparentFX

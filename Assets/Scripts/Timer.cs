@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement; // 引入场景管理命名空间
 public class Timer: MonoBehaviour
 {
     public Slider progressBar; // 引用UI进度条
-    [SerializeField] float duration = 120f; // 计时器的持续时间
+    public float duration = 180f; // 计时器的持续时间
     private float timeLeft; // 剩余时间
 
     void Start()

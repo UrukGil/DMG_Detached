@@ -38,6 +38,11 @@ public class DialogueUI : MonoBehaviour
             m_endButton.gameObject.SetActive(false);
             m_nextButton.gameObject.SetActive(false);
         }
+        // else
+        // {
+        //     m_endButton.gameObject.SetActive(true);
+        //     m_nextButton.gameObject.SetActive(false);
+        // }
     }
     // Listener
     public void NextDialogue()
@@ -59,6 +64,8 @@ public class DialogueUI : MonoBehaviour
             letter = m_dialogueManager.letter;
             GameObject memo = GameObject.FindGameObjectWithTag("Memo");
             memo.transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.FindObjectOfType<MemoManager>().PlayerCanTab = false;
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
             List<string> tempList = GameManager.Instance.GetItems();
             for (int i = 0; i < tempList.Count; i++)
             {
@@ -184,6 +191,8 @@ public class DialogueUI : MonoBehaviour
         }
         yield return new WaitForSeconds(5f);
         GameObject.FindObjectOfType<MemoManager>().CloseMemo();
+        GameObject.FindObjectOfType<MemoManager>().PlayerCanTab = true;
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
 
     }
 }

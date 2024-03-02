@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 9094818647765779152}
-  duration: 60
+  duration: 120
 --- !u!1 &3106908375212490947
 GameObject:
   m_ObjectHideFlags: 0
