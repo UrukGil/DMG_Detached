@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Beef Stew in Red Wine for me ;)
+  m_text: Beef Stew with Red Wine for me ;)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28db9806b973fae439e18906f4bffd6f, type: 2}
   m_sharedMaterial: {fileID: 1988189249359461972, guid: 28db9806b973fae439e18906f4bffd6f, type: 2}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 123308875149963510}
   m_Layer: 0
   m_Name: Sentence12
-  m_TagString: Untagged
+  m_TagString: Birthday
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 3486301626934088390}
   m_Layer: 0
   m_Name: Sentence8
-  m_TagString: Untagged
+  m_TagString: All
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 2002938089502794157}
   m_Layer: 0
   m_Name: Sentence7
-  m_TagString: Untagged
+  m_TagString: Birthday
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,7 +636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41.5, y: -92.3}
+  m_AnchoredPosition: {x: -45.9, y: -99.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6488794183480638331
@@ -694,8 +694,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5.04
-  m_fontSizeBase: 5.04
+  m_fontSize: 5.82
+  m_fontSizeBase: 5.82
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -782,8 +782,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiElement: {fileID: 7746702263219341476}
   letter: 
-  letterUI: {fileID: 0}
+  letterUI:
+  - {fileID: 0}
   alpha: 0
+  memoClosedTimes: 0
+  PlayerCanTab: 1
 --- !u!1 &5250149467740008704
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +800,7 @@ GameObject:
   - component: {fileID: 1907833882444478961}
   m_Layer: 0
   m_Name: Sentence11
-  m_TagString: Untagged
+  m_TagString: Birthday
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

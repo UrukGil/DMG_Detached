@@ -870,14 +870,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cd0b0e1cba447489d8317d2021c26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_dialogueData: {fileID: 11400000, guid: fa9299e442ea64a2a977159f70c41893, type: 2}
+  m_dialogueData: {fileID: 11400000, guid: b204c84c7288d95428ba8c70cb986cea, type: 2}
   m_pressSpaceUI: {fileID: 0}
   m_canTalk: 0
   m_isTalking: 0
   m_hasTalked: 0
+  m_isAutoStart: 0
   m_dialogue: {fileID: 0}
   letter: Newspaper
   m_isMemoTrigger: 1
+  m_isDialogueTrigger: 0
 --- !u!1 &260875493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,14 +1889,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cd0b0e1cba447489d8317d2021c26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_dialogueData: {fileID: 11400000, guid: fa9299e442ea64a2a977159f70c41893, type: 2}
+  m_dialogueData: {fileID: 11400000, guid: d29f0696db9d56c40bf002e230495b55, type: 2}
   m_pressSpaceUI: {fileID: 0}
   m_canTalk: 0
   m_isTalking: 0
   m_hasTalked: 0
+  m_isAutoStart: 0
   m_dialogue: {fileID: 0}
   letter: Photo
   m_isMemoTrigger: 1
+  m_isDialogueTrigger: 0
 --- !u!1 &1214112351
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,12 +25,16 @@ public class GameManager : MonoBehaviour
     public List<GameObject> gameObjectsList = new List<GameObject>();
     //public List<string> stringList;
     // Timer
-    public float timer = 60f;
-    public float timeLeft = 60f;
+    public float timer = 180f;
+    public float timeLeft = 180f;
     public bool timerIsRunning = false;
     public Dictionary<string, GameObject> gameObjectsDict = new Dictionary<string, GameObject>();
     public Timer timerKit;
     public int memoClosedTimes = 0;
+
+    private int count = 0;
+    private int count2 = 0;
+    public GameObject dialogue;
     private void Start()
     {
         if (GameObject.FindWithTag("Timer") != null){
@@ -43,26 +47,10 @@ public class GameManager : MonoBehaviour
         if (GameObject.FindWithTag("Timer") != null){
             timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
         }
-        // Timer Update
-        // if (timerIsRunning)
-        // {
-        //     timer += Time.deltaTime;
-        // }
-
+        dialogue = GameObject.FindGameObjectWithTag("Dialogue");
     }
 
-    // Method to start the timer
-    // public void StartTimer()
-    // {
-    //     timerIsRunning = true;
-    // }
 
-    // Method to stop the timer and get the elapsed time
-    // public float StopTimer()
-    // {
-    //     timerIsRunning = false;
-    //     return timer; // Returns the current time value
-    // }
     bool CheckIfStringsInList(params string[] strings)
     {
         // 使用 LINQ 查询，检查每个字符串是否在列表中
@@ -112,20 +100,31 @@ public class GameManager : MonoBehaviour
         string string1 = "Vegetable";
         string string2 = "Magazine";
         string string3 = "Wine";
-        bool allStringsInList = CheckIfStringsInList(string1, string2, string3);
-        GameObject dialogue = GameObject.FindGameObjectWithTag("Dialogue");
-        if (allStringsInList)
+        string string4 = "Photo";
+        string string5 = "Newspaper";
+        string string6 = "Birthday";
+
+
+        if (CheckIfStringsInList(string1, string2, string3) && count == 0)
         {
+            count = 1;
             yield return new WaitForSeconds(6f);
             dialogue.transform.GetChild(2).gameObject.SetActive(true);
-        }
-        if (memoClosedTimes == 2)
-        {
-            print("1");
             yield return new WaitForSeconds(6f);
-            //激活玩家身上的Trigger
+            dialogue.transform.GetChild(2).gameObject.SetActive(false);
+            yield return new WaitForSeconds(2f);
             GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk = true;
+        }
+        
+        if (CheckIfStringsInList(string1, string2, string3, string4, string5, string6) && count2 == 0)
+        {
+            yield return new WaitForSeconds(6f);
+            print("all collected");
+            count2 = 1;
+            GameObject.FindWithTag("Player").transform.GetChild(1).gameObject.SetActive(true);
+            GameObject.FindWithTag("Player").transform.GetChild(1).GetComponent<DialogueManager>().m_canTalk = true;
+
         }
     }
 

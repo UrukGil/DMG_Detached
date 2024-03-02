@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using UnityEngine;
 using TMPro;
-
+using UnityEditorInternal;
+using System.Linq;
 public class MemoManager : MonoBehaviour
 {
     public GameObject UiElement;
     [SerializeField] string letter;
-    [SerializeField] GameObject letterUI = null;
+    [SerializeField] GameObject[] letterUI = null;
     [SerializeField] float alpha = 0f;
     public int memoClosedTimes = 0;
     private GameObject player;
+    
+    public bool PlayerCanTab = true;
+    List<string> tags;
     // Start is called before the first frame update
     void Start()
     {
-        
+        tags = InternalEditorUtility.tags.ToList();
     }
 
     // Update is called once per frame
@@ -34,16 +38,22 @@ public class MemoManager : MonoBehaviour
                 List<string> tempList = GameManager.Instance.GetItems();
                 for (int i = 0; i < tempList.Count; i++){
                     alpha = 0f;
-                    letterUI = GameObject.FindGameObjectWithTag(tempList[i]);
-                    if (letterUI != null){
-                        letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+                    if (tags.Contains(tempList[i]))
+                    {
+                        letterUI = GameObject.FindGameObjectsWithTag(tempList[i]);
+                        foreach (GameObject templetter in letterUI)
+                        {
+                            if (templetter != null){
+                                templetter.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+                            }
+                        }
                     }
                 }
             }
         }
         else if (UiElement.activeSelf)
         {
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (Input.GetKeyDown(KeyCode.Tab)&& PlayerCanTab == true)
             {
                 UiElement.SetActive(!UiElement.activeSelf);
             }
