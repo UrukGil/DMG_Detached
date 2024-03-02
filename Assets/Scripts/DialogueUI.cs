@@ -38,11 +38,6 @@ public class DialogueUI : MonoBehaviour
             m_endButton.gameObject.SetActive(false);
             m_nextButton.gameObject.SetActive(false);
         }
-        else
-        {
-            m_endButton.gameObject.SetActive(true);
-            m_nextButton.gameObject.SetActive(false);
-        }
     }
     // Listener
     public void NextDialogue()
@@ -137,6 +132,7 @@ public class DialogueUI : MonoBehaviour
         else
         {
             m_nextButton.gameObject.SetActive(false);
+            m_endButton.gameObject.SetActive(true);
         }
         UpdateDialogueOptions(pieceOfDialogue);
     }

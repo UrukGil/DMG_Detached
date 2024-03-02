@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public bool m_canTalk = false;
     public bool m_isTalking = false;
     public bool m_hasTalked = false;
+    [Header("是否是自动触发？")]
     [SerializeField] bool m_isAutoStart = false;
     private GameObject m_dialogueCanvas = null;
     [SerializeField] DialogueUI m_dialogue = null;
