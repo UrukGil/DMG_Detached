@@ -9,8 +9,6 @@ public class ComputerImage : MonoBehaviour
     [SerializeField] bool playerIsInTrigger = false;
     private GameObject Magic;
    
-
-    public Vector2 spawnPointInNextScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +20,8 @@ public class ComputerImage : MonoBehaviour
     {
         GameObject ComputerImage = GameObject.FindGameObjectWithTag("ComputerImage");
         Magic = GameObject.FindWithTag("Magic");
+        Vector2 playerPos = Magic.transform.position;
+        ComputerImage.transform.GetChild(0).position = new Vector2(playerPos.x, playerPos.y);
         if (playerIsInTrigger)
         {
             ComputerImage.transform.GetChild(0).gameObject.SetActive(true);
