@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
         if (CheckIfStringsInList(string1, string2, string3, string4, string5, string6) && count2 == 0)
         {
             yield return new WaitForSeconds(6f);
-            print("all collected");
+            //print("all collected");
             count2 = 1;
             GameObject.FindWithTag("Player").transform.GetChild(1).gameObject.SetActive(true);
             GameObject.FindWithTag("Player").transform.GetChild(1).GetComponent<DialogueManager>().m_canTalk = true;

@@ -1267,7 +1267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 1
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 0
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: 0.8816464, y: 1.358693}
 --- !u!61 &864572814
 BoxCollider2D:
@@ -2258,7 +2259,7 @@ GameObject:
   - component: {fileID: 2076172050}
   - component: {fileID: 2076172049}
   m_Layer: 0
-  m_Name: ChangeRoomTrigger
+  m_Name: RightRoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2293,7 +2294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 3
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 1
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: 0, y: -0.5310215}
 --- !u!61 &2076172050
 BoxCollider2D:

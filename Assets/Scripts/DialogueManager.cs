@@ -60,6 +60,11 @@ public class DialogueManager : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GetComponent<Animator>().enabled = true;
             }
+            if(GameObject.FindObjectOfType<Timer>() != null)
+            {
+                GameObject.FindObjectOfType<Timer>().isCounting = true;
+            }
+
         }
     }
     private void Update()
@@ -97,6 +102,10 @@ public class DialogueManager : MonoBehaviour
     }
     private void StartDialogue()
     {
+        if (GameObject.FindObjectOfType<Timer>() != null)
+        {
+            GameObject.FindObjectOfType<Timer>().isCounting = false;
+        }
         m_dialogue.m_dialogueManager = this;
         StartCoroutine(ChangeDialoguePosition());
         if (letter == "K")
@@ -119,8 +128,8 @@ public class DialogueManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         while (true)
         {
-            m_dialogueCanvas.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
-            yield return new WaitForSeconds(0.01f);
+            m_dialogueCanvas.transform.position = new Vector2(player.transform.position.x, player.transform.position.y - 0.35f);
+            yield return new WaitForSeconds(0.001f);
         }
         // m_dialogueCanvas.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
         // yield return new WaitForSeconds(0.1f);

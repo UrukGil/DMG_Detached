@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 260875495}
   - component: {fileID: 260875496}
   m_Layer: 0
-  m_Name: Collider (10)
+  m_Name: RoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,12 +901,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260875493}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1650548627}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &260875495
 BoxCollider2D:
@@ -965,8 +965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 2
+  sceneIndex: 9
   playerIsInTrigger: 0
+  isRandomRoom: 0
+  isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0.8331339, y: 0.3082297}
 --- !u!1001 &406554004
 PrefabInstance:
@@ -1989,7 +1993,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1826272904}
-  - {fileID: 260875494}
   - {fileID: 1793399382}
   - {fileID: 1184927039}
   - {fileID: 1130053148}
@@ -2327,3 +2330,4 @@ SceneRoots:
   - {fileID: 79812256}
   - {fileID: 406554004}
   - {fileID: 535370846}
+  - {fileID: 260875494}

@@ -21,17 +21,23 @@ public class DialogueUI : MonoBehaviour
     private bool m_isMemoTrigger = false;
     private bool m_isDialogueTrigger = false;
     [SerializeField] float alpha = 0f;
-    [SerializeField] GameObject letterUI = null;
+    //[SerializeField] GameObject letterUI = null;
+    GameObject[] letterUIArray;
     [SerializeField] string letter;
     public DialogueManager m_dialogueManager = null;
     List<string> tags;
     private void Start()
     {
         tags = InternalEditorUtility.tags.ToList();
-        //m_dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
+        m_dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
+    }
+    private void Update()
+    {
+        transform.GetChild(0).gameObject.GetComponent<VerticalLayoutGroup>().enabled = false;
     }
     private void LateUpdate()
     {
+        transform.GetChild(0).gameObject.GetComponent<VerticalLayoutGroup>().enabled = true;
         // 确保有选项时，“下一个”按钮不出现
         if (m_dialogueOptionPanel.transform.childCount > 0)
         {
@@ -66,25 +72,35 @@ public class DialogueUI : MonoBehaviour
             memo.transform.GetChild(0).gameObject.SetActive(true);
             GameObject.FindObjectOfType<MemoManager>().PlayerCanTab = false;
             GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+            if (GameObject.FindObjectOfType<Timer>() != null)
+            {
+                GameObject.FindObjectOfType<Timer>().isCounting = false;
+            }
             List<string> tempList = GameManager.Instance.GetItems();
+            //print(tempList[0]);
             for (int i = 0; i < tempList.Count; i++)
             {
                 alpha = 0f;
                 if (tags.Contains(tempList[i]))
                 {
-                    letterUI = GameObject.FindGameObjectWithTag(tempList[i]);
+                    letterUIArray = GameObject.FindGameObjectsWithTag(tempList[i]);
                 }
-                if (letterUI != null)
+                if (letterUIArray != null)
                 {
+                    //print(letterUIArray.Length);
                     for ( int j = 0; j < tempList.Count; j++)
                     {
-                        letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+                        foreach (GameObject letterUI in letterUIArray)
+                        {
+                            letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+                        }
+                        
                     }
                     //letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 255);
                     
                 }
             }
-            letterUI = GameObject.FindGameObjectWithTag(letter);
+            letterUIArray = GameObject.FindGameObjectsWithTag(letter);
             GameManager.Instance.memoClosedTimes += 1;
             GameManager.Instance.AddItem(letter);
             alpha = 0f;
@@ -99,6 +115,10 @@ public class DialogueUI : MonoBehaviour
             m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
             m_dialogueManager.m_isTalking = false;
             m_dialogueManager.m_hasTalked = true;
+            if (GameObject.FindObjectOfType<Timer>() != null)
+            {
+                GameObject.FindObjectOfType<Timer>().isCounting = true;
+            }
         }
         else
         {
@@ -107,8 +127,11 @@ public class DialogueUI : MonoBehaviour
             m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
             m_dialogueManager.m_isTalking = false;
             m_dialogueManager.m_hasTalked = true;
+            if (GameObject.FindObjectOfType<Timer>() != null)
+            {
+                GameObject.FindObjectOfType<Timer>().isCounting = true;
+            }
         }
-
     }
     public void UpdateDialogueData(SODialogue dialogueData)
     {
@@ -167,16 +190,22 @@ public class DialogueUI : MonoBehaviour
     IEnumerator ChangeAlpha()
     {
         alpha = 0;
-        if (letterUI != null)
+        if (letterUIArray != null)
         {
             //Dialogue
             m_dialoguePanel.SetActive(false);
             m_dialogueOptionPanel.SetActive(false);
             m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
-            letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+            foreach (GameObject letterUI in letterUIArray)
+            {
+                letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+            }
             while (alpha <= 1)
             {
-                letterUI.GetComponent<TMP_Text>().color = new Color(0, 0, 0, Mathf.Min(1, alpha += 0.01f));
+                foreach (GameObject letterUI in letterUIArray)
+                {
+                    letterUI.GetComponent<TMP_Text>().color = new Color(0, 0, 0, Mathf.Min(1, alpha += 0.01f));
+                }
                 //letterUI.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
                 yield return new WaitForSeconds(0.01f);
             }
@@ -193,6 +222,10 @@ public class DialogueUI : MonoBehaviour
         GameObject.FindObjectOfType<MemoManager>().CloseMemo();
         GameObject.FindObjectOfType<MemoManager>().PlayerCanTab = true;
         GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
+        if (GameObject.FindObjectOfType<Timer>() != null)
+        {
+            GameObject.FindObjectOfType<Timer>().isCounting = true;
+        }
 
     }
 }

@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 265224650}
   - component: {fileID: 265224652}
   m_Layer: 0
-  m_Name: ChangeRoomTrigger
+  m_Name: RoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -376,7 +376,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 1
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 0
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: -0.6052744, y: 0.5641791}
 --- !u!1 &310593612
 GameObject:

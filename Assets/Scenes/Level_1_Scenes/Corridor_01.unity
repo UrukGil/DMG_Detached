@@ -793,7 +793,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 2
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 0
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: 1.364774, y: -0.4488968}
 --- !u!61 &412148357
 BoxCollider2D:
@@ -1652,7 +1653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 5
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 1
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: 0, y: -0.4926267}
 --- !u!61 &734843209
 BoxCollider2D:
@@ -1811,7 +1813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 4
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 1
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: 0, y: -0.4613751}
 --- !u!61 &1265721333
 BoxCollider2D:
@@ -2042,7 +2045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 0
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 0
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: 1.4668, y: -0.502}
 --- !u!61 &1469800827
 BoxCollider2D:

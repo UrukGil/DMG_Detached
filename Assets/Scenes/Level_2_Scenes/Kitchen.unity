@@ -1599,7 +1599,7 @@ GameObject:
   - component: {fileID: 1341637689}
   - component: {fileID: 1341637688}
   m_Layer: 0
-  m_Name: Collider (10)
+  m_Name: RoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1618,7 +1618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1403947834}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1341637688
 MonoBehaviour:
@@ -1632,8 +1632,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 0
+  sceneIndex: 7
   playerIsInTrigger: 0
+  isRandomRoom: 0
+  isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0.8964887, y: 0.7755232}
 --- !u!61 &1341637689
 BoxCollider2D:
@@ -1852,7 +1856,6 @@ Transform:
   - {fileID: 313339619}
   - {fileID: 88949788}
   - {fileID: 1355701240}
-  - {fileID: 1341637687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412513706
@@ -2403,3 +2406,4 @@ SceneRoots:
   - {fileID: 1589774001}
   - {fileID: 1489842521}
   - {fileID: 741885745}
+  - {fileID: 1341637687}

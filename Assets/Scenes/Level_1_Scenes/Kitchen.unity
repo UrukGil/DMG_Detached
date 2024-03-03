@@ -1664,7 +1664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1403947834}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1341637688
 MonoBehaviour:
@@ -1680,7 +1680,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 0
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 0
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: 0.8964887, y: 0.7755232}
 --- !u!61 &1341637689
 BoxCollider2D:
@@ -1899,7 +1900,6 @@ Transform:
   - {fileID: 313339619}
   - {fileID: 88949788}
   - {fileID: 1355701240}
-  - {fileID: 1341637687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412513706
@@ -2509,3 +2509,4 @@ SceneRoots:
   - {fileID: 1489842521}
   - {fileID: 741885745}
   - {fileID: 146919880}
+  - {fileID: 1341637687}

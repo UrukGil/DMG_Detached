@@ -1235,7 +1235,7 @@ GameObject:
   - component: {fileID: 864572814}
   - component: {fileID: 864572813}
   m_Layer: 0
-  m_Name: Collider (13)
+  m_Name: CorridorTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1254,7 +1254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1216869903}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &864572813
 MonoBehaviour:
@@ -1270,6 +1270,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 1
   playerIsInTrigger: 0
+  isRandomRoom: 0
+  isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 1
   spawnPointInNextScene: {x: 0.8816464, y: 1.358693}
 --- !u!61 &864572814
 BoxCollider2D:
@@ -1673,9 +1677,7 @@ Transform:
   - {fileID: 982156747}
   - {fileID: 1727821486}
   - {fileID: 863615666}
-  - {fileID: 2076172048}
   - {fileID: 257862314}
-  - {fileID: 864572812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1287357831
@@ -2160,7 +2162,7 @@ GameObject:
   - component: {fileID: 2076172050}
   - component: {fileID: 2076172049}
   m_Layer: 0
-  m_Name: Collider (11)
+  m_Name: RightRoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2179,7 +2181,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1216869903}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2076172049
 MonoBehaviour:
@@ -2195,6 +2197,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 3
   playerIsInTrigger: 0
+  isRandomRoom: 0
+  isRandomCorridor: 0
+  isRandomRoomInLevel2: 1
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0, y: -0.5310215}
 --- !u!61 &2076172050
 BoxCollider2D:
@@ -2331,3 +2337,5 @@ SceneRoots:
   - {fileID: 421568245}
   - {fileID: 168961771}
   - {fileID: 642472973}
+  - {fileID: 864572812}
+  - {fileID: 2076172048}

@@ -7,6 +7,7 @@ public class Timer: MonoBehaviour
     public Slider progressBar; // 引用UI进度条
     public float duration = 180f; // 计时器的持续时间
     private float timeLeft; // 剩余时间
+    public bool isCounting = true;
 
     void Start()
     {
@@ -43,11 +44,14 @@ public class Timer: MonoBehaviour
         }
         if (timeLeft > 0)
         {
-            // 更新剩余时间
-            timeLeft -= Time.deltaTime;
-            GameManager.Instance.SaveTime();
-            // 计算剩余时间的百分比，并更新进度条的值
-            progressBar.value = timeLeft / duration;
+            if (isCounting)
+            {
+                // 更新剩余时间
+                timeLeft -= Time.deltaTime;
+                GameManager.Instance.SaveTime();
+                // 计算剩余时间的百分比，并更新进度条的值
+                progressBar.value = timeLeft / duration;
+            }
         }
         else
         {

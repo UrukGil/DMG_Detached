@@ -9,7 +9,7 @@ public class MemoManager : MonoBehaviour
 {
     public GameObject UiElement;
     [SerializeField] string letter;
-    [SerializeField] GameObject[] letterUI = null;
+    [SerializeField] GameObject[] letterUIArray;
     [SerializeField] float alpha = 0f;
     public int memoClosedTimes = 0;
     private GameObject player;
@@ -40,11 +40,11 @@ public class MemoManager : MonoBehaviour
                     alpha = 0f;
                     if (tags.Contains(tempList[i]))
                     {
-                        letterUI = GameObject.FindGameObjectsWithTag(tempList[i]);
-                        foreach (GameObject templetter in letterUI)
+                        letterUIArray = GameObject.FindGameObjectsWithTag(tempList[i]);
+                        foreach (GameObject letterUI in letterUIArray)
                         {
-                            if (templetter != null){
-                                templetter.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+                            if (letterUI != null){
+                                letterUI.GetComponent<TMP_Text>().font = Resources.Load("FKRASTERGROTESKTRIAL-SHARP SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
                             }
                         }
                     }

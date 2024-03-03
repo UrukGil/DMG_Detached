@@ -686,7 +686,6 @@ Transform:
   - {fileID: 2086348373}
   - {fileID: 1683642410}
   - {fileID: 2007468044}
-  - {fileID: 1410821369}
   - {fileID: 1592792857}
   - {fileID: 814027662}
   - {fileID: 1600753911}
@@ -1642,7 +1641,7 @@ GameObject:
   - component: {fileID: 1410821371}
   - component: {fileID: 1410821370}
   m_Layer: 0
-  m_Name: ChangeRoom
+  m_Name: RoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1656,12 +1655,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410821368}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 551015563}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1410821370
 MonoBehaviour:
@@ -1677,7 +1676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 1
   playerIsInTrigger: 0
-  hasExactIndex: 1
+  isRandomRoom: 0
+  isRandomCorridor: 0
   spawnPointInNextScene: {x: -0.6077186, y: -0.8064811}
 --- !u!61 &1410821371
 BoxCollider2D:
@@ -2353,3 +2353,4 @@ SceneRoots:
   - {fileID: 1170961398}
   - {fileID: 1074163140}
   - {fileID: 657864556}
+  - {fileID: 1410821369}
