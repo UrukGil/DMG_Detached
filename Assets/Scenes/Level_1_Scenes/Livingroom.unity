@@ -1183,8 +1183,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 1
   playerIsInTrigger: 0
+  isRandomTurnedOn: 0
   isRandomRoom: 0
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 1.0334, y: 0.4889}
 --- !u!1 &624118690
 GameObject:
@@ -1278,8 +1281,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 0
   playerIsInTrigger: 0
+  isRandomTurnedOn: 0
   isRandomRoom: 1
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &692156793
 GameObject:
@@ -1373,8 +1379,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 6
   playerIsInTrigger: 0
+  isRandomTurnedOn: 0
   isRandomRoom: 1
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0, y: -0.7744917}
 --- !u!1 &700505804
 GameObject:
@@ -2973,6 +2982,7 @@ GameObject:
   - component: {fileID: 1536511900}
   - component: {fileID: 1536511899}
   - component: {fileID: 1536511901}
+  - component: {fileID: 1536511902}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3028,6 +3038,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSpawnPoint: {x: 0, y: 0}
+--- !u!114 &1536511902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536511898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff48aad3d6ffe4a9fa68370206bb7784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRandomTurnedOn: 1
 --- !u!1 &1593608887
 GameObject:
   m_ObjectHideFlags: 0
