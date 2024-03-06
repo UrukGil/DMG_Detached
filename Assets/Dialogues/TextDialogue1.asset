@@ -20,33 +20,45 @@ MonoBehaviour:
   - m_index: 1
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
     m_textString: "Sofie! Sweetiee to hear from you! How's your day going, darlin'?
-      Are you thinking of coming tonight with Zane?\r "
+      \r "
     m_optionsArray: []
   - m_index: 2
-    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
-    m_textString: "(soft chuckle) Everything is good. I am so happy to hear you're
-      still so energetic.\r\nand\u2026 yes, yes. I\u2019ll come tonight with Zane.\r"
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: Are you thinking of coming tonight with Zane?
     m_optionsArray: []
   - m_index: 3
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: "(soft chuckle) Everything is good. I am so happy to hear you're
+      still so energetic.\r\r"
+    m_optionsArray: []
+  - m_index: 4
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: "And\u2026 yes, yes. I\u2019ll come tonight with Zane."
+    m_optionsArray: []
+  - m_index: 5
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
     m_textString: "Good! Good! How is he doing? Did he get taller, haha?\r"
     m_optionsArray: []
-  - m_index: 4
+  - m_index: 6
     m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
     m_textString: Haha, it's quite a bit taller than Christmas. It's only been a
       month. Kids grow up so fast these days.
     m_optionsArray: []
-  - m_index: 5
+  - m_index: 7
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
     m_textString: Ha! Good! good! Can't wait to see you all tonight. Love you all.
       You know I am always proud of you.
     m_optionsArray: []
-  - m_index: 6
+  - m_index: 8
     m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
-    m_textString: Haha. I know da. Love you too. Things are getting hectic on my
-      side. Catch you later tonight, Da.
+    m_textString: 'Haha. I know da. Love you too. '
     m_optionsArray: []
-  - m_index: 7
+  - m_index: 9
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: Things are getting hectic on my side. Catch you later tonight,
+      Da.
+    m_optionsArray: []
+  - m_index: 10
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
     m_textString: Okay! Love you! See you tonight!
     m_optionsArray: []

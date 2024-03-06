@@ -1185,6 +1185,8 @@ MonoBehaviour:
   playerIsInTrigger: 0
   isRandomRoom: 0
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 1.0334, y: 0.4889}
 --- !u!1 &624118690
 GameObject:
@@ -1280,6 +1282,8 @@ MonoBehaviour:
   playerIsInTrigger: 0
   isRandomRoom: 1
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &692156793
 GameObject:
@@ -1375,6 +1379,8 @@ MonoBehaviour:
   playerIsInTrigger: 0
   isRandomRoom: 1
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0, y: -0.7744917}
 --- !u!1 &700505804
 GameObject:

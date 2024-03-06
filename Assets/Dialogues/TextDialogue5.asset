@@ -15,6 +15,9 @@ MonoBehaviour:
   m_pieceOfDialogueArray:
   - m_index: 1
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
-    m_textString: "Humm\u2026 Today is January 17th\u2026\r\nIs there any special
-      event today?\r\nHumm\u2026 Can not remember\u2026\r"
+    m_textString: "Humm\u2026 Today is January 17th\u2026\r"
+    m_optionsArray: []
+  - m_index: 2
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "Is there any special event today?\r\nHumm\u2026 Can not remember\u2026"
     m_optionsArray: []

@@ -15,6 +15,9 @@ MonoBehaviour:
   m_pieceOfDialogueArray:
   - m_index: 1
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
-    m_textString: "Okay, vegetable. Looks fresh. I know Sophie likes Grilled Salmon
-      and Roasted Vegetables.\r"
+    m_textString: "Okay, vegetable. Looks fresh. \r"
+    m_optionsArray: []
+  - m_index: 2
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "I know Sophie likes Grilled Salmon and Roasted Vegetables. \r"
     m_optionsArray: []

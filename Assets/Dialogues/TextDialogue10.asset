@@ -16,6 +16,10 @@ MonoBehaviour:
   - m_index: 1
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
     m_textString: Ah! Yes! I just remembered Zane and Sophie are coming back today
-      to celebrate my birthday. I went out earlier to buy some ingredients for tonight.
-      Oh, I must be getting old! How did I suddenly forget that?
+      to celebrate my birthday.
+    m_optionsArray: []
+  - m_index: 2
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: I went out earlier to buy some ingredients for tonight. Oh, I must
+      be getting old! How did I suddenly forget that?
     m_optionsArray: []
