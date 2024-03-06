@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     private int count = 0;
     private int count2 = 0;
     public GameObject dialogue;
+    [SerializeField] GameObject phone = null;
     private void Start()
     {
         if (GameObject.FindWithTag("Timer") != null){
@@ -48,9 +50,25 @@ public class GameManager : MonoBehaviour
             timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
         }
         dialogue = GameObject.FindGameObjectWithTag("Dialogue");
+        string string1 = "Phone";
+        if (CheckIfStringsInList(string1))
+        {
+            phone = GameObject.FindWithTag("Phone");
+            if (phone != null)
+            {
+                phone.SetActive(false);
+            }
+        }
+        if (CheckIfStringsInList("Virus") && SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            print(SceneManager.GetActiveScene().buildIndex);
+            GameObject.FindWithTag("Player").transform.GetChild(3).gameObject.SetActive(true);
+            GameObject.FindWithTag("Player").transform.GetChild(3).GetComponent<DialogueManager>().m_canTalk = true;
+            GameManager.Instance.RemoveItem("Virus");
+        }
     }
 
-
+    
     bool CheckIfStringsInList(params string[] strings)
     {
         // 使用 LINQ 查询，检查每个字符串是否在列表中
@@ -86,7 +104,7 @@ public class GameManager : MonoBehaviour
     public void AddItem(string item)
     {
         playerItems.Add(item);
-        StartCoroutine(CheckPhoneOpen());
+        StartCoroutine(CheckEverything());
     }
 
     public void clear(){
@@ -94,7 +112,7 @@ public class GameManager : MonoBehaviour
         memoClosedTimes = 0;
     }
 
-    IEnumerator CheckPhoneOpen()
+    IEnumerator CheckEverything()
     {
 
         string string1 = "Vegetable";
@@ -124,7 +142,6 @@ public class GameManager : MonoBehaviour
             count2 = 1;
             GameObject.FindWithTag("Player").transform.GetChild(1).gameObject.SetActive(true);
             GameObject.FindWithTag("Player").transform.GetChild(1).GetComponent<DialogueManager>().m_canTalk = true;
-
         }
     }
 
