@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: cdd5a797d2f71ba47acaf9ea2feb8a58
+  - enabled: 1
+    path: Assets/Scenes/Innerworld.unity
+    guid: 3ffecb60314e442a7b152fcc262a2c01
   m_configObjects: {}
