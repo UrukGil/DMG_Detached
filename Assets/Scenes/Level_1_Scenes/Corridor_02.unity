@@ -1267,8 +1267,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 1
   playerIsInTrigger: 0
+  isRandomTurnedOn: 0
   isRandomRoom: 0
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0.8816464, y: 1.358693}
 --- !u!61 &864572814
 BoxCollider2D:
@@ -2294,8 +2297,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 3
   playerIsInTrigger: 0
+  isRandomTurnedOn: 0
   isRandomRoom: 1
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0, y: -0.5310215}
 --- !u!61 &2076172050
 BoxCollider2D:

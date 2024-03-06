@@ -972,8 +972,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 2
   playerIsInTrigger: 0
+  isRandomTurnedOn: 0
   isRandomRoom: 0
   isRandomCorridor: 0
+  isRandomRoomInLevel2: 0
+  isRandomCorridorInLevel2: 0
   spawnPointInNextScene: {x: 0.8331339, y: 0.3082297}
 --- !u!1001 &406554004
 PrefabInstance:
