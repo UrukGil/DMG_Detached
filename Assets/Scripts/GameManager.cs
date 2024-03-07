@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     private int count = 0;
     private int count2 = 0;
     private int countInnerWorld = 0;
+
+    private int playAnimation = 0;
     private int countExitInnerWorld = 0;
     public GameObject dialogue;
     [SerializeField] GameObject phone = null;
@@ -91,6 +93,35 @@ public class GameManager : MonoBehaviour
 
     IEnumerator EnterInnerWorld()
     {
+        // WrtingAni start
+        GameObject.FindWithTag("WritingAni").transform.GetChild(0).gameObject.SetActive(true);
+        //PlayerMovelock
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        // close animation
+        yield return new WaitForSeconds(3f);
+        GameObject.FindWithTag("WritingAni").transform.GetChild(0).gameObject.SetActive(false);
+
+        // move grandpa to door
+        
+        float time = 3.0f;
+        while (time > 0)
+        {
+            print(time);
+            print(GameObject.FindWithTag("Player").transform.position.y);
+            time -= Time.deltaTime;
+            //GameObject.FindWithTag("Player").transform.position += Vector3.down * 5f * Time.deltaTime;
+            // GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.2f);
+            Vector2 pos = GameObject.FindWithTag("Player").transform.position;
+            pos.y -= 0.2f * Time.deltaTime;
+            GameObject.FindWithTag("Player").transform.position = pos;
+
+        }
+        yield return new WaitForSeconds(3f);
+        // grandpa back
+              
+
+        //EnterInnerWorld
         while (GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize >= 0.01)
         {
             yield return new WaitForSeconds(0.01f);
