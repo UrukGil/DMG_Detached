@@ -13,14 +13,14 @@ GameObject:
   - component: {fileID: 5580155600876017572}
   - component: {fileID: 1708893968899208037}
   - component: {fileID: 6879183036573228835}
-  - component: {fileID: 2043773293166249669}
+  - component: {fileID: 7521777216286093381}
   m_Layer: 0
   m_Name: Daughter_Changed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1779622197604204750
 Transform:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.09499998}
   m_Size: {x: 0.23, y: 0.23}
   m_Direction: 0
---- !u!114 &2043773293166249669
+--- !u!114 &7521777216286093381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cd0b0e1cba447489d8317d2021c26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_dialogueData: {fileID: 11400000, guid: fa9299e442ea64a2a977159f70c41893, type: 2}
+  m_dialogueData: {fileID: 11400000, guid: e4d642d6e15aabb43be9f8388af080f4, type: 2}
   m_pressSpaceUI: {fileID: 0}
   m_canTalk: 0
   m_isTalking: 0
