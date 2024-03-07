@@ -15,5 +15,5 @@ MonoBehaviour:
   m_pieceOfDialogueArray:
   - m_index: 0
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
-    m_textString: "Ah, there it is.\r"
+    m_textString: Ah. There it is.
     m_optionsArray: []
