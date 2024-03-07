@@ -73,11 +73,9 @@ public class DialogueManager : MonoBehaviour
     }
     private void Update()
     {
-        if (m_canTalk){
-            if (GameManager.Instance.playerItems.Contains(letter))
-            {
-                m_hasTalked = true;
-            }
+        if (GameManager.Instance.playerItems.Contains(letter))
+        {
+            m_hasTalked = true;
         }
         if (!m_hasTalked && m_canTalk && (Input.GetKeyDown(KeyCode.Space)||m_isAutoStart) && m_dialogue.m_dialoguePanel.activeSelf == false)
         {
