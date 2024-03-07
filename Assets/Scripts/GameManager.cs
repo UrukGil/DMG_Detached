@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
             {
                 //StartCoroutine(ExitInnerWorld());
                 hasStarted = true;
+                //if (GameObject.FindWithTag("W").GetComponent<Animator>().GetCurrentAnimatorClipInfo)
             }
         }
 
