@@ -7,6 +7,7 @@ public class Timer: MonoBehaviour
     public Slider progressBar; // 引用UI进度条
     public float duration = 180f; // 计时器的持续时间
     private float timeLeft; // 剩余时间
+    public bool hasStarted = false;
     public bool isCounting = true;
 
     void Start()
@@ -18,8 +19,6 @@ public class Timer: MonoBehaviour
             Debug.LogError("Progress bar slider is not assigned!");
             return;
         }
-        
-
         if (timeLeft < duration && timeLeft > 0)
         {
             // print("here2");
@@ -44,7 +43,7 @@ public class Timer: MonoBehaviour
         }
         if (timeLeft > 0)
         {
-            if (isCounting)
+            if (isCounting && hasStarted)
             {
                 // 更新剩余时间
                 timeLeft -= Time.deltaTime;

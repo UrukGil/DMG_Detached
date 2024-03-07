@@ -35,8 +35,11 @@ public class GameManager : MonoBehaviour
 
     private int count = 0;
     private int count2 = 0;
+    private int countInnerWorld = 0;
+    private int countExitInnerWorld = 0;
     public GameObject dialogue;
     [SerializeField] GameObject phone = null;
+    private bool hasStarted = false;
     private void Start()
     {
         if (GameObject.FindWithTag("Timer") != null){
@@ -46,8 +49,10 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {   
-        if (GameObject.FindWithTag("Timer") != null){
+        if (GameObject.FindWithTag("Timer") != null)
+        {
             timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
+            timerKit.hasStarted = hasStarted;
         }
         dialogue = GameObject.FindGameObjectWithTag("Dialogue");
         string string1 = "Phone";
@@ -59,16 +64,54 @@ public class GameManager : MonoBehaviour
                 phone.SetActive(false);
             }
         }
-        if (CheckIfStringsInList("Virus") && SceneManager.GetActiveScene().buildIndex == 0)
+        if (CheckIfStringsInList("Virus") && SceneManager.GetActiveScene().buildIndex == 0 && countExitInnerWorld == 0)
         {
-            print(SceneManager.GetActiveScene().buildIndex);
-            GameObject.FindWithTag("Player").transform.GetChild(3).gameObject.SetActive(true);
-            GameObject.FindWithTag("Player").transform.GetChild(3).GetComponent<DialogueManager>().m_canTalk = true;
-            GameManager.Instance.RemoveItem("Virus");
+            countExitInnerWorld += 1;
+            StartCoroutine(ExitInnerWorld());
+            //print(SceneManager.GetActiveScene().buildIndex);
         }
+        if (GameObject.FindWithTag("InnerWorld") != null)
+        {
+            if (GameObject.FindWithTag("InnerWorld").GetComponent<DialogueManager>().m_hasTalked == true && countInnerWorld == 0)
+            {
+                StartCoroutine(EnterInnerWorld());
+                countInnerWorld += 1;
+            }
+        }
+        if (GameObject.FindWithTag("Player").name == "Grandpa")
+        {
+            if (GameObject.FindWithTag("Player").transform.GetChild(4).GetComponent<DialogueManager>().m_hasTalked == true)
+            {
+                //StartCoroutine(ExitInnerWorld());
+                hasStarted = true;
+            }
+        }
+
     }
 
-    
+    IEnumerator EnterInnerWorld()
+    {
+        while (GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize >= 0.01)
+        {
+            yield return new WaitForSeconds(0.01f);
+            GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
+        }
+        SceneManager.LoadScene(16);
+    }
+
+    IEnumerator ExitInnerWorld()
+    {
+        GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize = 0.01f;
+        while (GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize <= 0.7f)
+        {
+            yield return new WaitForSeconds(0.01f);
+            GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize += 0.01f;
+        }
+        yield return new WaitForSeconds(1f);
+        GameObject.FindWithTag("Player").transform.GetChild(3).gameObject.SetActive(true);
+        GameObject.FindWithTag("Player").transform.GetChild(3).GetComponent<DialogueManager>().m_canTalk = true;
+        GameManager.Instance.RemoveItem("Virus");
+    }
     bool CheckIfStringsInList(params string[] strings)
     {
         // 使用 LINQ 查询，检查每个字符串是否在列表中

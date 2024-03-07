@@ -17,6 +17,7 @@ TagManager:
   - ComputerImage
   - Birthday
   - All
+  - InnerWorld
   layers:
   - Default
   - TransparentFX

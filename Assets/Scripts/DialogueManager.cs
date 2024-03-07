@@ -84,7 +84,7 @@ public class DialogueManager : MonoBehaviour
             if (m_destroyGameobject != null)
             {
                 m_destroyGameobject.SetActive(false);
-                SceneManager.LoadScene(16);
+                //SceneManager.LoadScene(16);
             }
             StartDialogue();
             m_isTalking = true;
