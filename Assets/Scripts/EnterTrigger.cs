@@ -41,7 +41,7 @@ public class EnterTrigger : MonoBehaviour
         {
             if (isRandom)
             {
-                sceneIndex = Random.Range(startSceneIndex, endSceneIndex);
+                sceneIndex = Random.Range(startSceneIndex, endSceneIndex + 1);
                 spawnPointInNextScene = spawnPointDictionary[sceneIndex];
             }
         }

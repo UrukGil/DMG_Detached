@@ -267,44 +267,6 @@ public class GameManager : MonoBehaviour
         return playerItems;
     }
 
-    public void AddGameObjectToList(GameObject obj)
-    {
-        if (!gameObjectsList.Contains(obj))
-        {
-            gameObjectsList.Add(obj);
-        }
-    }
-
-    public void RemoveGameObjectFromList(GameObject obj)
-    {
-        if (gameObjectsList.Contains(obj))
-        {
-            gameObjectsList.Remove(obj);
-        }
-    }
-
-    public void AddGameObjectToDict(string key, GameObject obj)
-    {
-        if (!gameObjectsDict.ContainsKey(key))
-        {
-            gameObjectsDict.Add(key, obj);
-        }
-    }
-
-    public bool RemoveGameObjectFromDict(string key)
-    {
-        return gameObjectsDict.Remove(key);
-    }
-
-    public GameObject GetGameObjectFromDict(string key)
-    {
-        if (gameObjectsDict.ContainsKey(key))
-        {
-            return gameObjectsDict[key];
-        }
-        return null; // Return null if the object is not found
-    }
-    
     // Reset Timer
     public void ResetTimer()
     {

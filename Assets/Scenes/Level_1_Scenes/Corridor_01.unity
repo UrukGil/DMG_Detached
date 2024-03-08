@@ -1657,8 +1657,8 @@ MonoBehaviour:
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 1
-  startSceneIndex: 4
-  endSceneIndex: 6
+  startSceneIndex: 3
+  endSceneIndex: 5
   spawnPointInNextScene: {x: 0, y: -0.4926267}
 --- !u!61 &734843209
 BoxCollider2D:
@@ -1819,8 +1819,8 @@ MonoBehaviour:
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 1
-  startSceneIndex: 3
-  endSceneIndex: 5
+  startSceneIndex: 4
+  endSceneIndex: 6
   spawnPointInNextScene: {x: 0, y: -0.4613751}
 --- !u!61 &1265721333
 BoxCollider2D:
