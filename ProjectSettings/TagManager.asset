@@ -20,6 +20,8 @@ TagManager:
   - InnerWorld
   - WritingAni
   - HeadingOut
+  - Obstacle
+  - Dark
   layers:
   - Default
   - TransparentFX

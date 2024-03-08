@@ -241,6 +241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dark
       objectReference: {fileID: 0}
+    - target: {fileID: 1186850548005724600, guid: 654e7495df6224becbe39b6e7ac3fc4f, type: 3}
+      propertyPath: m_TagString
+      value: Dark
+      objectReference: {fileID: 0}
     - target: {fileID: 3117836598206444844, guid: 654e7495df6224becbe39b6e7ac3fc4f, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -263,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4449558575026155681, guid: 654e7495df6224becbe39b6e7ac3fc4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.006
+      value: 0.281
       objectReference: {fileID: 0}
     - target: {fileID: 4449558575026155681, guid: 654e7495df6224becbe39b6e7ac3fc4f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -355,10 +359,9 @@ MonoBehaviour:
   sceneIndex: 6
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
-  isRandomRoom: 0
-  isRandomCorridor: 0
-  isRandomRoomInLevel2: 1
-  isRandomCorridorInLevel2: 0
+  isRandom: 0
+  startSceneIndex: 0
+  endSceneIndex: 0
   spawnPointInNextScene: {x: 0, y: -0.7744917}
 --- !u!61 &147084371
 BoxCollider2D:
@@ -724,7 +727,7 @@ Transform:
   m_GameObject: {fileID: 387689580}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.994, y: 0.079, z: 0}
+  m_LocalPosition: {x: 0.994, y: 0.219, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -960,6 +963,7 @@ MonoBehaviour:
   letter: Wine
   m_isMemoTrigger: 1
   m_isDialogueTrigger: 0
+  m_destroyGameobject: {fileID: 0}
 --- !u!1 &555180531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,10 +1141,9 @@ MonoBehaviour:
   sceneIndex: 1
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
-  isRandomRoom: 0
-  isRandomCorridor: 0
-  isRandomRoomInLevel2: 0
-  isRandomCorridorInLevel2: 1
+  isRandom: 0
+  startSceneIndex: 0
+  endSceneIndex: 0
   spawnPointInNextScene: {x: 1.0334, y: 0.4889}
 --- !u!1 &605933120
 GameObject:
@@ -1266,6 +1269,7 @@ GameObject:
   - component: {fileID: 692156794}
   - component: {fileID: 692156795}
   - component: {fileID: 692156796}
+  - component: {fileID: 692156797}
   m_Layer: 0
   m_Name: RightRoomTrigger
   m_TagString: Untagged
@@ -1348,10 +1352,26 @@ MonoBehaviour:
   sceneIndex: 6
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
-  isRandomRoom: 0
-  isRandomCorridor: 0
-  isRandomRoomInLevel2: 1
-  isRandomCorridorInLevel2: 0
+  isRandom: 0
+  startSceneIndex: 0
+  endSceneIndex: 0
+  spawnPointInNextScene: {x: 0, y: -0.7744917}
+--- !u!114 &692156797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692156793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b03262d0d424cf49e877ca451c93cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 6
+  playerIsInTrigger: 0
+  startSceneIndex: 0
+  endSceneIndex: 0
   spawnPointInNextScene: {x: 0, y: -0.7744917}
 --- !u!1 &700505804
 GameObject:
@@ -1532,7 +1552,7 @@ Transform:
   m_GameObject: {fileID: 804731824}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -1.223, z: 0}
+  m_LocalPosition: {x: 1.014, y: -1.164, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2885,6 +2905,7 @@ MonoBehaviour:
   timerKit: {fileID: 1958135222}
   memoClosedTimes: 0
   dialogue: {fileID: 0}
+  phone: {fileID: 0}
 --- !u!4 &1536511900
 Transform:
   m_ObjectHideFlags: 0
@@ -3085,7 +3106,7 @@ MonoBehaviour:
   - {fileID: 387689581}
   - {fileID: 804731825}
   - {fileID: 2117832227}
-  speed: 0.7
+  speed: 0.4
 --- !u!114 &1729854272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3216,7 +3237,7 @@ Transform:
   m_GameObject: {fileID: 2108702288}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.096, y: -0.606, z: 0}
+  m_LocalPosition: {x: 0.383, y: -0.606, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3247,7 +3268,7 @@ Transform:
   m_GameObject: {fileID: 2117832226}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.572, y: -1.217, z: 0}
+  m_LocalPosition: {x: 1.617, y: -1.073, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

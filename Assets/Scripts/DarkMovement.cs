@@ -54,4 +54,14 @@ public class DarkMovement : MonoBehaviour
             currentIndex++; // 切换到下一个点
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(0, 0, 0);
+        foreach (Transform tempTransform in points)
+        {
+            Gizmos.DrawWireSphere(tempTransform.position, 0.1f);
+        }
+        
+    }
 }
