@@ -238,6 +238,7 @@ public class GameManager : MonoBehaviour
             count = 1;
             yield return new WaitForSeconds(6f);
             dialogue.transform.GetChild(2).gameObject.SetActive(true);
+            print(dialogue.transform.GetChild(2).gameObject.activeSelf);
             yield return new WaitForSeconds(6f);
             dialogue.transform.GetChild(2).gameObject.SetActive(false);
             yield return new WaitForSeconds(2f);
