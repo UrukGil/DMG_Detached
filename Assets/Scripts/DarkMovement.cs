@@ -26,12 +26,15 @@ public class DarkMovement : MonoBehaviour
         }
         else
         {
+            //MoveTowardsPoint(points[0].position);
             // 到达最后一个点后的逻辑，例如循环或停止
         }
     }
 
     void MoveTowardsPoint(Vector2 target)
     {
+        if (points.Length == 0) return;
+
         Vector2 newPosition = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
         Vector2 direction = (target - (Vector2)transform.position).normalized;
 
@@ -52,6 +55,10 @@ public class DarkMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, target) < 0.1f) // 如果角色非常接近当前目标点
         {
             currentIndex++; // 切换到下一个点
+            if (currentIndex >= points.Length)
+            {
+                currentIndex = 0;
+            }
         }
     }
 
