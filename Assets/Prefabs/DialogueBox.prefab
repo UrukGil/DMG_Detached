@@ -807,7 +807,6 @@ MonoBehaviour:
   m_dialogueData: {fileID: 0}
   m_currentDialogueIndex: 0
   alpha: 0
-  letterUI: {fileID: 0}
   letter: 
   m_dialogueManager: {fileID: 0}
 --- !u!1 &7656940640803480110
