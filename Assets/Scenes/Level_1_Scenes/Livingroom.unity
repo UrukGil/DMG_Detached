@@ -1704,6 +1704,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1545654431980846056, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1852681651243550887, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1745,12 +1749,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 987267184}
     - target: {fileID: 2137520158964918643, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2137520158964918643, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
       propertyPath: m_TagString
-      value: PhoneScreen
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2268335709213279001, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
       propertyPath: m_AnchorMax.y
