@@ -37,6 +37,7 @@ public class EnterTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         if (isRandomTurnedOn)
         {
             if (isRandomRoom)
