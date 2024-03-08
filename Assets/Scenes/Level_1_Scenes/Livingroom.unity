@@ -484,7 +484,7 @@ Transform:
   m_GameObject: {fileID: 288156081}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.047, y: 0.301, z: 0}
+  m_LocalPosition: {x: -0.002, y: 0.301, z: 0}
   m_LocalScale: {x: 0.028453737, y: 0.028453737, z: 0.028453737}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1168,10 +1168,9 @@ MonoBehaviour:
   sceneIndex: 1
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
-  isRandomRoom: 0
-  isRandomCorridor: 0
-  isRandomRoomInLevel2: 0
-  isRandomCorridorInLevel2: 0
+  isRandom: 0
+  startSceneIndex: 0
+  endSceneIndex: 0
   spawnPointInNextScene: {x: 1.0334, y: 0.4889}
 --- !u!1 &624118690
 GameObject:
@@ -1266,10 +1265,9 @@ MonoBehaviour:
   sceneIndex: 0
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
-  isRandomRoom: 1
-  isRandomCorridor: 0
-  isRandomRoomInLevel2: 0
-  isRandomCorridorInLevel2: 0
+  isRandom: 1
+  startSceneIndex: 4
+  endSceneIndex: 6
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &692156793
 GameObject:
@@ -1364,10 +1362,9 @@ MonoBehaviour:
   sceneIndex: 6
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
-  isRandomRoom: 1
-  isRandomCorridor: 0
-  isRandomRoomInLevel2: 0
-  isRandomCorridorInLevel2: 0
+  isRandom: 1
+  startSceneIndex: 3
+  endSceneIndex: 5
   spawnPointInNextScene: {x: 0, y: -0.7744917}
 --- !u!1 &700505804
 GameObject:
@@ -2332,7 +2329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cd0b0e1cba447489d8317d2021c26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_dialogueData: {fileID: 11400000, guid: fa9299e442ea64a2a977159f70c41893, type: 2}
+  m_dialogueData: {fileID: 11400000, guid: 61b1a601b1ebf443788350e1aa13e24d, type: 2}
   m_pressSpaceUI: {fileID: 0}
   m_canTalk: 0
   m_isTalking: 0
@@ -2375,7 +2372,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4564037, y: -0.041642368}
+  m_Offset: {x: 1.5325193, y: -0.041642427}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2386,7 +2383,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5851531, y: 2.539215}
+  m_Size: {x: 1.4329218, y: 2.539215}
   m_EdgeRadius: 0
 --- !u!61 &844936625
 BoxCollider2D:
@@ -2420,7 +2417,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6742984, y: -0.04511261}
+  m_Offset: {x: -0.6983042, y: -0.04511261}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2431,7 +2428,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4602258, y: 2.5322747}
+  m_Size: {x: 1.4122143, y: 2.5322747}
   m_EdgeRadius: 0
 --- !u!4 &844936626
 Transform:
@@ -3495,7 +3492,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.7613431, y: -0.11980389}
+  m_Offset: {x: 0.7928182, y: -0.11980389}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3506,7 +3503,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3227737, y: 0.17171928}
+  m_Size: {x: 0.21647471, y: 0.17171928}
   m_EdgeRadius: 0
 --- !u!114 &1593608889
 MonoBehaviour:
@@ -3641,7 +3638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1683541934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3825,12 +3822,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2053593220}
   m_Layer: 0
-  m_Name: Outgoing
-  m_TagString: Untagged
+  m_Name: HeadingOut
+  m_TagString: HeadingOut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2053593220
 Transform:
   m_ObjectHideFlags: 0

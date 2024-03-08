@@ -80,16 +80,18 @@ public class GameManager : MonoBehaviour
                 countInnerWorld += 1;
             }
         }
-        if (GameObject.FindWithTag("Player").name == "Grandpa")
+        if (GameObject.FindWithTag("Player") != null)
         {
-            if (GameObject.FindWithTag("Player").transform.GetChild(4).GetComponent<DialogueManager>().m_hasTalked == true)
+            if (GameObject.FindWithTag("Player").name == "Grandpa")
             {
-                //StartCoroutine(ExitInnerWorld());
-                hasStarted = true;
-                //if (GameObject.FindWithTag("W").GetComponent<Animator>().GetCurrentAnimatorClipInfo)
+                if (GameObject.FindWithTag("Player").transform.GetChild(4).GetComponent<DialogueManager>().m_hasTalked == true)
+                {
+                    //StartCoroutine(ExitInnerWorld());
+                    hasStarted = true;
+                    //if (GameObject.FindWithTag("W").GetComponent<Animator>().GetCurrentAnimatorClipInfo)
+                }
             }
         }
-
     }
 
     IEnumerator EnterInnerWorld()
@@ -120,18 +122,47 @@ public class GameManager : MonoBehaviour
             // 移动角色
             GameObject.FindWithTag("Player").transform.Translate(movement);
         }
+        //GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
+        //yield return new WaitForSeconds(2f);
+        // play door
 
-        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
+        // play headingout anime
+        GameObject.FindWithTag("HeadingOut").transform.GetChild(0).gameObject.SetActive(true);
+        GameObject.FindWithTag("HeadingOut").transform.GetChild(0).transform.position = new Vector2(GameObject.FindWithTag("Player").transform.position.x, GameObject.FindWithTag("Player").transform.position.y);
         yield return new WaitForSeconds(3f);
-        // grandpa back
-              
 
+        // play door
+        // grandpa back
+        GameObject.FindWithTag("HeadingOut").transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("verticalSpeed", 1);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("speed", 1);
+
+        time = 3.0f;
+        while (time >= 0)
+        {
+
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+            yield return new WaitForFixedUpdate();
+            time -= Time.deltaTime;
+            // 根据输入计算移动的方向和距离
+            Vector2 movement = new Vector2(0, 1) * 0.3f * Time.deltaTime;
+
+            // 移动角色
+            GameObject.FindWithTag("Player").transform.Translate(movement);
+        }
+        //GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("verticalSpeed", -1);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("speed", 0);
         //EnterInnerWorld
+        yield return new WaitForSeconds(2f);
         while (GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize >= 0.01)
         {
             yield return new WaitForSeconds(0.01f);
             GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
         }
+        
         SceneManager.LoadScene(16);
     }
 

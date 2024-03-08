@@ -18,6 +18,16 @@ public class MemoVideoAppear : MonoBehaviour
     {
         if (GameObject.FindWithTag("Player").transform.GetChild(3).gameObject.GetComponent<DialogueManager>().m_hasTalked == true)
         {
+            // Stop player
+            if (videoPlayer.isPlaying)
+            {
+                GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+                GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+                GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+                GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("verticalSpeed", 0);
+                GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("speed", 0);
+            }
+            // play video
             transform.GetChild(0).gameObject.GetComponent<VideoPlayer>().Play();
             if (isVideoEnd)
             {

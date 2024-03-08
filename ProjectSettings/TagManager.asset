@@ -19,6 +19,7 @@ TagManager:
   - All
   - InnerWorld
   - WritingAni
+  - HeadingOut
   layers:
   - Default
   - TransparentFX
