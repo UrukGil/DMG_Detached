@@ -19,7 +19,7 @@ MonoBehaviour:
     m_optionsArray: []
   - m_index: 1
     m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
-    m_textString: "You there? Beta\u2026 emmmm\u2026 Which Beta number are you\uFF1F"
+    m_textString: "You there? Beta\u2026 emmmm\u2026 Which Beta number are you?"
     m_optionsArray: []
   - m_index: 2
     m_sprite: {fileID: 21300000, guid: b95426383c28a0a4684b6a065a25747d, type: 3}

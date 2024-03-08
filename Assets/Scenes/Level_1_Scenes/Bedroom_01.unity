@@ -807,7 +807,7 @@ Transform:
   m_GameObject: {fileID: 126202211}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.222, y: 0.319, z: -0.57}
+  m_LocalPosition: {x: -0.353, y: 0.319, z: -0.57}
   m_LocalScale: {x: 0.009886454, y: 0.009886454, z: 0.009886454}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -880,6 +880,7 @@ MonoBehaviour:
   letter: Newspaper
   m_isMemoTrigger: 1
   m_isDialogueTrigger: 0
+  m_destroyGameobject: {fileID: 0}
 --- !u!1 &260875493
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,10 +974,9 @@ MonoBehaviour:
   sceneIndex: 2
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
-  isRandomRoom: 0
-  isRandomCorridor: 0
-  isRandomRoomInLevel2: 0
-  isRandomCorridorInLevel2: 0
+  isRandom: 0
+  startSceneIndex: 0
+  endSceneIndex: 0
   spawnPointInNextScene: {x: 0.8331339, y: 0.3082297}
 --- !u!1001 &406554004
 PrefabInstance:
@@ -1904,6 +1904,7 @@ MonoBehaviour:
   letter: Photo
   m_isMemoTrigger: 1
   m_isDialogueTrigger: 0
+  m_destroyGameobject: {fileID: 0}
 --- !u!1 &1214112351
 GameObject:
   m_ObjectHideFlags: 0
