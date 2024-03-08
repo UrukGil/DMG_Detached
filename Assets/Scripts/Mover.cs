@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] public float moveSpeed = 5f; // 角色移动速度
+    public float moveSpeed = 0.3f; // 角色移动速度
     Animator animator;
     Rigidbody2D rb;
 

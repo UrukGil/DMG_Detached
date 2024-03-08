@@ -104,20 +104,24 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("WritingAni").transform.GetChild(0).gameObject.SetActive(false);
 
         // move grandpa to door
-        
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("verticalSpeed", -1);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("speed", 1);
         float time = 3.0f;
-        while (time > 0)
+        while (time >= 0)
         {
-            print(time);
-            print(GameObject.FindWithTag("Player").transform.position.y);
+            
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+            yield return new WaitForFixedUpdate();
             time -= Time.deltaTime;
-            //GameObject.FindWithTag("Player").transform.position += Vector3.down * 5f * Time.deltaTime;
-            // GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.2f);
-            Vector2 pos = GameObject.FindWithTag("Player").transform.position;
-            pos.y -= 0.2f * Time.deltaTime;
-            GameObject.FindWithTag("Player").transform.position = pos;
+            // 根据输入计算移动的方向和距离
+            Vector2 movement = new Vector2(0, -1) * 0.3f * Time.deltaTime;
 
+            // 移动角色
+            GameObject.FindWithTag("Player").transform.Translate(movement);
         }
+
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
         yield return new WaitForSeconds(3f);
         // grandpa back
               
