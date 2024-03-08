@@ -115,10 +115,13 @@ public class DialogueUI : MonoBehaviour
             m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
             m_dialogueManager.m_isTalking = false;
             m_dialogueManager.m_hasTalked = true;
+            // Timer
             if (GameObject.FindObjectOfType<Timer>() != null)
             {
                 GameObject.FindObjectOfType<Timer>().isCounting = true;
             }
+            // Movement
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
         }
         else
         {
@@ -127,10 +130,13 @@ public class DialogueUI : MonoBehaviour
             m_dialogueOptionPanel.GetComponent<GraphicRaycaster>().enabled = false;
             m_dialogueManager.m_isTalking = false;
             m_dialogueManager.m_hasTalked = true;
+            // Timer
             if (GameObject.FindObjectOfType<Timer>() != null)
             {
                 GameObject.FindObjectOfType<Timer>().isCounting = true;
             }
+            // Movement
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
         }
     }
     public void UpdateDialogueData(SODialogue dialogueData)
@@ -222,10 +228,12 @@ public class DialogueUI : MonoBehaviour
         GameObject.FindObjectOfType<MemoManager>().CloseMemo();
         GameObject.FindObjectOfType<MemoManager>().PlayerCanTab = true;
         GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
+        // Timer
         if (GameObject.FindObjectOfType<Timer>() != null)
         {
             GameObject.FindObjectOfType<Timer>().isCounting = true;
         }
-
+        // Movement
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
     }
 }

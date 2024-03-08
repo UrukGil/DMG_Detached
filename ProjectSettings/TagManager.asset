@@ -17,7 +17,9 @@ TagManager:
   - ComputerImage
   - Birthday
   - All
-  - Obstacle
+  - InnerWorld
+  - WritingAni
+  - HeadingOut
   layers:
   - Default
   - TransparentFX

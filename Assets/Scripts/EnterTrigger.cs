@@ -9,10 +9,9 @@ public class EnterTrigger : MonoBehaviour
     [SerializeField] int sceneIndex = 0;
     [SerializeField] bool playerIsInTrigger = false;
     public bool isRandomTurnedOn = false;
-    [SerializeField] bool isRandomRoom = false;
-    [SerializeField] bool isRandomCorridor = false;
-    [SerializeField] bool isRandomRoomInLevel2 = false;
-    [SerializeField] bool isRandomCorridorInLevel2 = false;
+    [SerializeField] bool isRandom = false;
+    [SerializeField] int startSceneIndex = 0;
+    [SerializeField] int endSceneIndex = 0;
     public Vector2 spawnPointInNextScene;
     [SerializeField] Dictionary<int, Vector2> spawnPointDictionary = new Dictionary<int, Vector2>();
     // Start is called before the first frame update
@@ -40,24 +39,9 @@ public class EnterTrigger : MonoBehaviour
        
         if (isRandomTurnedOn)
         {
-            if (isRandomRoom)
+            if (isRandom)
             {
-                sceneIndex = Random.Range(3, 7);
-                spawnPointInNextScene = spawnPointDictionary[sceneIndex];
-            }
-            if (isRandomCorridor)
-            {
-                sceneIndex = Random.Range(0, 3);
-                spawnPointInNextScene = spawnPointDictionary[sceneIndex];
-            }
-            if (isRandomRoomInLevel2)
-            {
-                sceneIndex = Random.Range(10, 14);
-                spawnPointInNextScene = spawnPointDictionary[sceneIndex];
-            }
-            if (isRandomCorridorInLevel2)
-            {
-                sceneIndex = Random.Range(7, 10);
+                sceneIndex = Random.Range(startSceneIndex, endSceneIndex);
                 spawnPointInNextScene = spawnPointDictionary[sceneIndex];
             }
         }

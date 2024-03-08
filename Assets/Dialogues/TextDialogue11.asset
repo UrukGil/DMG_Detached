@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445d06398617d4c3fbae1018d09318cc, type: 3}
+  m_Name: TextDialogue11
+  m_EditorClassIdentifier: 
+  m_pieceOfDialogueArray:
+  - m_index: 0
+    m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
+    m_textString: "Alas\u2026 It is just starting again\u2026 and again\u2026 \r\r\n\r"
+    m_optionsArray: []
+  - m_index: 1
+    m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
+    m_textString: "You there? Beta\u2026 emmmm\u2026 Which Beta number are you?"
+    m_optionsArray: []
+  - m_index: 2
+    m_sprite: {fileID: 21300000, guid: b95426383c28a0a4684b6a065a25747d, type: 3}
+    m_textString: "7843. and yes. It\u2019s starting again."
+    m_optionsArray: []
+  - m_index: 3
+    m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
+    m_textString: "Wow. You\u2019re so young. Shortage of manpower?\r"
+    m_optionsArray: []
+  - m_index: 4
+    m_sprite: {fileID: 21300000, guid: b95426383c28a0a4684b6a065a25747d, type: 3}
+    m_textString: "Severely understaffed. \r\r"
+    m_optionsArray: []
+  - m_index: 5
+    m_sprite: {fileID: 21300000, guid: b95426383c28a0a4684b6a065a25747d, type: 3}
+    m_textString: "Even with current numbers exceeding six digits, we are still overwhelmed.\r.
+      \r\r"
+    m_optionsArray: []
+  - m_index: 6
+    m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
+    m_textString: "Human beings nowadays. (mocking laugh)\r"
+    m_optionsArray: []
+  - m_index: 7
+    m_sprite: {fileID: 21300000, guid: b95426383c28a0a4684b6a065a25747d, type: 3}
+    m_textString: "BTW. This job has a duration of three years.\r\r"
+    m_optionsArray: []
+  - m_index: 8
+    m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
+    m_textString: "Sweet\u2026 (bitter laugh)\r\r\r"
+    m_optionsArray: []

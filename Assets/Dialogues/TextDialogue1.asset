@@ -62,3 +62,15 @@ MonoBehaviour:
     m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
     m_textString: Okay! Love you! See you tonight!
     m_optionsArray: []
+  - m_index: 11
+    m_sprite: {fileID: 0}
+    m_textString: He hangs up the phone...
+    m_optionsArray: []
+  - m_index: 12
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "I need to write it down.\r"
+    m_optionsArray: []
+  - m_index: 13
+    m_sprite: {fileID: 0}
+    m_textString: "Rupert writes today\u2019s plan in his diary.\r"
+    m_optionsArray: []

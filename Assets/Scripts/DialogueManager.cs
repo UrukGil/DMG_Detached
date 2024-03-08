@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 //using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public bool m_isMemoTrigger = false;
     [Header("是否是自动触发的对话？")]
     [SerializeField] public bool m_isDialogueTrigger = false;
+    [SerializeField] GameObject m_destroyGameobject = null;
     private GameObject player;
     private void Awake()
     {
@@ -60,23 +62,28 @@ public class DialogueManager : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GetComponent<Animator>().enabled = true;
             }
+            // Timer
             if(GameObject.FindObjectOfType<Timer>() != null)
             {
                 GameObject.FindObjectOfType<Timer>().isCounting = true;
             }
-
+            // Movement
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
         }
     }
     private void Update()
     {
-        if (m_canTalk){
-            if (GameManager.Instance.playerItems.Contains(letter))
-            {
-                m_hasTalked = true;
-            }
+        if (GameManager.Instance.playerItems.Contains(letter))
+        {
+            m_hasTalked = true;
         }
         if (!m_hasTalked && m_canTalk && (Input.GetKeyDown(KeyCode.Space)||m_isAutoStart) && m_dialogue.m_dialoguePanel.activeSelf == false)
         {
+            if (m_destroyGameobject != null)
+            {
+                m_destroyGameobject.SetActive(false);
+                //SceneManager.LoadScene(16);
+            }
             StartDialogue();
             m_isTalking = true;
         }
@@ -102,10 +109,17 @@ public class DialogueManager : MonoBehaviour
     }
     private void StartDialogue()
     {
+        // Timer停
         if (GameObject.FindObjectOfType<Timer>() != null)
         {
             GameObject.FindObjectOfType<Timer>().isCounting = false;
         }
+        // 移动停
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("verticalSpeed", 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("speed", 0);
         m_dialogue.m_dialogueManager = this;
         StartCoroutine(ChangeDialoguePosition());
         if (letter == "K")
