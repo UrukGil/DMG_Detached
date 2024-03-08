@@ -20,6 +20,7 @@ TagManager:
   - InnerWorld
   - WritingAni
   - HeadingOut
+  - PhoneScreen
   layers:
   - Default
   - TransparentFX
