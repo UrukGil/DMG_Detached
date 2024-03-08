@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.49641275, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1960,10 +1960,6 @@ PrefabInstance:
     - target: {fileID: 1641624931501045792, guid: 021ae59002b0f4ca2b5a53fce66be4fe, type: 3}
       propertyPath: m_Name
       value: Virus
-      objectReference: {fileID: 0}
-    - target: {fileID: 1641624931501045792, guid: 021ae59002b0f4ca2b5a53fce66be4fe, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1779622197604204750, guid: 021ae59002b0f4ca2b5a53fce66be4fe, type: 3}
       propertyPath: m_LocalPosition.x
