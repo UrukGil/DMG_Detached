@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8967dc30bc9163d44883826a73a5e153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToClose: {fileID: 1074163143}
+  objectToClose: {fileID: 0}
 --- !u!4 &657864556
 Transform:
   m_ObjectHideFlags: 0
@@ -1042,6 +1042,10 @@ PrefabInstance:
       propertyPath: m_dialogueOptionPanel
       value: 
       objectReference: {fileID: 1074163141}
+    - target: {fileID: 2137520158964918643, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2268335709213279001, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1343,11 +1347,6 @@ GameObject:
 --- !u!1 &1074163142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9051302382075404818, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
-  m_PrefabInstance: {fileID: 1074163140}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1074163143 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2682043446120066499, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
   m_PrefabInstance: {fileID: 1074163140}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1159275134
@@ -1677,10 +1676,9 @@ MonoBehaviour:
   sceneIndex: 1
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
-  isRandomRoom: 0
-  isRandomCorridor: 0
-  isRandomRoomInLevel2: 0
-  isRandomCorridorInLevel2: 0
+  isRandom: 0
+  startSceneIndex: 0
+  endSceneIndex: 0
   spawnPointInNextScene: {x: -0.6077186, y: -0.8064811}
 --- !u!61 &1410821371
 BoxCollider2D:
@@ -2034,6 +2032,7 @@ MonoBehaviour:
   letter: Magazine
   m_isMemoTrigger: 1
   m_isDialogueTrigger: 0
+  m_destroyGameobject: {fileID: 0}
 --- !u!1 &1683642409
 GameObject:
   m_ObjectHideFlags: 0
