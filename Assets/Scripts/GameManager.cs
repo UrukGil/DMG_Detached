@@ -42,15 +42,18 @@ public class GameManager : MonoBehaviour
     public GameObject dialogue;
     [SerializeField] GameObject phone = null;
     private bool hasStarted = false;
+    public int darkSceneIndex = 7;
+    public int currentSceneIndex = 0;
+    public float darkEnterBias = 0f;
     private void Start()
     {
         if (GameObject.FindWithTag("Timer") != null){
             timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
         }
-        
     }
     private void Update()
-    {   
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (GameObject.FindWithTag("Timer") != null)
         {
             timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
@@ -90,6 +93,18 @@ public class GameManager : MonoBehaviour
                     hasStarted = true;
                     //if (GameObject.FindWithTag("W").GetComponent<Animator>().GetCurrentAnimatorClipInfo)
                 }
+            }
+        }
+        if (GameObject.FindWithTag("DarkParent") != null)
+        {
+            darkEnterBias = GameObject.FindWithTag("DarkParent").transform.GetChild(0).GetComponent<DarkMovement>().darkEnterBias;
+            if (darkSceneIndex == SceneManager.GetActiveScene().buildIndex)
+            {
+                GameObject.FindWithTag("DarkParent").transform.GetChild(0).transform.gameObject.SetActive(true);
+            }
+            else
+            {
+                GameObject.FindWithTag("DarkParent").transform.GetChild(0).transform.gameObject.SetActive(false);
             }
         }
     }

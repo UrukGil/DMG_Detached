@@ -8,6 +8,7 @@ public class DarkMovement : MonoBehaviour
     public float speed = 5f;
     private int currentIndex = 0;
     private Animator animator;
+    public float darkEnterBias = 0f;
 
     void Start()
     {
@@ -16,6 +17,10 @@ public class DarkMovement : MonoBehaviour
         {
             transform.position = points[0].position; // 开始时角色位于第一个点
         }
+        //for (int i = 0; i < GameObject.FindWithTag("WayPoint").transform.childCount; i++)
+        //{
+        //    points[i] = GameObject.FindWithTag("WayPoint").transform.GetChild(i).transform;
+        //}
     }
 
     void Update()
@@ -28,6 +33,27 @@ public class DarkMovement : MonoBehaviour
         {
             //MoveTowardsPoint(points[0].position);
             // 到达最后一个点后的逻辑，例如循环或停止
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        float randomNum = Random.Range(0, 1f);
+        if (0 < randomNum && randomNum < 0.9f)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                currentIndex++;
+                if (currentIndex >= points.Length)
+                {
+                    currentIndex = 0;
+                }
+                transform.position = points[currentIndex].position;
+            }
+        }
+        else
+        {
+            print("抓住了！");
         }
     }
 
@@ -64,11 +90,28 @@ public class DarkMovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(0, 0, 0);
-        foreach (Transform tempTransform in points)
+        if (points != null)
         {
-            Gizmos.DrawWireSphere(tempTransform.position, 0.1f);
+            Gizmos.color = new Color(0, 0, 0);
+            if (points.Length != 0)
+            {
+                foreach (Transform tempTransform in points)
+                {
+                    Gizmos.DrawWireSphere(tempTransform.position, 0.1f);
+                }
+            }
+            for (int i = 0; i < points.Length; i++)
+            {
+                if (i == points.Length - 1)
+                {
+                    Gizmos.DrawLine(points[i].position, points[0].position);
+                }
+                else
+                {
+                    Gizmos.DrawLine(points[i].position, points[i + 1].position);
+                }
+            }
         }
-        
+
     }
 }

@@ -22,6 +22,8 @@ TagManager:
   - HeadingOut
   - Obstacle
   - Dark
+  - DarkParent
+  - WayPoints
   layers:
   - Default
   - TransparentFX

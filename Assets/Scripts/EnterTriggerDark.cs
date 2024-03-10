@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 public class EnterTriggerDark : MonoBehaviour
 {
     [SerializeField] int sceneIndex = 0;
-    [SerializeField] bool playerIsInTrigger = false;
-    [SerializeField] int startSceneIndex = 0;
-    [SerializeField] int endSceneIndex = 0;
+    [SerializeField] bool darkIsInTrigger = false;
     public Vector2 spawnPointInNextScene;
     [SerializeField] Dictionary<int, Vector2> spawnPointDictionary = new Dictionary<int, Vector2>();
     // Start is called before the first frame update
@@ -29,20 +27,21 @@ public class EnterTriggerDark : MonoBehaviour
         spawnPointDictionary.Add(11, new Vector2(0, -0.4613751f));
         spawnPointDictionary.Add(12, new Vector2(0, -0.4926267f));
         spawnPointDictionary.Add(13, new Vector2(0, -0.7744917f));
+        //spawnPointInNextScene = spawnPointDictionary[sceneIndex];
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        
         spawnPointInNextScene = spawnPointDictionary[sceneIndex];
        
-        if (playerIsInTrigger)
+        if (darkIsInTrigger)
         {
+            print("DarkInTrigger");
             PositionManager.instance.SetSpawnPoint(spawnPointInNextScene);
             //GameManager.Instance.timerKit = GameObject.FindWithTag("Timer").GetComponent<Timer>();
-            SceneManager.LoadScene(sceneIndex);
+            GameManager.Instance.darkSceneIndex = sceneIndex;
+            GameObject.FindWithTag("DarkParent").transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 
@@ -50,12 +49,20 @@ public class EnterTriggerDark : MonoBehaviour
     {
         if (other.gameObject.tag == "Dark")
         {
-            playerIsInTrigger = true;
+            GameObject.FindWithTag("DarkParent").transform.GetChild(0).GetComponent<DarkMovement>().darkEnterBias += 0.05f;
+            float randomFloat = Random.Range(0, 1f);
+            randomFloat += GameObject.FindWithTag("DarkParent").transform.GetChild(0).GetComponent<DarkMovement>().darkEnterBias;
+            randomFloat = Mathf.Min(0.3f, randomFloat);
+            print(randomFloat);
+            if (randomFloat > 0 && randomFloat <= 0.3f)
+            {
+                darkIsInTrigger = true;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        playerIsInTrigger = false;
+        darkIsInTrigger = false;
     }
 }
