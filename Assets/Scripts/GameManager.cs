@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     private int count = 0;
     private int count2 = 0;
+    private int count3 = 0;
     private int countInnerWorld = 0;
 
     private int playAnimation = 0;
@@ -246,6 +247,7 @@ public class GameManager : MonoBehaviour
         string string4 = "Photo";
         string string5 = "Newspaper";
         string string6 = "Birthday";
+        string string7 = "All";
 
 
         if (CheckIfStringsInList(string1, string2, string3) && count == 0)
@@ -268,6 +270,11 @@ public class GameManager : MonoBehaviour
             count2 = 1;
             GameObject.FindWithTag("Player").transform.GetChild(1).gameObject.SetActive(true);
             GameObject.FindWithTag("Player").transform.GetChild(1).GetComponent<DialogueManager>().m_canTalk = true;
+        }
+
+        if (CheckIfStringsInList(string7) && count3 == 0)
+        {
+            SceneManager.LoadScene(7);
         }
     }
 
