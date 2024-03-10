@@ -51,9 +51,9 @@ public class EnterTriggerDark : MonoBehaviour
             GameObject.FindWithTag("DarkParent").transform.GetChild(0).GetComponent<DarkMovement>().darkEnterBias += 0.05f;
             float randomFloat = Random.Range(0, 1f);
             randomFloat += GameObject.FindWithTag("DarkParent").transform.GetChild(0).GetComponent<DarkMovement>().darkEnterBias;
-            randomFloat = Mathf.Min(0.2f, randomFloat);
+            //randomFloat = Mathf.Min(0.2f, randomFloat);
             print(randomFloat);
-            if (randomFloat > 0 && randomFloat <= 0.2f)
+            if (randomFloat > 0.8f)
             {
                 darkIsInTrigger = true;
             }
