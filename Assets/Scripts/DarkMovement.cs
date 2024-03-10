@@ -43,6 +43,8 @@ public class DarkMovement : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
+                
+                print("哈哈");
                 currentIndex++;
                 if (currentIndex >= points.Length)
                 {
@@ -53,7 +55,10 @@ public class DarkMovement : MonoBehaviour
         }
         else
         {
-            print("抓住了！");
+            if (collision.gameObject.tag == "Player"){
+                print("抓住了！");
+            }
+           
         }
     }
 
