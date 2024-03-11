@@ -24,6 +24,7 @@ TagManager:
   - Dark
   - DarkParent
   - WayPoints
+  - BG
   layers:
   - Default
   - TransparentFX
