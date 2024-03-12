@@ -1,28 +1,103 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RandomBackground : MonoBehaviour
 {
     private void Awake()
     {
-        int randomNum = Random.Range(1, 5);
-        //print(randomNum);
-        if (randomNum == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 17)
         {
-            GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("1", typeof(Sprite)) as Sprite;
+            int randomNum = Random.Range(1, 2);
+            //print(randomNum);
+            if (randomNum == 1)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template1_1", typeof(Sprite)) as Sprite;
+            }
+            //else if (randomNum == 2)
+            //{
+            //    GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("2", typeof(Sprite)) as Sprite;
+            //}
+            //else if (randomNum == 3)
+            //{
+            //    GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("3", typeof(Sprite)) as Sprite;
+            //}
+            //else if (randomNum == 4)
+            //{
+            //    GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("4", typeof(Sprite)) as Sprite;
+            //}
         }
-        else if (randomNum == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 18)
         {
-            GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("2", typeof(Sprite)) as Sprite;
+            int randomNum = Random.Range(1, 7);
+            //print(randomNum);
+            if (randomNum == 1)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template2_1", typeof(Sprite)) as Sprite;
+            }
+            else if (randomNum == 2)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template2_2", typeof(Sprite)) as Sprite;
+            }
+            else if (randomNum == 3)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template2_3", typeof(Sprite)) as Sprite;
+            }
+            else if (randomNum == 4)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template2_4", typeof(Sprite)) as Sprite;
+            }
+            else if (randomNum == 5)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template2_5", typeof(Sprite)) as Sprite;
+            }
+            else if (randomNum == 6)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template2_6", typeof(Sprite)) as Sprite;
+            }
         }
-        else if (randomNum == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 19)
         {
-            GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("3", typeof(Sprite)) as Sprite;
+            int randomNum = Random.Range(1, 3);
+            //print(randomNum);
+            if (randomNum == 1)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template3_1", typeof(Sprite)) as Sprite;
+            }
+            else if (randomNum == 2)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template3_2", typeof(Sprite)) as Sprite;
+            }
+            //else if (randomNum == 3)
+            //{
+            //    GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("3", typeof(Sprite)) as Sprite;
+            //}
+            //else if (randomNum == 4)
+            //{
+            //    GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("4", typeof(Sprite)) as Sprite;
+            //}
         }
-        else if (randomNum == 4)
+        if (SceneManager.GetActiveScene().buildIndex == 20)
         {
-            GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("4", typeof(Sprite)) as Sprite;
+            int randomNum = Random.Range(1, 2);
+            //print(randomNum);
+            if (randomNum == 1)
+            {
+                GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("Template4_1", typeof(Sprite)) as Sprite;
+            }
+            //else if (randomNum == 2)
+            //{
+            //    GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("2", typeof(Sprite)) as Sprite;
+            //}
+            //else if (randomNum == 3)
+            //{
+            //    GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("3", typeof(Sprite)) as Sprite;
+            //}
+            //else if (randomNum == 4)
+            //{
+            //    GameObject.FindWithTag("BG").GetComponent<SpriteRenderer>().sprite = Resources.Load("4", typeof(Sprite)) as Sprite;
+            //}
         }
     }
 }

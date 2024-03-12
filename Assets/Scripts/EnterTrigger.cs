@@ -31,7 +31,10 @@ public class EnterTrigger : MonoBehaviour
         spawnPointDictionary.Add(11, new Vector2(0, -0.4613751f));
         spawnPointDictionary.Add(12, new Vector2(0, -0.4926267f));
         spawnPointDictionary.Add(13, new Vector2(0, -0.7744917f));
-        spawnPointDictionary.Add(17, new Vector2(0, -0.338f));
+        spawnPointDictionary.Add(17, new Vector2(0, -1.4f));
+        spawnPointDictionary.Add(18, new Vector2(0, -1.4f));
+        spawnPointDictionary.Add(19, new Vector2(0, -1.4f));
+        spawnPointDictionary.Add(20, new Vector2(0, -1.4f));
         //spawnPointInNextScene = spawnPointDictionary[sceneIndex];
     }
     

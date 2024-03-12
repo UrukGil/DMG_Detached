@@ -57,6 +57,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_1_Scenes/InnerWorld.unity
     guid: 3ffecb60314e442a7b152fcc262a2c01
   - enabled: 1
-    path: Assets/Scenes/Level_3_Scenes/ColorfulCorridor.unity
+    path: Assets/Scenes/Level_3_Scenes/Template1.unity
+    guid: dae47ed290dbc42ffa49e0fff0f4123b
+  - enabled: 1
+    path: Assets/Scenes/Level_3_Scenes/Template2.unity
     guid: 1796c663bb04646a28c30b5c7c8cbe04
+  - enabled: 1
+    path: Assets/Scenes/Level_3_Scenes/Template3.unity
+    guid: 835dbf5c3ee4045c3bd963603a0a2fc8
+  - enabled: 1
+    path: Assets/Scenes/Level_3_Scenes/Template4.unity
+    guid: 73c66a117640c4a8f9cbd70a4724d89c
   m_configObjects: {}
