@@ -23,5 +23,9 @@ MonoBehaviour:
     m_optionsArray: []
   - m_index: 3
     m_sprite: {fileID: 0}
-    m_textString: To control the character searches the house to find clues.
+    m_textString: Use WASD To control the character searches the house to find clues.
+    m_optionsArray: []
+  - m_index: 4
+    m_sprite: {fileID: 0}
+    m_textString: Use "F" to interact with the objects and enter rooms.
     m_optionsArray: []

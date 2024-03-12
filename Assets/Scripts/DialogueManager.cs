@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
         {
             m_hasTalked = true;
         }
-        if (!m_hasTalked && m_canTalk && (Input.GetKeyDown(KeyCode.Space)||m_isAutoStart) && m_dialogue.m_dialoguePanel.activeSelf == false)
+        if (!m_hasTalked && m_canTalk && (Input.GetKeyDown(KeyCode.F)||m_isAutoStart) && m_dialogue.m_dialoguePanel.activeSelf == false)
         {
             if (m_destroyGameobject != null)
             {
