@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
     public int darkSceneIndex = 7;
     public int currentSceneIndex = 0;
     public float darkEnterBias = 0f;
+
+    public List<int> levelThreeList = new List<int>();
+    
     private void Start()
     {
         if (GameObject.FindWithTag("Timer") != null){
