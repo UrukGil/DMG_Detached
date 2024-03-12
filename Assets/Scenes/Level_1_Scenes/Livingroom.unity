@@ -3409,6 +3409,9 @@ MonoBehaviour:
   memoClosedTimes: 0
   dialogue: {fileID: 0}
   phone: {fileID: 288156081}
+  darkSceneIndex: 7
+  currentSceneIndex: 0
+  darkEnterBias: 0
 --- !u!4 &1536511900
 Transform:
   m_ObjectHideFlags: 0
@@ -4105,7 +4108,7 @@ SceneRoots:
   - {fileID: 288156084}
   - {fileID: 931731493}
   - {fileID: 1593608890}
-  - {fileID: 1536511900}
   - {fileID: 1160776084}
   - {fileID: 2053593220}
   - {fileID: 844936626}
+  - {fileID: 1536511900}
