@@ -16,7 +16,30 @@ public class EnterTriggerTransform : MonoBehaviour
     {
         if (playerIsInTrigger && Input.GetKeyDown(KeyCode.F))
         {
-            //print("J你来");
+            //Animator
+            int randomAnimatorIndex = Random.Range(0, 4);
+            if (randomAnimatorIndex == 0)
+            {
+                GameObject.FindWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Grandpa", typeof(AnimatorOverrideController)) as AnimatorOverrideController;
+                GameObject.FindWithTag("Player").transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+            else if (randomAnimatorIndex == 1)
+            {
+                GameObject.FindWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Grandpa_Adult", typeof(AnimatorOverrideController)) as AnimatorOverrideController;
+                GameObject.FindWithTag("Player").transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            }
+            else if (randomAnimatorIndex == 2)
+            {
+                GameObject.FindWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Grandpa_Boy", typeof(AnimatorOverrideController)) as AnimatorOverrideController;
+                GameObject.FindWithTag("Player").transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+            }
+            else if (randomAnimatorIndex == 3)
+            {
+                GameObject.FindWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Grandpa_Baby", typeof(AnimatorOverrideController)) as AnimatorOverrideController;
+                GameObject.FindWithTag("Player").transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            }
+
+            //BG
             GameObject.FindWithTag("Player").transform.position = new Vector3(0, -1.4f, 0);
             int randomNum = Random.Range(1, 19);
             //print(randomNum);
