@@ -3413,91 +3413,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32498717, y: 0.65886426}
   m_EdgeRadius: 0
---- !u!1 &1536511898
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1536511900}
-  - component: {fileID: 1536511899}
-  - component: {fileID: 1536511901}
-  - component: {fileID: 1536511902}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1536511899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536511898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b29a0d4eb61b3914abe4490a76557ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerItems: []
-  gameObjectsList: []
-  timer: 60
-  timeLeft: 60
-  timerIsRunning: 0
-  timerKit: {fileID: 1958135222}
-  memoClosedTimes: 0
-  dialogue: {fileID: 0}
-  phone: {fileID: 0}
-  darkSceneIndex: 7
-  currentSceneIndex: 0
-  darkEnterBias: 0
-  levelThreeList: 
---- !u!4 &1536511900
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536511898}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1536511901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536511898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9827fcf317c9f485abe8475d14a67a72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSpawnPoint: {x: 0, y: 0}
---- !u!114 &1536511902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536511898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff48aad3d6ffe4a9fa68370206bb7784, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRandomTurnedOn: 1
 --- !u!1 &1670324297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,17 +3629,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.31410027, y: 0.37579298}
   m_EdgeRadius: 0
---- !u!114 &1958135222 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4680262826546207122, guid: 59ce0b953b8728445a16f40025376be6, type: 3}
-  m_PrefabInstance: {fileID: 7971344279911905064}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b16c21b2390f47ffb055f42ddefa867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2061471973 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9051302382075404818, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
@@ -4152,4 +4056,3 @@ SceneRoots:
   - {fileID: 555480133}
   - {fileID: 605933121}
   - {fileID: 8418711823944829832}
-  - {fileID: 1536511900}

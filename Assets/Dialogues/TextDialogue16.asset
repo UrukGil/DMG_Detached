@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445d06398617d4c3fbae1018d09318cc, type: 3}
+  m_Name: TextDialogue16
+  m_EditorClassIdentifier: 
+  m_pieceOfDialogueArray:
+  - m_index: 0
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: Da! What happened? I heard from officers that you locked Zane up.
+      There must have been some mistake.
+    m_optionsArray: []
+  - m_index: 1
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: David? Why are you here?
+    m_optionsArray: []
+  - m_index: 2
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: 'What? Who is David? I am Sophie, your daughter.
+
+'
+    m_optionsArray: []
+  - m_index: 3
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: 'Oh, David. You still love to joke around, just like before. Haha.
+
+'
+    m_optionsArray: []
+  - m_index: 4
+    m_sprite: {fileID: 21300000, guid: 8e7dbae7d7704d143b9eb27e40ca5e25, type: 3}
+    m_textString: "Ma'am, may I say something?\r"
+    m_optionsArray: []
+  - m_index: 5
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "Ha! Don't know what this person is rambling about. David, I think
+      he should go see a doctor.\r\r"
+    m_optionsArray: []
+  - m_index: 6
+    m_sprite: {fileID: 21300000, guid: 8e7dbae7d7704d143b9eb27e40ca5e25, type: 3}
+    m_textString: "Ma'am, I think your father might be ill. These symptoms seem a
+      lot like Alzheimer's disease. My mother had the same illness.\r\r\r"
+    m_optionsArray: []
+  - m_index: 7
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: "Oh! No! Oh my god.\r\nOfficer, how is my son?\r"
+    m_optionsArray: []
+  - m_index: 8
+    m_sprite: {fileID: 21300000, guid: 8e7dbae7d7704d143b9eb27e40ca5e25, type: 3}
+    m_textString: "He's been through some shock, but he's okay now. An officer is
+      with him.\r\r"
+    m_optionsArray: []
+  - m_index: 9
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: "Oh! thank god.\r\nDa, I should pay more attention to you. Oh my,
+      I am so sorry\u2026\r\r\r"
+    m_optionsArray: []
+  - m_index: 10
+    m_sprite: {fileID: 21300000, guid: 8e7dbae7d7704d143b9eb27e40ca5e25, type: 3}
+    m_textString: "Does the child have any other relatives? Like his father?\r"
+    m_optionsArray: []
+  - m_index: 11
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: "Um, no... um... I think he can stay with his aunt for a while.\r"
+    m_optionsArray: []
+  - m_index: 12
+    m_sprite: {fileID: 21300000, guid: 8e7dbae7d7704d143b9eb27e40ca5e25, type: 3}
+    m_textString: "Alright, I suggest letting the child stay with his aunt until
+      we sort out your father's issues.\r\r"
+    m_optionsArray: []
+  - m_index: 13
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: "Thank you so much, officer.\r"
+    m_optionsArray: []
+  - m_index: 14
+    m_sprite: {fileID: 0}
+    m_textString: "As evening approached, Zane was picked up by his aunt while Sophie
+      stayed with his father.\r"
+    m_optionsArray: []
+  - m_index: 15
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "You are acting so wired today,  Mom\u2026\r\nWhat happened?\r\r"
+    m_optionsArray: []
+  - m_index: 16
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: "Nothing\u2026 It\u2019s okay\u2026\r\nAre you hungry? I can make
+      some food for you.\r\r\r"
+    m_optionsArray: []
+  - m_index: 17
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "Mom, don't be sad. Can we have cheeseburgers for dinner?\r\r\r\r"
+    m_optionsArray: []
+  - m_index: 18
+    m_sprite: {fileID: 21300000, guid: b73c5bb915d39fe41acfe112950c3546, type: 3}
+    m_textString: "\u2026\n\r\nYes\u2026 Yes\u2026 of course\u2026\r\r\r\r\r"
+    m_optionsArray: []

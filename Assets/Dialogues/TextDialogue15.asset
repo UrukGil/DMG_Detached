@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445d06398617d4c3fbae1018d09318cc, type: 3}
+  m_Name: TextDialogue15
+  m_EditorClassIdentifier: 
+  m_pieceOfDialogueArray:
+  - m_index: 0
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: Gotcha at last! Just wait for the cops to come and deal with you.
+    m_optionsArray: []
+  - m_index: 1
+    m_sprite: {fileID: 21300000, guid: 8e7dbae7d7704d143b9eb27e40ca5e25, type: 3}
+    m_textString: "ajhduewbsiofja;ldv\u2019sdashsl;dkf?\r"
+    m_optionsArray: []
+  - m_index: 2
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "Yes! Yes! I don\u2019t know what you are talking about, but this
+      is the thief!\r"
+    m_optionsArray: []
+  - m_index: 3
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "Arrest him!\r"
+    m_optionsArray: []
+  - m_index: 4
+    m_sprite: {fileID: 21300000, guid: 8e7dbae7d7704d143b9eb27e40ca5e25, type: 3}
+    m_textString: "ajhduewbsiofja;ldv\u2019sdashsl;dkf?bndlasjd,an?\r\r"
+    m_optionsArray: []
+  - m_index: 5
+    m_sprite: {fileID: 21300000, guid: 79e68204971583342b4bce6a4f376e19, type: 3}
+    m_textString: "(shaking) Oh... god...\r\nWhat? What? What's happening?\r\nWhy
+      can\u2019t I understand what you are saying?"
+    m_optionsArray: []
+  - m_index: 6
+    m_sprite: {fileID: 21300000, guid: 8e7dbae7d7704d143b9eb27e40ca5e25, type: 3}
+    m_textString: ......
+    m_optionsArray: []

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445d06398617d4c3fbae1018d09318cc, type: 3}
+  m_Name: TextDialogue13
+  m_EditorClassIdentifier: 
+  m_pieceOfDialogueArray:
+  - m_index: 0
+    m_sprite: {fileID: 21300000, guid: b95426383c28a0a4684b6a065a25747d, type: 3}
+    m_textString: "The first year of work has ended.\r"
+    m_optionsArray: []
+  - m_index: 1
+    m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
+    m_textString: Yeah, just two more years to go. I reckon they'll be sending over
+      the guide for the second year's work pretty soon.
+    m_optionsArray: []
+  - m_index: 2
+    m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
+    m_textString: Honestly, these things are more useful for newbies like you. Even
+      though they change it up a bit each year, from years 3-9, the job's pretty
+      much the same.
+    m_optionsArray: []
+  - m_index: 3
+    m_sprite: {fileID: 21300000, guid: b95426383c28a0a4684b6a065a25747d, type: 3}
+    m_textString: "So, have you been doing the same job for hundreds of years?\r"
+    m_optionsArray: []
+  - m_index: 4
+    m_sprite: {fileID: 21300000, guid: f51bbe726ff5f824589052fd9f7076d2, type: 3}
+    m_textString: "After all, we are protein-coding Genes.\r\r"
+    m_optionsArray: []
+  - m_index: 5
+    m_sprite: {fileID: 21300000, guid: b95426383c28a0a4684b6a065a25747d, type: 3}
+    m_textString: ......
+    m_optionsArray: []

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.49641275, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4154,7 +4154,6 @@ GameObject:
   m_Component:
   - component: {fileID: 666308188}
   - component: {fileID: 666308187}
-  - component: {fileID: 666308190}
   m_Layer: 0
   m_Name: Background1
   m_TagString: Untagged
@@ -4229,19 +4228,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1447682923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &666308190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666308186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9827fcf317c9f485abe8475d14a67a72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSpawnPoint: {x: 0, y: -1.4}
 --- !u!1 &673314474
 GameObject:
   m_ObjectHideFlags: 0
@@ -7397,77 +7383,6 @@ Transform:
   - {fileID: 1510390567}
   - {fileID: 1161030609}
   m_Father: {fileID: 635552097}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1283842637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1283842641}
-  - component: {fileID: 1283842640}
-  - component: {fileID: 1283842638}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1283842638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283842637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff48aad3d6ffe4a9fa68370206bb7784, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRandomTurnedOn: 0
---- !u!114 &1283842640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283842637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b29a0d4eb61b3914abe4490a76557ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerItems: []
-  gameObjectsList: []
-  timer: 180
-  timeLeft: 180
-  timerIsRunning: 0
-  timerKit: {fileID: 0}
-  memoClosedTimes: 0
-  dialogue: {fileID: 0}
-  phone: {fileID: 0}
-  darkSceneIndex: 7
-  currentSceneIndex: 0
-  darkEnterBias: 0
-  levelThreeList: 
---- !u!4 &1283842641
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283842637}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306085875
 GameObject:
@@ -12946,4 +12861,3 @@ SceneRoots:
   - {fileID: 501663556}
   - {fileID: 1822290906}
   - {fileID: 1796929302}
-  - {fileID: 1283842641}

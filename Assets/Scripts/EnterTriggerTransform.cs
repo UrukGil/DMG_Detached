@@ -49,8 +49,8 @@ public class EnterTriggerTransform : MonoBehaviour
             }
             if (GameManager.Instance.levelThreeList.Count == 18)
             {
-                print("GameOver");
                 // GameOver
+                GameManager.Instance.outOfMaze = true;
             }
             if (!GameManager.Instance.levelThreeList.Contains(randomNum))
             {

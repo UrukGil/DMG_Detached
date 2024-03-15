@@ -25,6 +25,7 @@ TagManager:
   - DarkParent
   - WayPoints
   - BG
+  - Virus2
   layers:
   - Default
   - TransparentFX
