@@ -139,6 +139,7 @@ public class GameManager : MonoBehaviour
                 //切回livingroom
                 
                 if(count4 == 0){
+                    PositionManager.instance.SetSpawnPoint(new Vector2(0,-0.3f));
                     SceneManager.LoadScene(19);
                     count4 += 1;
                 }
