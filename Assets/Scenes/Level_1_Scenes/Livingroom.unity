@@ -3379,8 +3379,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1536511900}
   - component: {fileID: 1536511899}
-  - component: {fileID: 1536511901}
   - component: {fileID: 1536511902}
+  - component: {fileID: 1536511903}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3412,6 +3412,9 @@ MonoBehaviour:
   darkSceneIndex: 7
   currentSceneIndex: 0
   darkEnterBias: 0
+  darkMissedTime: 0
+  caughtDark: 0
+  outOfMaze: 0
   levelThreeList: 
 --- !u!4 &1536511900
 Transform:
@@ -3428,19 +3431,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1536511901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536511898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9827fcf317c9f485abe8475d14a67a72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSpawnPoint: {x: 0, y: -0.3}
 --- !u!114 &1536511902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3454,6 +3444,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRandomTurnedOn: 0
+--- !u!114 &1536511903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536511898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9827fcf317c9f485abe8475d14a67a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSpawnPoint: {x: 0, y: -0.3}
 --- !u!1 &1593608887
 GameObject:
   m_ObjectHideFlags: 0

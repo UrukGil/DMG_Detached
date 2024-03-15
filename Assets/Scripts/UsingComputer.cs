@@ -23,6 +23,7 @@ public class UsingComputer : MonoBehaviour
         {
             if (GameObject.FindObjectOfType<DialogueManager>().m_hasTalked == true)
             {
+                //弹音效
                 GetComponent<BoxCollider2D>().enabled = true;
             }
         }

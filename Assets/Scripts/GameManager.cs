@@ -36,17 +36,24 @@ public class GameManager : MonoBehaviour
     private int count = 0;
     private int count2 = 0;
     private int count3 = 0;
+
+    private int count4 = 0;
+    private int count5 = 0;
     private int countInnerWorld = 0;
 
     private int playAnimation = 0;
     private int countExitInnerWorld = 0;
+    private int countExitInnerWorld2 = 0;
     public GameObject dialogue;
     [SerializeField] GameObject phone = null;
     private bool hasStarted = false;
-    public int darkSceneIndex = 7;
+    public int darkSceneIndex = 8;
     public int currentSceneIndex = 0;
     public float darkEnterBias = 0f;
+    public int darkMissedTime = 0;
 
+    public bool caughtDark = false;
+    public bool outOfMaze = false;
     public List<int> levelThreeList = new List<int>();
     
     private void Start()
@@ -79,6 +86,13 @@ public class GameManager : MonoBehaviour
             StartCoroutine(ExitInnerWorld());
             //print(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (CheckIfStringsInList("Virus2") && SceneManager.GetActiveScene().buildIndex == 7 && countExitInnerWorld2 == 0)
+        {
+            countExitInnerWorld2 += 1;
+            StartCoroutine(ExitInnerWorld2());
+            //print(SceneManager.GetActiveScene().buildIndex);
+        }
         if (GameObject.FindWithTag("InnerWorld") != null)
         {
             if (GameObject.FindWithTag("InnerWorld").GetComponent<DialogueManager>().m_hasTalked == true && countInnerWorld == 0)
@@ -99,6 +113,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
         if (GameObject.FindWithTag("DarkParent") != null)
         {
             darkEnterBias = GameObject.FindWithTag("DarkParent").transform.GetChild(0).GetComponent<DarkMovement>().darkEnterBias;
@@ -111,8 +126,65 @@ public class GameManager : MonoBehaviour
                 GameObject.FindWithTag("DarkParent").transform.GetChild(0).transform.gameObject.SetActive(false);
             }
         }
+
+        if(GameObject.FindWithTag("Player").transform.childCount >= 5){
+            if(caughtDark == true)
+            {
+                if(SceneManager.GetActiveScene().buildIndex == 19){
+                    GameObject.FindWithTag("Player").transform.GetChild(6).gameObject.SetActive(true);
+                    GameObject.FindWithTag("Player").transform.GetChild(6).GetComponent<DialogueManager>().m_canTalk = true;
+                }
+                //切回livingroom
+                
+                if(count4 == 0){
+                    SceneManager.LoadScene(19);
+                    count4 += 1;
+                }
+            }
+        }
+        if(GameObject.FindWithTag("Player").transform.childCount >= 5)
+        {
+            if (GameObject.FindWithTag("Player").transform.GetChild(6).GetComponent<DialogueManager>().m_hasTalked == true)
+            {
+                StartCoroutine(EnterLevel3());
+            }
+        }
+        if(GameObject.FindWithTag("Player").transform.childCount >= 6)
+        {
+            if (GameObject.FindWithTag("Player").transform.GetChild(7).GetComponent<DialogueManager>().m_hasTalked == true)
+            {
+                //To level 3
+                SceneManager.LoadScene(17);
+            }
+        }
+        if(outOfMaze == true && count5 == 0){
+            count5 += 1;
+            StartCoroutine(EnterInnerWorld3());
+        }
     }
 
+    IEnumerator EnterInnerWorld3()
+    {
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("verticalSpeed", -1);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("speed", 0);
+        while (GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize >= 0.01)
+        {
+            yield return new WaitForSeconds(0.01f);
+            GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
+        }
+        SceneManager.LoadScene(20);
+
+    }
+    IEnumerator EnterLevel3()
+    {
+        //play Animation（one pic)
+        GameObject.FindWithTag("Player").transform.GetChild(7).gameObject.SetActive(true);
+        GameObject.FindWithTag("Player").transform.GetChild(7).GetComponent<DialogueManager>().m_canTalk = true;
+        yield return null;
+    }
     IEnumerator EnterInnerWorld()
     {
         // WrtingAni start
@@ -198,6 +270,20 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("Player").transform.GetChild(3).GetComponent<DialogueManager>().m_canTalk = true;
         GameManager.Instance.RemoveItem("Virus");
     }
+    IEnumerator ExitInnerWorld2()
+    {
+        GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize = 0.01f;
+        while (GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize <= 0.7f)
+        {
+            yield return new WaitForSeconds(0.01f);
+            GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize += 0.01f;
+        }
+        yield return new WaitForSeconds(1f);
+        //Rupert's Monologue
+        GameObject.FindWithTag("Player").transform.GetChild(5).gameObject.SetActive(true);
+        GameObject.FindWithTag("Player").transform.GetChild(5).GetComponent<DialogueManager>().m_canTalk = true;
+        GameManager.Instance.RemoveItem("Virus2");
+    }
     bool CheckIfStringsInList(params string[] strings)
     {
         // 使用 LINQ 查询，检查每个字符串是否在列表中
@@ -239,6 +325,19 @@ public class GameManager : MonoBehaviour
     public void clear(){
         playerItems.Clear();
         memoClosedTimes = 0;
+        darkMissedTime = 0;
+        count = 0;
+        count2 = 0;
+        count3 = 0;
+        count4 = 0;
+        count5 = 0;
+        countInnerWorld = 0;
+        playAnimation = 0;
+        countExitInnerWorld = 0;
+        countExitInnerWorld2 = 0;
+        darkEnterBias = 0f;
+        caughtDark = false;
+        outOfMaze = false;
     }
 
     IEnumerator CheckEverything()
@@ -261,7 +360,7 @@ public class GameManager : MonoBehaviour
             print(dialogue.transform.GetChild(2).gameObject.activeSelf);
             yield return new WaitForSeconds(6f);
             dialogue.transform.GetChild(2).gameObject.SetActive(false);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk = true;
         }
@@ -275,10 +374,25 @@ public class GameManager : MonoBehaviour
             GameObject.FindWithTag("Player").transform.GetChild(1).GetComponent<DialogueManager>().m_canTalk = true;
         }
 
-        if (CheckIfStringsInList(string7) && count3 == 0)
+        if (CheckIfStringsInList(string7) && count3 == 0)//第一关和第二关过渡
         {
-            SceneManager.LoadScene(7);
+            //TO-DO: play animation
+
+            //Enter Innerworld2
+            count3 += 1;
+            StartCoroutine(Level1ToLevel2());
         }
+    }
+
+    IEnumerator Level1ToLevel2()
+    {
+        yield return new WaitForSeconds(6f);
+        while (GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize >= 0.01)
+        {
+            yield return new WaitForSeconds(0.01f);
+            GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
+        }
+        SceneManager.LoadScene(18);//放在ani脚本里
     }
 
     // Remove item from the player's inventory

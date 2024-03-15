@@ -31,8 +31,27 @@ public class ComputerVideoAppear : MonoBehaviour
             transform.GetChild(0).gameObject.GetComponent<VideoPlayer>().Play();
             if (isVideoEnd)
             {
-                transform.GetChild(0).gameObject.SetActive(false);
-                StartCoroutine(SceneChange());
+                if(SceneManager.GetActiveScene().buildIndex == 16)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                    StartCoroutine(SceneChange());
+                }
+                else if(SceneManager.GetActiveScene().buildIndex == 18)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                    GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.SetActive(true);
+                    GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk = true;
+                    if(GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk == true)
+                    {
+                        SceneManager.LoadScene(7);
+                    }
+                }
+                else if(SceneManager.GetActiveScene().buildIndex == 20)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                    //播动画
+                }
+              
             }
         }
     }

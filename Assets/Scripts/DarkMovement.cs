@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DarkMovement : MonoBehaviour
 {
@@ -44,7 +45,8 @@ public class DarkMovement : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 
-                print("哈哈");
+                // print("哈哈");
+                GameManager.Instance.darkMissedTime += 1;
                 currentIndex++;
                 if (currentIndex >= points.Length)
                 {
@@ -55,12 +57,18 @@ public class DarkMovement : MonoBehaviour
         }
         else
         {
-            if (collision.gameObject.tag == "Player"){
-                print("抓住了！");
+            if (collision.gameObject.tag == "Player" && GameManager.Instance.darkMissedTime >= 5){
+                //print("You got me");
+                
+                GameManager.Instance.caughtDark = true;
+                //黑影消失
+                //this.gameObject.SetActive(false);
+                
+                
             }
-           
         }
     }
+
 
     void MoveTowardsPoint(Vector2 target)
     {
