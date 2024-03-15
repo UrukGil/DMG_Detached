@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_3_Scenes/InnerWorld3.unity
     guid: c51642fc8ea3685489ec691aea2d9a8b
+  - enabled: 1
+    path: Assets/Scenes/Level_3_Scenes/Street.unity
+    guid: aa5929cefb342400f96abcc93087f64d
   m_configObjects: {}

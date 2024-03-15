@@ -26,6 +26,7 @@ TagManager:
   - WayPoints
   - BG
   - Virus2
+  - Sophie
   layers:
   - Default
   - TransparentFX

@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
 
     private int count4 = 0;
     private int count5 = 0;
+    private int count6 = 0;
+    private int count7 = 0;
     private int countInnerWorld = 0;
 
     private int playAnimation = 0;
@@ -142,22 +144,26 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        if(GameObject.FindWithTag("Player").transform.childCount >= 5)
+        if(GameObject.FindWithTag("Player").transform.childCount >= 5 && count6 == 0)
         {
             if (GameObject.FindWithTag("Player").transform.GetChild(6).GetComponent<DialogueManager>().m_hasTalked == true)
             {
-                StartCoroutine(EnterLevel3());
+                count6 += 1;
+                StartCoroutine(SophieAppear());
             }
         }
-        if(GameObject.FindWithTag("Player").transform.childCount >= 6)
+        if(GameObject.FindWithTag("Player").transform.childCount >= 6 && count7 == 0)
         {
             if (GameObject.FindWithTag("Player").transform.GetChild(7).GetComponent<DialogueManager>().m_hasTalked == true)
             {
                 //To level 3
-                SceneManager.LoadScene(17);
+                count7 += 1;
+                StartCoroutine(EnterLevelThree());
             }
+            //count7 += 1;
+            //StartCoroutine(EnterLevelThree());
         }
-        if(outOfMaze == true && count5 == 0){
+        if (outOfMaze == true && count5 == 0){
             count5 += 1;
             StartCoroutine(EnterInnerWorld3());
         }
@@ -178,12 +184,97 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(20);
 
     }
-    IEnumerator EnterLevel3()
+    IEnumerator SophieAppear()
     {
         //play Animation（one pic)
+        yield return null;
+
+        //Sophie Appear
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.FindWithTag("Player").transform.GetChild(7).gameObject.SetActive(true);
         GameObject.FindWithTag("Player").transform.GetChild(7).GetComponent<DialogueManager>().m_canTalk = true;
+    }
+
+    IEnumerator EnterLevelThree()
+    {
         yield return null;
+        //PlayerMovelock
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        //Sophie to Kitchen
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("verticalSpeed", 1);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("speed", 1);
+        // Camera Lock
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraMover>().player = GameObject.FindWithTag("Sophie").transform.GetChild(0).gameObject;
+        float time = 0.7f;
+        while (time >= 0)
+        {
+            yield return new WaitForFixedUpdate();
+            time -= Time.deltaTime;
+            // 根据输入计算移动的方向和距离
+            Vector2 movement = new Vector2(0, 1) * 0.3f * Time.deltaTime;
+
+            // 移动角色
+            GameObject.FindWithTag("Sophie").transform.Translate(movement);
+        }
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("horizontalSpeed", 1);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("verticalSpeed", 0);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("speed", 1);
+        time = 3.1f;
+        while (time >= 0)
+        {
+            yield return new WaitForFixedUpdate();
+            time -= Time.deltaTime;
+            // 根据输入计算移动的方向和距离
+            Vector2 movement = new Vector2(1, 0) * 0.3f * Time.deltaTime;
+
+            // 移动角色
+            GameObject.FindWithTag("Sophie").transform.GetChild(0).Translate(movement);
+        }
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("verticalSpeed", 1);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("speed", 1);
+        time = 4.3f;
+        while (time >= 0)
+        {
+            yield return new WaitForFixedUpdate();
+            time -= Time.deltaTime;
+            // 根据输入计算移动的方向和距离
+            Vector2 movement = new Vector2(0, 1) * 0.3f * Time.deltaTime;
+
+            // 移动角色
+            GameObject.FindWithTag("Sophie").transform.Translate(movement);
+        }
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("verticalSpeed", 0);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("speed", 0);
+        GameObject.FindWithTag("Sophie").transform.GetChild(0).gameObject.SetActive(false);
+        //Animation
+        //Rupert to Door
+        // Camera Lock
+        yield return new WaitForSeconds(1f);
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraMover>().player = GameObject.FindWithTag("Player");
+        // move grandpa to door
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("verticalSpeed", -1);
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("speed", 1);
+        time = 2f;
+        while (time >= 0)
+        {
+
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+            yield return new WaitForFixedUpdate();
+            time -= Time.deltaTime;
+            // 根据输入计算移动的方向和距离
+            Vector2 movement = new Vector2(0, -1) * 0.3f * Time.deltaTime;
+
+            // 移动角色
+            GameObject.FindWithTag("Player").transform.Translate(movement);
+        }
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
+        //Enter Level 3
+        SceneManager.LoadScene(21);
     }
     IEnumerator EnterInnerWorld()
     {
@@ -331,6 +422,8 @@ public class GameManager : MonoBehaviour
         count3 = 0;
         count4 = 0;
         count5 = 0;
+        count6 = 0;
+        count7 = 0;
         countInnerWorld = 0;
         playAnimation = 0;
         countExitInnerWorld = 0;
