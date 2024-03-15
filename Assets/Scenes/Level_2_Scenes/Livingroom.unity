@@ -3456,6 +3456,7 @@ MonoBehaviour:
   darkSceneIndex: 7
   currentSceneIndex: 0
   darkEnterBias: 0
+  levelThreeList: 
 --- !u!4 &1536511900
 Transform:
   m_ObjectHideFlags: 0
