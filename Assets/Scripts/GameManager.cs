@@ -274,6 +274,7 @@ public class GameManager : MonoBehaviour
             GameObject.FindWithTag("Player").transform.Translate(movement);
         }
         GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
+        PositionManager.instance.nextSpawnPoint = new Vector2(5.15f, -0.9f);
         //Enter Level 3
         SceneManager.LoadScene(21);
     }
