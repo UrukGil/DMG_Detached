@@ -129,41 +129,45 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(GameObject.FindWithTag("Player").transform.childCount >= 5){
-            if(caughtDark == true)
-            {
-                if(SceneManager.GetActiveScene().buildIndex == 19){
-                    GameObject.FindWithTag("Player").transform.GetChild(6).gameObject.SetActive(true);
-                    GameObject.FindWithTag("Player").transform.GetChild(6).GetComponent<DialogueManager>().m_canTalk = true;
-                }
-                //切回livingroom
-                
-                if(count4 == 0){
-                    PositionManager.instance.SetSpawnPoint(new Vector2(0,-0.3f));
-                    SceneManager.LoadScene(19);
-                    count4 += 1;
-                }
-            }
-        }
-        if(GameObject.FindWithTag("Player").transform.childCount >= 5 && count6 == 0)
+        if(GameObject.FindWithTag("Player") != null)
         {
-            if (GameObject.FindWithTag("Player").transform.GetChild(6).GetComponent<DialogueManager>().m_hasTalked == true)
+            if(GameObject.FindWithTag("Player").transform.childCount >= 5){
+                if(caughtDark == true)
+                {
+                    if(SceneManager.GetActiveScene().buildIndex == 19){
+                        GameObject.FindWithTag("Player").transform.GetChild(6).gameObject.SetActive(true);
+                        GameObject.FindWithTag("Player").transform.GetChild(6).GetComponent<DialogueManager>().m_canTalk = true;
+                    }
+                    //切回livingroom
+                    
+                    if(count4 == 0){
+                        PositionManager.instance.SetSpawnPoint(new Vector2(0,-0.3f));
+                        SceneManager.LoadScene(19);
+                        count4 += 1;
+                    }
+                }
+            }
+            if(GameObject.FindWithTag("Player").transform.childCount >= 5 && count6 == 0)
             {
-                count6 += 1;
-                StartCoroutine(SophieAppear());
+                if (GameObject.FindWithTag("Player").transform.GetChild(6).GetComponent<DialogueManager>().m_hasTalked == true)
+                {
+                    count6 += 1;
+                    StartCoroutine(SophieAppear());
+                }
+            }
+            if(GameObject.FindWithTag("Player").transform.childCount >= 6 && count7 == 0)
+            {
+                if (GameObject.FindWithTag("Player").transform.GetChild(7).GetComponent<DialogueManager>().m_hasTalked == true)
+                {
+                    //To level 3
+                    count7 += 1;
+                    StartCoroutine(EnterLevelThree());
+                }
+                //count7 += 1;
+                //StartCoroutine(EnterLevelThree());
             }
         }
-        if(GameObject.FindWithTag("Player").transform.childCount >= 6 && count7 == 0)
-        {
-            if (GameObject.FindWithTag("Player").transform.GetChild(7).GetComponent<DialogueManager>().m_hasTalked == true)
-            {
-                //To level 3
-                count7 += 1;
-                StartCoroutine(EnterLevelThree());
-            }
-            //count7 += 1;
-            //StartCoroutine(EnterLevelThree());
-        }
+        
         if (outOfMaze == true && count5 == 0){
             count5 += 1;
             StartCoroutine(EnterInnerWorld3());

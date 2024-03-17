@@ -9,6 +9,7 @@ public class UsingComputer : MonoBehaviour
     [SerializeField] int sceneIndex = 0;
     public bool playerIsInTrigger = false;
     private GameObject Magic;
+    private int emailCount = 0;
    
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,12 @@ public class UsingComputer : MonoBehaviour
             if (GameObject.FindObjectOfType<DialogueManager>().m_hasTalked == true)
             {
                 //弹音效
-                GetComponent<BoxCollider2D>().enabled = true;
+                if(emailCount == 0)
+                {
+                    GameObject.FindWithTag("Email").GetComponent<AudioSource>().Play();
+                    emailCount++;
+                    GetComponent<BoxCollider2D>().enabled = true;
+                }
             }
         }
 

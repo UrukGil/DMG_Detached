@@ -25,6 +25,10 @@ public class BGMController : MonoBehaviour
         audioSource = GetComponent<AudioSource>(); // 获取AudioSource组件
     }
 
+    void Start()
+    {
+        audioSource.volume = 0.2f; // 播放背景音乐
+    }
     // 用于更换背景音乐的方法
     public void ChangeBGM(AudioClip newClip)
     {

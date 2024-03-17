@@ -40,6 +40,7 @@ public class Timer: MonoBehaviour
         {
             //endgame
             SceneManager.LoadScene("GameOver");
+            BGMController.Instance.GetComponent<AudioSource>().Stop();
         }
         if (timeLeft > 0)
         {

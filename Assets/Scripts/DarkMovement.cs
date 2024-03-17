@@ -40,12 +40,19 @@ public class DarkMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         float randomNum = Random.Range(0, 1f);
-        if (0 < randomNum && randomNum < 0.9f)
-        {
+        if (collision.gameObject.tag == "Player" && GameManager.Instance.darkMissedTime >= 5 && randomNum > 0.9f){
+                //print("You got me");
+                
+                GameManager.Instance.caughtDark = true;
+                //黑影消失
+                //this.gameObject.SetActive(false);
+                
+                
+        }
+        else{
             if (collision.gameObject.tag == "Player")
             {
-                
-                // print("哈哈");
+                //print("哈哈");
                 GameManager.Instance.darkMissedTime += 1;
                 currentIndex++;
                 if (currentIndex >= points.Length)
@@ -55,18 +62,7 @@ public class DarkMovement : MonoBehaviour
                 transform.position = points[currentIndex].position;
             }
         }
-        else
-        {
-            if (collision.gameObject.tag == "Player" && GameManager.Instance.darkMissedTime >= 5){
-                //print("You got me");
-                
-                GameManager.Instance.caughtDark = true;
-                //黑影消失
-                //this.gameObject.SetActive(false);
-                
-                
-            }
-        }
+        
     }
 
 

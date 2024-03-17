@@ -9,6 +9,8 @@ public class StartScene : MonoBehaviour
     // 这个方法会被绑定到按钮的点击事件上
     public void StartGame()
     {
-        SceneManager.LoadScene("LivingRoom");
+        SceneManager.LoadScene(0);
+        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level1"));
+        BGMController.Instance.GetComponent<AudioSource>().Play();
     }
 }
