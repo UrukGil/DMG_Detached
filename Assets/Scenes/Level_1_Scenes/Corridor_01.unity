@@ -1998,6 +1998,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7339609201223382052, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 107237624}
     - target: {fileID: 7578972438860698416, guid: e2ea2e7e10f424c7287d87baaf4ba1b0, type: 3}
       propertyPath: m_Name
       value: Grandpa

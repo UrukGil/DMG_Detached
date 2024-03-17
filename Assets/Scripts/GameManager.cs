@@ -491,21 +491,20 @@ public class GameManager : MonoBehaviour
 
             //Enter Innerworld2
             count3 += 1;
-            StartCoroutine(Level1ToLevel2());
+            StartCoroutine(LevelOneToTwo());
         }
     }
 
-    IEnumerator Level1ToLevel2()
+    IEnumerator LevelOneToTwo()
     {
         yield return new WaitForSeconds(6f);
-        while (GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize >= 0.01)
+        if (GameObject.FindWithTag("Player") != null)
         {
-            yield return new WaitForSeconds(0.01f);
-            GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
+            if (GameObject.FindWithTag("Player").transform.childCount >= 8)
+            {
+                GameObject.FindWithTag("Player").transform.GetChild(8).GetComponent<LevelOneToTwo>().canPlay = true;
+            }
         }
-        //Done
-        SceneManager.LoadScene(18);//放在ani脚本里
-        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Inner"));
     }
 
     // Remove item from the player's inventory
