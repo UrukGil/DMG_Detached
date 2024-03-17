@@ -183,6 +183,7 @@ public class GameManager : MonoBehaviour
             GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
         }
         SceneManager.LoadScene(20);
+        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Inner"));
 
     }
     IEnumerator SophieAppear()
@@ -276,6 +277,7 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
         //Enter Level 3
         SceneManager.LoadScene(21);
+        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level 3"));
     }
     IEnumerator EnterInnerWorld()
     {
@@ -347,6 +349,7 @@ public class GameManager : MonoBehaviour
         }
         
         SceneManager.LoadScene(16);
+        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Inner"));
     }
 
     IEnumerator ExitInnerWorld()
@@ -487,6 +490,7 @@ public class GameManager : MonoBehaviour
             GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
         }
         SceneManager.LoadScene(18);//放在ani脚本里
+        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Inner"));
     }
 
     // Remove item from the player's inventory
