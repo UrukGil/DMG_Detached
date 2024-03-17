@@ -261,7 +261,11 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("verticalSpeed", 0);
         GameObject.FindWithTag("Sophie").transform.GetChild(0).GetComponent<Animator>().SetFloat("speed", 0);
         GameObject.FindWithTag("Sophie").transform.GetChild(0).gameObject.SetActive(false);
+
+
         //Animation
+
+
         //Rupert to Door
         // Camera Lock
         yield return new WaitForSeconds(1f);
