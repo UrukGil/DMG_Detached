@@ -193,8 +193,11 @@ public class GameManager : MonoBehaviour
     IEnumerator SophieAppear()
     {
         //play Animation（one pic)
-        yield return null;
-
+        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+        GameObject.FindWithTag("SophieArrive").transform.GetChild(0).transform.position = new Vector3(GameObject.FindWithTag("Player").transform.position.x, GameObject.FindWithTag("Player").transform.position.y);
+        GameObject.FindWithTag("SophieArrive").transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(3f) ;
+        GameObject.FindWithTag("SophieArrive").transform.GetChild(0).gameObject.SetActive(false);
         //Sophie Appear
         GameObject.FindWithTag("Sophie").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.FindWithTag("Player").transform.GetChild(7).gameObject.SetActive(true);
@@ -282,7 +285,7 @@ public class GameManager : MonoBehaviour
         PositionManager.instance.nextSpawnPoint = new Vector2(5.15f, -0.9f);
         //Enter Level 3
         SceneManager.LoadScene(21);
-        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level 3"));
+        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Wind"));
     }
     IEnumerator EnterInnerWorld()
     {
@@ -457,11 +460,14 @@ public class GameManager : MonoBehaviour
         if (CheckIfStringsInList(string1, string2, string3) && count == 0)
         {
             count = 1;
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(7f);
+            //PlayerMovelock
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
+            //GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             dialogue.transform.GetChild(2).gameObject.SetActive(true);
-            print(dialogue.transform.GetChild(2).gameObject.activeSelf);
             yield return new WaitForSeconds(6f);
             dialogue.transform.GetChild(2).gameObject.SetActive(false);
+            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
             yield return new WaitForSeconds(1f);
             GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk = true;

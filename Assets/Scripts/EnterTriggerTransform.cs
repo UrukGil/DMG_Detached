@@ -60,7 +60,7 @@ public class EnterTriggerTransform : MonoBehaviour
                 {
                     if (BG.transform.GetChild(0).GetChild(0).name == "Background" + randomNum.ToString())
                     {
-                        print("true");
+                        //print("true");
                         BG.transform.GetChild(0).gameObject.SetActive(true);
                     }
                     else

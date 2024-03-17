@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mover : MonoBehaviour
 {
     public float moveSpeed = 0.3f; // 角色移动速度
     Animator animator;
     Rigidbody2D rb;
+    AudioSource audioSource;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        if (GameObject.FindWithTag("Step") != null)
+        {
+            audioSource = GameObject.FindWithTag("Step").GetComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
@@ -52,9 +58,47 @@ public class Mover : MonoBehaviour
         //切换跑步
         Vector2 dir = new Vector2(horizontalSpeed, verticalSpeed);
         //改变参数来改动画
-        animator.SetFloat("speed", dir.magnitude);
-
+        float speed = dir.magnitude;
+        animator.SetFloat("speed", speed);
+        if (audioSource != null)
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 21 && speed != 0)
+            {
+                PlayFootstepLightSound();
+            }
+            if (SceneManager.GetActiveScene().buildIndex == 17 && speed != 0)
+            {
+                PlayFootstepHeavySound();
+            }
+            if (speed == 0)
+            {
+                audioSource.Stop();
+            }
+        }
         //改变刚体速度
         rb.velocity = dir * moveSpeed;
+    }
+
+    void PlayFootstepLightSound()
+    {
+        // 播放脚步声音效
+        if (!audioSource.isPlaying)
+        {
+            // 随机选择一个脚步声音效
+            AudioClip footstepSound = Resources.Load<AudioClip>("Light_Step");
+            audioSource.clip = footstepSound;
+            audioSource.Play();
+        }
+    }
+    void PlayFootstepHeavySound()
+    {
+        // 播放脚步声音效
+        if (!audioSource.isPlaying)
+        {
+            // 随机选择一个脚步声音效
+            AudioClip footstepSound = Resources.Load<AudioClip>("Heavy_Step");
+            audioSource.clip = footstepSound;
+            audioSource.Play();
+        }
     }
 }
