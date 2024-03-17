@@ -44,6 +44,7 @@ public class ComputerVideoAppear : MonoBehaviour
                     if(GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk == true)
                     {
                         SceneManager.LoadScene(7);
+                        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level2"));
                     }
                 }
                 else if(SceneManager.GetActiveScene().buildIndex == 20)
@@ -65,5 +66,6 @@ public class ComputerVideoAppear : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
+        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level1"));
     }
 }
