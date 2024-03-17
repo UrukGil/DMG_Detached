@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using UnityEngine;
 using TMPro;
-using UnityEditorInternal;
 using System.Linq;
 public class MemoManager : MonoBehaviour
 {
@@ -19,7 +18,20 @@ public class MemoManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tags = InternalEditorUtility.tags.ToList();
+        string string1 = "Vegetable";
+        string string2 = "Magazine";
+        string string3 = "Wine";
+        string string4 = "Photo";
+        string string5 = "Newspaper";
+        string string6 = "Birthday";
+        string string7 = "All";
+        tags.Add(string1);
+        tags.Add(string2);
+        tags.Add(string3);
+        tags.Add(string4);
+        tags.Add(string5);
+        tags.Add(string6);
+        tags.Add(string7);
     }
 
     // Update is called once per frame
