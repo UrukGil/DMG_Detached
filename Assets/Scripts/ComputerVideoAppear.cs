@@ -31,23 +31,24 @@ public class ComputerVideoAppear : MonoBehaviour
             transform.GetChild(0).gameObject.GetComponent<VideoPlayer>().Play();
             if (isVideoEnd)
             {
-                if(SceneManager.GetActiveScene().buildIndex == 16)
+                if(SceneManager.GetActiveScene().buildIndex == 9) //Done
                 {
                     transform.GetChild(0).gameObject.SetActive(false);
                     StartCoroutine(SceneChange());
                 }
-                else if(SceneManager.GetActiveScene().buildIndex == 18)
+                else if(SceneManager.GetActiveScene().buildIndex == 18)//Done
                 {
                     transform.GetChild(0).gameObject.SetActive(false);
                     GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.SetActive(true);
                     GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk = true;
                     if(GameObject.FindWithTag("Player").transform.GetChild(0).GetComponent<DialogueManager>().m_canTalk == true)
                     {
-                        SceneManager.LoadScene(7);
+                        //Done
+                        SceneManager.LoadScene(10);
                         BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level2"));
                     }
                 }
-                else if(SceneManager.GetActiveScene().buildIndex == 20)
+                else if(SceneManager.GetActiveScene().buildIndex == 21)//Done
                 {
                     transform.GetChild(0).gameObject.SetActive(false);
                     //播动画
@@ -65,7 +66,8 @@ public class ComputerVideoAppear : MonoBehaviour
     IEnumerator SceneChange()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(0);
+        //Done
+        SceneManager.LoadScene(2);
         BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level1"));
     }
 }

@@ -17,7 +17,8 @@ public class StartAnimation : MonoBehaviour
     {
         if (isVideoEnd)
         {
-            SceneManager.LoadScene(0);
+            //Done
+            SceneManager.LoadScene(2);
         }
     }
     void OnVideoEnd(VideoPlayer videoPlayer)

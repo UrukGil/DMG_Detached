@@ -62,11 +62,11 @@ public class Mover : MonoBehaviour
         animator.SetFloat("speed", speed);
         if (audioSource != null)
         {
-            if (SceneManager.GetActiveScene().buildIndex == 21 && speed != 0)
+            if (SceneManager.GetActiveScene().buildIndex == 19 && speed != 0)
             {
                 PlayFootstepLightSound();
             }
-            if (SceneManager.GetActiveScene().buildIndex == 17 && speed != 0)
+            if (SceneManager.GetActiveScene().buildIndex == 20 && speed != 0)
             {
                 PlayFootstepHeavySound();
             }

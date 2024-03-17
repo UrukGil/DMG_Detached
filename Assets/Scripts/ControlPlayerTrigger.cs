@@ -20,7 +20,8 @@ public class ControlPlayerTrigger : MonoBehaviour
         }
         if (GetComponent<DialogueManager>().m_hasTalked == true)
         {
-            SceneManager.LoadScene(0);
+            //Done
+            SceneManager.LoadScene(2);
             GameManager.Instance.RemoveItem("ControlPlayer");
         }
     }

@@ -911,6 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  yBias: 0
 --- !u!1 &116177051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 9
+  sceneIndex: 12
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 0
@@ -1366,7 +1367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b03262d0d424cf49e877ca451c93cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 9
+  sceneIndex: 12
   darkIsInTrigger: 0
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &412952322
@@ -2275,12 +2276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 12
+  sceneIndex: 14
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 1
-  startSceneIndex: 11
-  endSceneIndex: 13
+  startSceneIndex: 14
+  endSceneIndex: 16
   spawnPointInNextScene: {x: 0, y: -0.4926267}
 --- !u!61 &734843209
 BoxCollider2D:
@@ -2354,7 +2355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b03262d0d424cf49e877ca451c93cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 11
+  sceneIndex: 14
   darkIsInTrigger: 0
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &753363627
@@ -2736,12 +2737,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 11
+  sceneIndex: 13
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 1
-  startSceneIndex: 10
-  endSceneIndex: 12
+  startSceneIndex: 13
+  endSceneIndex: 15
   spawnPointInNextScene: {x: 0, y: -0.4613751}
 --- !u!61 &1265721333
 BoxCollider2D:
@@ -2815,7 +2816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b03262d0d424cf49e877ca451c93cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 13
+  sceneIndex: 16
   darkIsInTrigger: 0
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &1346401558
@@ -3116,7 +3117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 7
+  sceneIndex: 10
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 0
@@ -3195,7 +3196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b03262d0d424cf49e877ca451c93cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 7
+  sceneIndex: 10
   darkIsInTrigger: 0
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &1545993753

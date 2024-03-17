@@ -354,12 +354,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 10
+  sceneIndex: 15
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 1
-  startSceneIndex: 12
-  endSceneIndex: 13
+  startSceneIndex: 15
+  endSceneIndex: 16
   spawnPointInNextScene: {x: 0, y: -0.7744917}
 --- !u!61 &147084371
 BoxCollider2D:
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b03262d0d424cf49e877ca451c93cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 13
+  sceneIndex: 16
   darkIsInTrigger: 0
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &215275347
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 8
+  sceneIndex: 11
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 0
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b03262d0d424cf49e877ca451c93cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 8
+  sceneIndex: 11
   darkIsInTrigger: 0
   spawnPointInNextScene: {x: 0, y: 0}
 --- !u!1 &605933120
@@ -1619,12 +1619,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 11
+  sceneIndex: 13
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 1
-  startSceneIndex: 10
-  endSceneIndex: 11
+  startSceneIndex: 13
+  endSceneIndex: 14
   spawnPointInNextScene: {x: 0, y: -0.5310215}
 --- !u!114 &692156797
 MonoBehaviour:
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b03262d0d424cf49e877ca451c93cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 11
+  sceneIndex: 14
   darkIsInTrigger: 0
   spawnPointInNextScene: {x: 0, y: -0.5310215}
 --- !u!1 &700505804

@@ -14,7 +14,7 @@ public class MemoManager : MonoBehaviour
     private GameObject player;
     
     public bool PlayerCanTab = true;
-    List<string> tags;
+    List<string> tags = new List<string>();
     // Start is called before the first frame update
     void Start()
     {

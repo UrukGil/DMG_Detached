@@ -82,14 +82,14 @@ public class GameManager : MonoBehaviour
                 phone.SetActive(false);
             }
         }
-        if (CheckIfStringsInList("Virus") && SceneManager.GetActiveScene().buildIndex == 0 && countExitInnerWorld == 0)
+        if (CheckIfStringsInList("Virus") && SceneManager.GetActiveScene().buildIndex == 2 && countExitInnerWorld == 0)
         {
             countExitInnerWorld += 1;
             StartCoroutine(ExitInnerWorld());
             //print(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (CheckIfStringsInList("Virus2") && SceneManager.GetActiveScene().buildIndex == 7 && countExitInnerWorld2 == 0)
+        if (CheckIfStringsInList("Virus2") && SceneManager.GetActiveScene().buildIndex == 10 && countExitInnerWorld2 == 0)
         {
             countExitInnerWorld2 += 1;
             StartCoroutine(ExitInnerWorld2());
@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
             if(GameObject.FindWithTag("Player").transform.childCount >= 5){
                 if(caughtDark == true)
                 {
-                    if(SceneManager.GetActiveScene().buildIndex == 19){
+                    if(SceneManager.GetActiveScene().buildIndex == 17){
                         GameObject.FindWithTag("Player").transform.GetChild(6).gameObject.SetActive(true);
                         GameObject.FindWithTag("Player").transform.GetChild(6).GetComponent<DialogueManager>().m_canTalk = true;
                     }
@@ -142,7 +142,8 @@ public class GameManager : MonoBehaviour
                     
                     if(count4 == 0){
                         PositionManager.instance.SetSpawnPoint(new Vector2(0,-0.3f));
-                        SceneManager.LoadScene(19);
+                        //Done
+                        SceneManager.LoadScene(17);
                         count4 += 1;
                     }
                 }
@@ -186,7 +187,8 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
         }
-        SceneManager.LoadScene(20);
+        //Done
+        SceneManager.LoadScene(21);
         BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Inner"));
 
     }
@@ -284,7 +286,8 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
         PositionManager.instance.nextSpawnPoint = new Vector2(5.15f, -0.9f);
         //Enter Level 3
-        SceneManager.LoadScene(21);
+        //Done
+        SceneManager.LoadScene(19);
         BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Wind"));
     }
     IEnumerator EnterInnerWorld()
@@ -355,8 +358,8 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
         }
-        
-        SceneManager.LoadScene(16);
+        //Done
+        SceneManager.LoadScene(9);
         BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Inner"));
     }
 
@@ -500,6 +503,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize -= 0.01f;
         }
+        //Done
         SceneManager.LoadScene(18);//放在ani脚本里
         BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Inner"));
     }

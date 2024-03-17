@@ -24,7 +24,7 @@ public class DialogueUI : MonoBehaviour
     GameObject[] letterUIArray;
     [SerializeField] string letter;
     public DialogueManager m_dialogueManager = null;
-    List<string> tags;
+    List<string> tags = new List<string>();
     private void Start()
     {
         string string1 = "Vegetable";

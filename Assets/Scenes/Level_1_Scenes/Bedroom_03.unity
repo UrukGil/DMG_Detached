@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428da5faeac5c4310b7e48a99be73528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 1
+  sceneIndex: 3
   playerIsInTrigger: 0
   isRandomTurnedOn: 0
   isRandom: 0
@@ -1053,11 +1053,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9051302382075404818, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
   m_PrefabInstance: {fileID: 398297283}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &398297286 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2682043446120066499, guid: 7a3eab91fc17945f7971c8d2370710ec, type: 3}
-  m_PrefabInstance: {fileID: 398297283}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &532069564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,6 +1378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  yBias: 0
 --- !u!1 &855940724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,7 +1773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8967dc30bc9163d44883826a73a5e153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToClose: {fileID: 398297286}
+  objectToClose: {fileID: 0}
 --- !u!4 &1214470442
 Transform:
   m_ObjectHideFlags: 0
