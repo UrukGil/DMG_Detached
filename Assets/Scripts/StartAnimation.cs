@@ -19,8 +19,11 @@ public class StartAnimation : MonoBehaviour
         {
             //Done
             SceneManager.LoadScene(2);
-            BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level1"));
-            BGMController.Instance.GetComponent<AudioSource>().Play();
+            if (BGMController.Instance != null)
+            {
+                BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Level1"));
+                BGMController.Instance.GetComponent<AudioSource>().Play();
+            }
         }
     }
     void OnVideoEnd(VideoPlayer videoPlayer)

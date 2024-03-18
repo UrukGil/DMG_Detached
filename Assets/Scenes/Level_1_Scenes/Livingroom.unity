@@ -4132,6 +4132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerKit
       objectReference: {fileID: 0}
+    - target: {fileID: 4680262826546207122, guid: 59ce0b953b8728445a16f40025376be6, type: 3}
+      propertyPath: duration
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 6754772008576298087, guid: 59ce0b953b8728445a16f40025376be6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
