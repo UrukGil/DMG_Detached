@@ -264,35 +264,12 @@ public class GameManager : MonoBehaviour
 
 
         //Animation
-
-
-        //Rupert to Door
-        // Camera Lock
-        yield return new WaitForSeconds(1f);
-        GameObject.FindWithTag("MainCamera").GetComponent<CameraMover>().player = GameObject.FindWithTag("Player");
-        // move grandpa to door
-        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("horizontalSpeed", 0);
-        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("verticalSpeed", -1);
-        GameObject.FindWithTag("Player").GetComponent<Animator>().SetFloat("speed", 1);
-        time = 2f;
-        while (time >= 0)
+        if (GameObject.FindWithTag("GrandpaVideo") != null)
         {
-
-            GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = false;
-            yield return new WaitForFixedUpdate();
-            time -= Time.deltaTime;
-            // 根据输入计算移动的方向和距离
-            Vector2 movement = new Vector2(0, -1) * 0.3f * Time.deltaTime;
-
-            // 移动角色
-            GameObject.FindWithTag("Player").transform.Translate(movement);
+            GameObject.FindWithTag("GrandpaVideo").GetComponent<GrandpaVideoAppear>().canPlay = true;
         }
-        GameObject.FindWithTag("Player").GetComponent<Mover>().enabled = true;
-        PositionManager.instance.nextSpawnPoint = new Vector2(5.15f, -0.9f);
-        //Enter Level 3
-        //Done
-        SceneManager.LoadScene(19);
-        BGMController.Instance.ChangeBGM(Resources.Load<AudioClip>("Wind"));
+
+        
     }
     IEnumerator EnterInnerWorld()
     {
@@ -389,10 +366,8 @@ public class GameManager : MonoBehaviour
             GameObject.FindWithTag("MainCamera").GetComponent<Camera>().orthographicSize += 0.01f;
         }
         yield return new WaitForSeconds(1f);
-        //Rupert's Monologue
-        GameObject.FindWithTag("Player").transform.GetChild(5).gameObject.SetActive(true);
-        GameObject.FindWithTag("Player").transform.GetChild(5).GetComponent<DialogueManager>().m_canTalk = true;
-        GameManager.Instance.RemoveItem("Virus2");
+        // DarkAppear
+        
     }
     bool CheckIfStringsInList(params string[] strings)
     {
