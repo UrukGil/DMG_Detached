@@ -367,6 +367,7 @@ public class GameManager : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
         // DarkAppear
+        GameObject.FindWithTag("DarkVideo").GetComponent<DarkVideoAppear>().canPlay = true;
         
     }
     bool CheckIfStringsInList(params string[] strings)

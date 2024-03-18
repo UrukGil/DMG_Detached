@@ -50,6 +50,7 @@ public class ComputerVideoAppear : MonoBehaviour
                 }
                 else if(SceneManager.GetActiveScene().buildIndex == 21)//Done
                 {
+                    GameObject.FindWithTag("IntoWater").GetComponent<IntoWaterVideoAppear>().canPlay = true;
                     transform.GetChild(0).gameObject.SetActive(false);
                     //播动画
                 }

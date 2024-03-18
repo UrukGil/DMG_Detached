@@ -7,6 +7,7 @@ using UnityEngine.Video;
 public class GrandpaVideoAppear : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
+    private int count = 0;
     public bool canPlay = false;
     private bool isVideoEnd = false;
     // Start is called before the first frame update
@@ -31,8 +32,9 @@ public class GrandpaVideoAppear : MonoBehaviour
             }
             // play video
             transform.GetChild(0).gameObject.GetComponent<VideoPlayer>().Play();
-            if (isVideoEnd)
+            if (isVideoEnd && count == 0)
             {
+                count++;
                 transform.GetChild(0).gameObject.SetActive(false);
                 StartCoroutine(GrandpaAppear());
             }
