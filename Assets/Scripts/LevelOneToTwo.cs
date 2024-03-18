@@ -18,7 +18,7 @@ public class LevelOneToTwo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( canPlay == true)
+        if (canPlay == true)
         {
             // Stop player
             if (videoPlayer.isPlaying)
